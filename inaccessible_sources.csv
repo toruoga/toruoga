@@ -1,0 +1,17 @@
+url,date_attempted,country,reason
+https://www.mofa.go.jp/press/kaiken/kaiken24e_000164.html,2026-09-21,japan,"EGRESS_BLOCKED: environment network policy denied outbound HTTPS to www.mofa.go.jp (curl: CONNECT tunnel failed, response 403). Page not opened; no text extracted; discovered via WebSearch snippet only, which is not sufficient provenance per spec Section 14."
+https://www.mofa.go.jp/press/release/index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://www.mofa.go.jp/press/release/202302_index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://www.mofa.go.jp/press/release/202203_index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://www.mofa.go.jp/policy/q_a/faq16.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://www.mofa.go.jp/policy/postwar/yasukuni/index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://www.mofa.go.jp/policy/postwar/index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://japan.kantei.go.jp/101_kishida/actions/202208/index.html,2026-09-21,japan,"EGRESS_BLOCKED: environment network policy denied outbound HTTPS to japan.kantei.go.jp."
+https://japan.kantei.go.jp/101_kishida/actions/202308/index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://japan.kantei.go.jp/101_kishida/statement/202208/index.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://japan.kantei.go.jp/101_kishida/actions/202208/_00014.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://japan.kantei.go.jp/101_kishida/statement/202208/_00006.html,2026-09-21,japan,"EGRESS_BLOCKED: same as above. This URL's title suggests it is PM Kishida's address at the 77th National Memorial Ceremony for the War Dead (Aug 15, 2022) but this was NEVER verified by opening the page, per non-hallucination rule Section 21 -- treat as unconfirmed."
+https://japan.kantei.go.jp/99_suga/actions/202108/_00020.html,2026-09-21,japan,EGRESS_BLOCKED: same as above.
+https://japan.kantei.go.jp/99_suga/statement/202108/_00006.html,2026-09-21,japan,"EGRESS_BLOCKED: same as above. Title suggests PM Suga's address at the 76th National Memorial Ceremony for the War Dead (Aug 15, 2021), NOT verified -- treat as unconfirmed."
+https://www.mofa.go.kr/eng/index.do,2026-09-21,korea,"EGRESS_BLOCKED: environment network policy denied outbound HTTPS to www.mofa.go.kr (tested as a control domain, not part of Japan-2020-2025 pilot scope)."
+https://en.wikipedia.org/wiki/Yasukuni_Shrine,2026-09-21,N/A,"EGRESS_BLOCKED: control test, non-official source anyway (excluded per spec Section 2); confirms block is environment-wide, not domain-specific."

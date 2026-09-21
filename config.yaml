@@ -1,0 +1,138 @@
+# config.yaml
+# Central configuration for the East Asia Historical Recognition Corpus pipeline.
+# All scripts (01_discover_urls.py .. 09_export_csv.py) read this file.
+
+project:
+  name: "east_asia_historical_recognition_corpus"
+  date_range:
+    start: "2000-01-01"
+    end: "2025-12-31"
+  random_seed: 20260921          # fixed seed for reproducible sampling (human_validation_sample, etc.)
+  human_validation_fraction: 0.20  # at least 20% of records
+
+# ---------------------------------------------------------------------------
+# Official sources. Only these domains/sections are in scope for the primary
+# corpus (Section 2 of the task spec). Search engines may only be used to
+# discover pages under these domains -- never as a source of record text.
+# ---------------------------------------------------------------------------
+sources:
+  japan:
+    - name: "Prime Minister's Office (Kantei)"
+      base_url: "https://japan.kantei.go.jp/"
+      sections:
+        - "https://japan.kantei.go.jp/{pm_slug}/statement/"   # speeches & statements, per PM slug/year
+        - "https://japan.kantei.go.jp/{pm_slug}/actions/"     # PM in Action (context/venue confirmation)
+    - name: "Ministry of Foreign Affairs of Japan"
+      base_url: "https://www.mofa.go.jp/"
+      sections:
+        - "https://www.mofa.go.jp/press/release/index.html"     # press releases archive
+        - "https://www.mofa.go.jp/press/kaiken/index.html"       # press conferences archive
+        - "https://www.mofa.go.jp/policy/postwar/index.html"     # postwar policy / history issues index
+        - "https://www.mofa.go.jp/policy/q_a/faq16.html"         # History Issues Q&A
+
+  korea:
+    - name: "Office of the President (ROK)"
+      base_url: "https://eng.president.go.kr/"
+      sections:
+        - "https://eng.president.go.kr/briefing/speeches"
+        - "https://eng.president.go.kr/briefing/statements"
+    - name: "Ministry of Foreign Affairs of the Republic of Korea"
+      base_url: "https://www.mofa.go.kr/"
+      sections:
+        - "https://www.mofa.go.kr/eng/press/pressbrief"
+        - "https://www.mofa.go.kr/eng/press/statements"
+
+  china:
+    - name: "State Council of the PRC"
+      base_url: "https://english.www.gov.cn/"
+      sections:
+        - "https://english.www.gov.cn/news/"
+    - name: "Ministry of Foreign Affairs of the PRC"
+      base_url: "https://www.mfa.gov.cn/eng/"
+      sections:
+        - "https://www.mfa.gov.cn/eng/xwfw_665399/s2510_665401/"   # regular press conferences
+        - "https://www.mfa.gov.cn/eng/wjbz_665378/"                 # statements
+
+# ---------------------------------------------------------------------------
+# Excluded source types (Section 2) -- enforced by 04_filter_history_documents.py
+# ---------------------------------------------------------------------------
+excluded_domains_keywords:
+  - wikipedia.org
+  - blogspot.
+  - wordpress.
+  - medium.com
+  - reuters.com
+  - nytimes.com
+  - asahi.com
+  - koreaherald.com
+  - scmp.com
+  - jstor.org
+
+# ---------------------------------------------------------------------------
+# Search terms (Section 5). Expand iteratively; log additions in
+# data/logs/search_term_log.csv with date and rationale.
+# ---------------------------------------------------------------------------
+search_terms:
+  - war
+  - wartime
+  - war responsibility
+  - aggression
+  - aggressor
+  - colonial rule
+  - colonialism
+  - colonial occupation
+  - history
+  - historical issue
+  - historical recognition
+  - historical perception
+  - comfort women
+  - military comfort women
+  - sexual slavery
+  - sex slavery
+  - Nanjing
+  - Nanking
+  - Nanjing Massacre
+  - Yasukuni
+  - Yasukuni Shrine
+  - textbook
+  - history textbook
+  - forced labor
+  - forced workers
+  - wartime labor
+  - forced mobilization
+  - conscription
+  - apology
+  - apologize
+  - apologise
+  - remorse
+  - regret
+  - reflection
+  - responsibility
+  - victim
+  - victims
+  - suffering
+  - compensation
+  - reparation
+  - fund
+  - 1965 agreement
+  - 2015 agreement
+  - Treaty on Basic Relations
+  - Japan-Korea agreement
+  - historical responsibility
+
+# ---------------------------------------------------------------------------
+# Crawl politeness
+# ---------------------------------------------------------------------------
+crawl:
+  respect_robots_txt: true
+  request_delay_seconds: 3
+  timeout_seconds: 20
+  max_retries: 2
+  user_agent: "AcademicResearchBot/1.0 (historical-recognition-corpus; contact: toruoga0916@gmail.com)"
+
+paths:
+  raw_dir: "data/raw"
+  cleaned_dir: "data/cleaned"
+  metadata_dir: "data/metadata"
+  logs_dir: "data/logs"
+  output_dir: "data/output"
