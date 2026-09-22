@@ -36,12 +36,10 @@
 ## 3、先行研究の限界
 
 歴史認識問題をめぐる既存研究は、大別して二つの視点に整理できる。第一の視点
-は謝罪の十分性・誠意・道徳性を問うもので、道徳的関係の修復(Tavuchis 1991)、
-歴史的不正義への補償・修復(Barkan 2000)、日本の謝罪・戦後責任の評価
-(Dudden 2008; Lind 2008; Berger 2012)などが該当する。第二の視点は謝罪を
-外交的シグナルとして捉えるもので、謝罪のタイミング・動機分析(Daase et al.
-2016)、国家間信頼形成への効果(Yang 2013; Yang and Diehl 2025)などがこれ
-に含まれる。
+は謝罪の十分性・誠意・道徳性を問うもので、道徳的関係の修復⑴、歴史的不正義
+への補償・修復⑵、日本の謝罪・戦後責任の評価⑶⑷⑸などが該当する。第二の視
+点は謝罪を外交的シグナルとして捉えるもので、謝罪のタイミング・動機分析⑹、
+国家間信頼形成への効果⑺⑻などがこれに含まれる。
 
 これらの研究は、謝罪の有無・十分性・外交的効果に焦点を当てる傾向があり、歴
 史問題がなぜ反復的に再燃するのかを十分に説明できない。本稿は、謝罪そのもの
@@ -161,7 +159,48 @@ individual の式典演説等、別の資料類型によって捕捉されるべ
 
 ## 6、分析結果
 
-**(一)争点の分布**
+**(一)頻出語分析**
+
+計量テキスト分析は、5節で述べた通り、文脈的コーディングによって得られた解
+釈を裏づける補助的根拠として用いる。以前の学会報告(2026年6月、日本法政学
+会)で提示した頻出語表は、本稿のコーパスとは異なる、より大規模な資料(2016
+年時点の演説データセット等)に基づくものであり、本稿の29件(コーディング
+済み全記録)には直接流用できない。そこで本稿では、29件の`response_text`
+(発話全文)を国別に結合し、対数尤度比(log-likelihood, LL)によるキーネス
+分析を改めて実施した。すなわち、ある語が特定の国のコーパスにおいて、他の二
+か国のコーパスと比べてどれだけ統計的に有意に高頻度で出現するかを算出したも
+のである(語形は小文字化し、機能語を除去、出現数3未満の語は除外)。
+
+| 順位 | 日本(総語数3,221) | LL | 韓国(総語数7,610) | LL | 中国(総語数1,735) | LL |
+|---|---|---|---|---|---|---|
+| 1 | prime | 209.1 | korea | 91.3 | chinese | 130.7 |
+| 2 | minister | 169.7 | freedom | 88.3 | aggression | 110.9 |
+| 3 | dead | 126.9 | independence | 53.8 | china | 108.3 |
+| 4 | rok | 89.1 | koreans | 43.1 | japanese | 59.8 |
+| 5 | war | 77.8 | korean | 40.2 | war | 54.6 |
+| 6 | statements | 73.5 | day | 36.1 | resistance | 52.2 |
+| 7 | japan | 66.8 | liberation | 34.5 | fascist | 51.5 |
+| 8 | memorial | 62.6 | fellow | 32.1 | victory | 44.6 |
+| 9 | cabinet | 52.3 | north | 31.8 | yasukuni/shrine | 43.6 |
+| 10 | heartfelt | 40.8 | movement | 30.1 | justice | 31.7 |
+
+各国上位語の性格は明確に異なる。日本の上位語(prime, minister, dead, memo-
+rial, cabinet, heartfelt)は、首相官邸発の儀礼的な追悼発話というジャンルそ
+のものを反映しており、歴史認識の実質的争点語(aggression, colonial等)は上
+位に現れない。韓国の上位語(korea, freedom, independence, liberation,
+movement)は、独立運動・光復節という自国史ナラティブの語彙が支配的であり、
+対日関係語(japan, colonial等)は上位10語には入らない――これは、韓国の発
+話が「日本を名指しして問う」ことよりも「自国の独立史を物語る」ことに紙幅の
+大半を割いているという構成上の特徴であり、(二)で見る`agency_explicit`が
+60%と相対的に高いことと矛盾するものではない(残りの発話量のなかで、日本
+に言及する箇所では明示的な名指しが選好される、と解釈すべきである)。中国の
+上位語(chinese, aggression, china, japanese, resistance, fascist, victory,
+yasukuni, justice)は、対照的に、日本の歴史的責任を直接に問う語彙が上位を
+占めており、争点語そのものが高頻度語として現れる唯一の国である。この違い
+は、(二)(三)で見る`agency_explicit`・Kingdon政治次元の該当率が中国で最
+も高いことと整合的である。
+
+**(二)争点の分布**
 
 日本の10件は、`WAR_GENERAL`(戦争一般)6件、`FORCED_LABOR`(強制労働)2
 件、`COMFORT_WOMEN`(慰安婦)1件、`HISTORICAL_RECOGNITION_GENERAL`(歴史
@@ -180,7 +219,7 @@ individual の式典演説等、別の資料類型によって捕捉されるべ
 虐殺80周年のような特別な記念式典(本稿収録の2025年9月ミュンヘン総領事講演
 はその一例で、これも首脳ではなく総領事級)に限られる。
 
-**(二)謝罪・反省・行為主体の明示性**
+**(三)謝罪・反省・行為主体の明示性**
 
 `apology`(明示的謝罪)は三国いずれも0件であった。日本の10件は、いずれも
 自国の戦争死者を悼む文脈での発話であり、外国人被害者への言及や謝罪は含まれ
@@ -206,7 +245,24 @@ individual の式典演説等、別の資料類型によって捕捉されるべ
 (`LEADER`)、「日本の国家」(`STATE`)、「日本軍国主義者」(`MILITARY`)
 のいずれかが明示的に名指しされている。
 
-**(三)Kingdon三次元への布置**
+謝罪・責任語彙6項目すべての該当件数を国別に示すと、以下の通りである。
+
+| 項目 | 日本(n=10) | 韓国(n=10) | 中国(n=8) |
+|---|---|---|---|
+| apology(謝罪) | 0 | 0 | 0 |
+| explanation(説明) | 4 | 6 | 8 |
+| remorse(悔恨) | 2 | 0 | 0 |
+| reflection(反省) | 7 | 4 | 1 |
+| remedy(救済) | 9 | 3 | 0 |
+| pardon_or_forgiveness(赦し) | 0 | 0 | 0 |
+
+`explanation`(説明)が中国で全件(8/8)該当するのは、報道官会見という発話
+形式が、事実関係の説明を伴わずに成立しないためであり、他の5項目が軒並み低
+い(remorse/remedy/pardonはいずれも0)こととあわせて、中国の発話が「説明を
+通じた告発」に特化していることを示す。日本の`remedy`の高さ(9/10)は
+(三)で述べた通り、遺骨収集事業等の制度的対応の反復に起因する。
+
+**(四)Kingdon三次元への布置**
 
 `kingdon_policy=1`の比率は、日本10/10件(100%)、韓国7/10件(70%)、中
 国6/8件(75%)であった。日本の全件が政策次元に該当するのは、遺骨収集事業
@@ -214,9 +270,12 @@ individual の式典演説等、別の資料類型によって捕捉されるべ
 `kingdon_politics=1`の比率は、日本4/10件(40%)、韓国8/10件(80%)、中国
 8/8件(100%)であり、逆の傾斜を示す。中国の全件が政治次元に該当するの
 は、報道官会見という発話形式そのものが外交的抗議・シグナリングという政治的
-機能を担っているためである。
+機能を担っているためである。`kingdon_problem=1`の比率は、日本5/10件
+(50%)、韓国8/10件(80%)、中国8/8件(100%)であり、日本の発話の半数
+は、歴史的な加害・被害を「問題」として明示的に構成することなく、儀礼・制度
+的対応のみで完結している――これも(三)の`agency_explicit=0%`と符合する。
 
-**(四)歴史的画期:1995年村山談話との対比**
+**(五)歴史的画期:1995年村山談話との対比**
 
 村山談話(HISTORICAL_RECOGNITION_GENERAL、apology=1、remorse=1、reflec-
 tion=1、remedy=1、responsibility_actor=STATE、agency_explicit=1)は、主軸
@@ -277,18 +336,52 @@ policy=100%)という点で、「政策管理型」と呼ぶにふさわしい�
 憶レジーム分析を司法判断・市民運動・教育制度・記念施設を含めたより広い制度
 的射程へと拡張することである。
 
+註
+
+⑴ Nicholas Tavuchis, *Mea Culpa: A Sociology of Apology and Reconciliation*,
+Stanford University Press, 1991.
+⑵ Elazar Barkan, *The Guilt of Nations: Restitution and Negotiating
+Historical Injustices*, W. W. Norton & Company, 2000.
+⑶ Alexis Dudden, *Troubled Apologies Among Japan, Korea, and the United
+States*, Columbia University Press, 2008.
+⑷ Jennifer Lind, *Sorry States: Apologies in International Politics*,
+Cornell University Press, 2008.
+⑸ Thomas U. Berger, *War, Guilt, and World Politics after World War II*,
+Cambridge University Press, 2012.
+⑹ Christopher Daase, Stefan Engert, Michel-André Horelt, Judith Renner and
+Renate Strassner (eds.), *Apology and Reconciliation in International
+Relations: The Importance of Being Sorry*, Routledge, 2016.
+⑺ Daqing Yang, "Political Apology in Sino-Japanese Relations: The Murayama
+Statement and Its Receptions in China," in Kazuhiko Togo (ed.), *Japan and
+Reconciliation in Post-war Asia: The Murayama Statement and Its
+Implications*, Palgrave Macmillan, 2013.
+⑻ Deli Yang and Paul F. Diehl, "Political Apologies in International
+Relations," *Oxford Research Encyclopedia of Politics*, 2025.
+
 ---
 
-【この草稿についての補足】
+【この草稿についての補足(2026-09-22更新)】
 - サブタイトルは仮のものであり、確定版では調整可能。メインタイトルはご指示
   通り維持している。
+- **書誌情報を確認済み**。先行研究8件すべてについてWeb検索で出版社・巻号
+  等を確認し、註⑴〜⑻に反映した。特に「Yang (2013)」「Yang and Diehl
+  (2025)」はスライド上では著者ファーストネーム・正式タイトルが未記載だった
+  ため、それぞれDaqing Yang「Political Apology in Sino-Japanese Relations」
+  (Togo編『Japan and Reconciliation in Post-war Asia』所収、Palgrave
+  Macmillan, 2013)、Deli Yang and Paul F. Diehl, "Political Apologies in
+  International Relations"(*Oxford Research Encyclopedia of Politics*,
+  2025)と特定した。なお Barkan (2000) の出版社は資料によってW. W. Norton
+  とJohns Hopkins University Pressの両方が挙がっており(後者は再版の可能性
+  あり)、本稿ではオリジナル版のW. W. Nortonを採用した――確定稿では現物で
+  再確認されたい。
+- **計量テキスト分析はスライドのものを流用せず、実際の29件のコーパスから
+  やり直した**(6節(一)の頻出語表、(三)の謝罪・責任語彙6項目表)。スラ
+  イドにあった時期×国家の対応分析(1991〜2016年のビン分割)は、本稿のコー
+  パスが時間的にほぼ2020〜2026年に集中している(村山談話1件のみ1995年)た
+  め再現できず、意図的に割愛している――時系列分析を行うには、8節で述べた
+  歴史的画期(小泉靖国参拝、2005年教科書問題等)の追加が前提になる。
 - 6節(分析結果)の数値はすべて `pilot_east_asia_2020_2025.csv`(28件)・
-  `landmark_anchors.csv`(1件)から実際に集計したもの。
-- 3節(先行研究)・4節(理論枠組み)は既存スライドの内容をほぼそのまま文章
-  化しており、書誌情報(Tavuchis 1991等の出版社・巻号)は未確認のため、確
-  定版では原典に当たって補完する必要がある。
+  `landmark_anchors.csv`(1件)から実際に集計したもの(頻出語分析のみ
+  `response_text`全文を国別に結合してLL値を算出)。
 - 7節(考察)・8節(おわりに)は、実際のコーディング結果に基づいて新たに書
-  き起こしたもので、スライドの記述(計量テキスト分析による頻度分布等)とは
-  分析の粒度が異なる。スライドの計量テキスト分析部分(争点×時期、国家×発
-  話者等の対応分析)を本文にどう位置づけるかは、投稿する学会誌の性格(質的
-  研究中心か、計量テキスト分析を許容するか)を踏まえて改めて相談したい。
+  き起こしたもので、旧スライドの記述とは分析の粒度が異なる。
