@@ -1,7 +1,81 @@
 # Pilot Coverage Report — Japan, Korea, China, 2020–2025
 
-## Status: real data collected across all three countries; 28 records fully
-## contextually coded (main axis) + 1 landmark anchor, 736 pending
+## Status: real data collected across all three countries; 90 records fully
+## contextually coded (main axis, 30/country) + 1 landmark anchor, 718 pending
+
+**2026-09-22, later same session — final push to 30/30/30**: after the
+phase-2 update below (34 main-axis records: Japan 16, Korea 10, China 8),
+the user reset the scaling target back up to 30/country (having
+provisionally agreed to ~20/country mid-session, then reviewed Japan's
+progress and raised it again — see `phase2_plan.md`'s "Target reset to
+30/country" section for the full reasoning) and asked to proceed in the
+order Japan → Korea → China. All three countries reached exactly 30,
+bringing the main-axis total to **90**. New genres/sources added per
+country in this final push:
+
+- **Japan** (16 → 30): a 12-record Hiroshima/Nagasaki Peace Memorial
+  Ceremony batch (2020-2025, Abe/Suga/Kishida/Ishiba, found via the same
+  proximity-keyword backlog sweep as the earlier 6-record batch), plus
+  Kishida's July 2024 Sado Island Gold Mines UNESCO message as a
+  deliberate silence/omission data point (30th record).
+- **Korea** (10 → 30): the previously-untried `eng.president.go.kr/speeches/*`
+  path (distinct from `/briefing/*`, found via Wayback CDX); a 6-year
+  (2021-2026) annual MOFA Spokesperson protest-statement series on Japan's
+  textbook authorizations (found via web search identifying the
+  `mofa.go.kr` board's `seq=` numbering, then fetched live); a MOFA
+  Yasukuni statement; two March First Independence Day addresses; a Keio
+  University lecture; and several Lee Jae Myung-era records (a Yomiuri
+  Shimbun interview via `korea.net`, two Comfort Women Memorial Day
+  messages, Tokyo-summit remarks). The Sado Island Gold Mines dispute
+  became a three-point, two-country trace across time with the Japan-side
+  record above.
+- **China** (8 → 30): three new annual-commemoration genres — Dec 13
+  Nanjing Massacre Memorial Day (2021-2024, filling out the series with
+  the existing 2025 record), Sept 18 (Mukden Incident) sirens ceremony
+  (2020, 2023, 2024), and July 7 (Lugou/Marco Polo Bridge Incident)
+  commemoration (2021, 2023, 2024) — found via targeted web search per
+  year after an attempt to calibrate the `english.www.gov.cn/news/page_N.html`
+  archive's own date-to-page-number mapping proved unreliable (highly
+  non-linear posting rate). Also added the corpus's first HEAD-level China
+  records outside the Sept 3, 2025 Xi speeches: three Xi-Japan PM
+  APEC-sidelines summit readouts (2022, 2023, 2024).
+
+Several Korea/China records in this push use a wire-service report
+(Xinhua, or Yonhap via Korea Times/Korea Herald) that quotes an official
+statement directly, rather than a directly-fetched primary-source page,
+where the primary page could not be reached after repeated attempts —
+each such record is flagged in its own `coder_notes` with
+`classification_confidence` downgraded to MEDIUM. See `phase2_plan.md`'s
+final-push section for the complete per-country breakdown and the
+genre-confound implications of the new HEAD/OFFICIAL-level data added.
+The genre/speaker-level/administration confound stress-test in the
+"Methodology stress-test" section of `phase2_plan.md` (run against the
+28-row sample) has **not** been re-run against the full 90-row sample —
+flagged as the top remaining item before the paper's "3-type" conclusion
+can be finalized.
+
+The rest of this report describes the state as of the original phase-2
+session (34 records: Japan 16, Korea 10, China 8) and is kept for its
+discovery-method narrative and "what worked/didn't work" detail, which is
+still accurate; only the summary numbers below have been superseded by
+the final push above.
+
+### Current coverage table (post-final-push, 2026-09-22)
+
+| Country | Fully coded (main axis) | Backlog pending | Landmark anchors |
+|---------|--------------------------|------------------|-------------------|
+| Japan   | 30 | 718 | — |
+| Korea   | 30 | 0 (candidate pools hand/search-verified, not archive-crawled at Japan's scale) | — |
+| China   | 30 | 0 (same as Korea) | — |
+| **Total** | **90** | **718** | **1** (1995 Murayama Danwa) |
+
+Per-country `issue_primary` and `speaker_level`/`document_type` distributions
+at this final tally can be recomputed directly from
+`pilot_east_asia_2020_2025.csv` (e.g. `python3 -c "import csv, collections;
+print(collections.Counter(r['issue_primary'] for r in csv.DictReader(open('pilot_east_asia_2020_2025.csv')) if r['country']=='japan'))"`)
+rather than hand-copied into prose here, since the distribution will shift
+again if the corpus is scaled further or the paper's methodology section
+needs a different cut.
 
 **2026-09-22 phase 2 update** (Japan-journal, non-full-scale scope — see
 `phase2_plan.md`): Korea's and China's discovery methods, previously
@@ -248,13 +322,19 @@ triggers, not a China/Korea-specific grievance formula.
 - 736 real, downloaded, keyword-filtered Japan candidates remain
   uncoded (`pilot_manual_review.csv`, `classification_confidence=LOW`) —
   see the "What is still pending" discussion in earlier revisions of this
-  report; unchanged by this session's Korea/China work.
+  report; unchanged by this session's Korea/China work. **Superseded by
+  the final push**: 718 rows remain as of 2026-09-22, after 13 were
+  promoted to fully-coded records (12 Hiroshima/Nagasaki Peace Memorial
+  addresses + the Sado Island Gold Mines message) — see the top of this
+  report and `phase2_plan.md`.
 
 ## Proposed next steps
 
 1. Continue the contextual-coding pass over `pilot_manual_review.csv`
-   (736 Japan rows) — explicitly out of scope for the 2026-09-22 phase 2
-   session (Japan-journal, non-full-scale framing), not attempted.
+   (now 718 Japan rows, down from 736 after the final push — see top of
+   report) — still out of scope for this phase (Japan-journal,
+   non-full-scale framing), not attempted beyond the two targeted
+   proximity-keyword sweeps already done.
 2. Periodically re-test `www.mofa.go.jp` / `www.mofa.go.kr` access —
    both still blocked as of 2026-09-22 (Akamai WAF / TLS reset
    respectively).
@@ -274,13 +354,15 @@ triggers, not a China/Korea-specific grievance formula.
    session (tried alternate pagination params and the sibling
    `/briefing`/`/visits` listings). Any further Yoon-era material would
    need hand-verified search discovery, the original (narrower) method.
-6. China's Nanjing Memorial Day (Dec 13) does not reliably surface in the
-   MFA's routine press conference — checked 2022 and 2023, neither had
-   Yasukuni/Nanjing/comfort-women content in that day's Q&A. Nanjing-
-   related remarks more likely come through a leader's own ceremony
-   speech (as the existing Sept 2025 Munich consul-general record does)
-   than the daily spokesperson briefing — a different discovery target
-   than the press-conference archive.
+6. ~~China's Nanjing Memorial Day (Dec 13) does not reliably surface in
+   the MFA's routine press conference~~ — **partially resolved in the
+   final push**: confirmed the diagnosis was right (it's not in the daily
+   spokesperson Q&A), and found the actual source instead —
+   `english.www.gov.cn`'s Xinhua/State Council news archive carries a
+   dedicated wire report on the ceremony every year (2021-2024 now coded,
+   alongside the pre-existing 2025 record), a different genre again from
+   both the MFA press conference and a leader's own ceremony speech (it's
+   third-person wire narration of a state event, `speaker_level=UNKNOWN`).
 7. Merge `landmark_anchors.csv` into a larger set as more pre-2020
    historical flashpoints are added (Koizumi's 2001-2006 Yasukuni visits,
    the 2005 textbook controversy, the 2015 Japan-Korea "comfort women"
@@ -289,4 +371,19 @@ triggers, not a China/Korea-specific grievance formula.
    mid-session (`web.archive.org` returned a "Temporarily Offline"
    maintenance page); retry once that clears, since most of these depend
    on Wayback snapshots of blocked live domains (`mofa.go.jp`,
-   `mofa.go.kr`).
+   `mofa.go.kr`). Still not attempted as of the final push — out of scope
+   (that push targeted the 2020-2025 main axis only, per the user's
+   explicit Japan → Korea → China ordering).
+8. **New, added after the final push to 30/30/30**: re-run the
+   genre/speaker-level/administration confound stress-test (see
+   `phase2_plan.md`'s "Methodology stress-test" and its follow-up section)
+   against the full 90-record sample before finalizing the paper's
+   "3-type" conclusion wording — the original stress-test only had 28
+   records to work with and explicitly flagged China's finding as
+   "not decomposable" from that sample; the new HEAD-level China summit
+   records and the larger Korea OFFICIAL-level sample directly bear on
+   that gap. Not yet done.
+9. **New**: refresh `draft_paper_ja.md` and `draft_paper_ja.docx`'s
+   quantitative tables (keyness analysis, apology/responsibility
+   vocabulary table) against the full 90-record corpus — both still
+   reflect the earlier 28-record state. Not yet done.

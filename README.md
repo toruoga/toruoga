@@ -6,7 +6,7 @@ colonial rule, comfort women, Yasukuni, forced labor, apology, compensation,
 etc.), 2000-01-01 through 2025-12-31. See `codebook.md` for the full coding
 scheme and `config.yaml` for source lists, keyword lists, and crawl settings.
 
-## Current status: Stage 1 pilot (Japan, Korea, China, 2020–2025) — partially coded, real data
+## Current status: Stage 1 pilot (Japan, Korea, China, 2020–2025) — 30/country main axis reached, real data
 
 A later session re-tested network access and found the picture had changed
 from the original blocker (see "Network access notes" below), then ran the
@@ -14,31 +14,50 @@ pipeline for real across all three countries. A 2026-09-22 phase 2 session
 (see `phase2_plan.md`), scoped for a low-priority Japan-journal paper
 rather than a full-scale international-journal version, then improved
 Korea's and China's discovery methods for real (not just more hand
-search — see below) and added a first pre-2020 landmark anchor. Full
-detail (per-country coverage numbers, what was and wasn't reachable, a
-real pipeline bug found and fixed along the way) is in
-`pilot_coverage_report.md`. Summary:
+search — see below) and added a first pre-2020 landmark anchor, bringing
+the main axis to 34 records (Japan 16, Korea 10, China 8). Later the same
+session, the user set a 30/country scaling target and the pilot was pushed
+to it in Japan → Korea → China order, reaching **90 main-axis records
+(30/30/30)** — see `phase2_plan.md`'s "Target reset to 30/country and
+final push" section for the discovery methods used per country in that
+push, and `pilot_coverage_report.md` for the full numbers. Summary of the
+current state:
 
 - **Japan**: `japan.kantei.go.jp` reachable; `www.mofa.go.jp` blocked
   site-wide (Akamai WAF `403`, independent of headers). 1096 URLs
   discovered via a real archive crawl of every 2020–2025 administration's
   monthly statement archives, 1081 downloaded, 746 kept after the keyword
-  filter, **10 fully contextually coded** (`pilot_japan_2020_2025.csv`).
+  filter. **30 fully contextually coded** (`pilot_japan_2020_2025.csv`),
+  up from an initial 10: two further proximity-keyword sweeps of the
+  backlog found 6 then 12 more genuinely on-topic candidates (a 6-record
+  batch including an Okinawa memorial press conference and a forced-labor
+  temporal series, then a 12-record Hiroshima/Nagasaki Peace Memorial
+  Ceremony batch spanning Abe/Suga/Kishida/Ishiba), plus one deliberate
+  silence/omission record (Kishida's July 2024 Sado Island Gold Mines
+  UNESCO message, which omits the wartime forced-Korean-labor dispute
+  that was the actual story behind the inscription).
 - **Korea**: `en.president.go.kr` (current, Lee Jae Myung administration)
   and `webarchives.pa.go.kr` (the National Archives of Korea's official web
   archive, covering the Moon Jae-in and Yoon Suk Yeol eras whose original
   English-language domains are now DNS-dead) both reachable;
   `www.mofa.go.kr` blocked site-wide (TLS ClientHello reset, independent
-  of headers — same class of block as MOFA Japan). The current
-  administration's listing turned out to load via an AJAX POST
+  of headers — same class of block as MOFA Japan) for automated crawling,
+  though its content is directly fetchable by URL once found via search
+  (used extensively in the final push below). The current administration's
+  listing turned out to load via an AJAX POST
   (`/ajaxf/frBoard/bbsViewGalleryList.do`), not the dead end an earlier
   session assumed from the `?page=N` GET failing — a single call returns
   the full listing. The Moon-era National Archives listing also supports
   real `?page=N` pagination; the Yoon-era one does not (its snapshot only
   ever captured page 1 of each category — a hard limit, confirmed
-  unfixable). **10 candidate URLs, all 10 fully contextually coded**
-  (6 from the original hand-verified pilot, 4 found via the newly-solved
-  archive methods).
+  unfixable). **30 fully contextually coded**, up from an initial 10 (6
+  hand-verified + 4 archive-crawled) via a final push that added: the
+  `eng.president.go.kr/speeches/*` path (distinct from `/briefing/*`,
+  found via Wayback CDX), a 6-year (2021-2026) MOFA Spokesperson
+  textbook-protest statement series (found via web search identifying the
+  `mofa.go.kr` press-release board's `seq=` numbering, then fetched live),
+  a MOFA Yasukuni statement, two March First Independence Day addresses, a
+  Keio University lecture, and several Lee Jae Myung-era records.
 - **China**: `www.mfa.gov.cn` reachable (with intermittent, retriable
   connection resets). Its press-conference archive
   (`mfa.gov.cn/eng/xw/fyrbt/lxjzh/index_N.html`) is real and date-ordered,
@@ -46,16 +65,29 @@ real pipeline bug found and fixed along the way) is in
   reachable through it at all, and there's no working site search, so
   finding relevant content means grepping full daily transcripts around
   known high-salience weeks (Yasukuni's biannual shrine festivals) rather
-  than a keyword search. **8 candidate URLs, all 8 fully contextually
-  coded** (5 from the original hand-verified pilot, 1 of which was a stale
-  URL logged as inaccessible rather than used, plus 4 new ones found via
-  the targeted date search this session).
-- **28 main-axis records total are fully contextually coded** per
-  `codebook.md` (read in full, not keyword-matched) — see
-  `pilot_east_asia_2020_2025.csv` for all 28, or the per-country file
-  (`pilot_japan_2020_2025.csv`). Every row's `coder_notes` documents the
-  specific textual basis for every field, including explicitly-flagged
-  borderline calls.
+  than a keyword search. **30 fully contextually coded**, up from an
+  initial 8 (5 hand-verified + 4 newly found, 1 stale) via a final push
+  that added three new annual-commemoration genres: Dec 13 Nanjing
+  Massacre Memorial Day (2021-2024), Sept 18 Mukden Incident sirens
+  ceremony (2020, 2023, 2024), and July 7 Lugou/Marco Polo Bridge Incident
+  commemoration (2021, 2023, 2024) — all found via targeted web search of
+  `english.www.gov.cn`'s Xinhua/State Council news archive, since that
+  archive's own page-number index turned out not to map linearly to
+  dates. Also added the corpus's first HEAD-level China records outside
+  the Sept 3, 2025 Xi speeches: three Xi-Japan PM APEC-summit readouts
+  (2022, 2023, 2024).
+- **90 main-axis records total are fully contextually coded** per
+  `codebook.md` (read in full, not keyword-matched) — exactly 30 per
+  country — see `pilot_east_asia_2020_2025.csv` for all 90, or the
+  per-country file (`pilot_japan_2020_2025.csv`). Every row's
+  `coder_notes` documents the specific textual basis for every field,
+  including explicitly-flagged borderline calls. Several Korea/China
+  records added in the final push use a wire-service report (Xinhua, or
+  Yonhap via Korea Times/Korea Herald) quoting an official statement
+  directly, rather than a directly-fetched primary-source page, where the
+  primary page could not be reached after repeated attempts — each such
+  record is flagged in its own `coder_notes` with `classification_confidence`
+  downgraded to `MEDIUM`.
 - **Plus 1 pre-2020 landmark anchor** — the 1995 Murayama Danwa, retrieved
   via a Wayback Machine snapshot of the blocked `mofa.go.jp` — in the
   separate `landmark_anchors.csv`, kept apart from the main-axis file
@@ -66,9 +98,10 @@ real pipeline bug found and fixed along the way) is in
   Japan-Korea "comfort women" agreement, the 2018 Korea Supreme Court
   forced-labor ruling), blocked as of 2026-09-22 by a site-wide Internet
   Archive outage encountered mid-session.
-- The remaining **736 candidates** (all from Japan; Korea/China's smaller,
-  hand-verified/archive-crawled candidate pools were each coded in full)
-  are real,
+- The remaining **718 candidates** (all from Japan, down from 736 after
+  the final push promoted 13 more to fully-coded records; Korea/China's
+  smaller, hand-verified/archive-crawled candidate pools were each coded
+  in full) are real,
   downloaded, keyword-matched documents that have not yet been
   contextually coded — the keyword filter is deliberately recall-oriented
   (it also matches, e.g., "war" in statements about Ukraine, or "victims"
@@ -81,11 +114,18 @@ real pipeline bug found and fixed along the way) is in
 
 **Scaling this beyond the pilot** means continuing the contextual-coding
 pass over `pilot_manual_review.csv`; separately resolving MOFA Japan/Korea
-access; and finding a working discovery mechanism for China's State
-Council source and Korea's JS-paginated live site so they can be
-archive-crawled as thoroughly as Japan's was, rather than relying on
-hand-picked search results (see `pilot_coverage_report.md`'s "What didn't
-work" section for specifics).
+access; and improving discovery for China's State Council source (real
+and working at `english.www.gov.cn/news/page_N.html`, but its page-number
+index does not map linearly to dates — see `phase2_plan.md`) and Korea's
+JS-paginated live site so they can be archive-crawled as thoroughly as
+Japan's was, rather than relying on search-discovered URLs (see
+`pilot_coverage_report.md`'s "What didn't work" section for specifics).
+Before any further scaling, though, two items from the just-completed
+30/30/30 push take priority: re-running the genre/speaker-level/
+administration confound stress-test in `phase2_plan.md` against the full
+90-record sample, and refreshing `draft_paper_ja.md`/`draft_paper_ja.docx`'s
+quantitative tables against it — both still reflect the earlier 28-record
+state.
 
 ## Network access notes (for future sessions)
 

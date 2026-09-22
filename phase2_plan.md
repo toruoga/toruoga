@@ -181,14 +181,139 @@ proximity-keyword kind (has headroom in `pilot_manual_review.csv`,
 now 731 rows after removing the 6 promoted ones, but expect a similarly
 low hit rate, not a straight path to +4 more).
 
+## Target reset to 30/country and final push (2026-09-22, later same session)
+
+The ~20/country retarget above was the user's call at the time, made when
+Japan's real backlog hit-rate turned out much lower than the raw 736-row
+count suggested. Later the same session the user reviewed Japan's progress
+and explicitly reset the target back up: **"30件を目標 日本→韓国→中国の順に"**
+(target 30, in the order Japan → Korea → China). The ~20/country section
+above is kept as a historical record of that intermediate decision and the
+effort-estimation reasoning behind it, not as the final target.
+
+Executed in that order, across several discovery rounds:
+
+- **Japan**: 16 → **30**. The 12-record Hiroshima/Nagasaki Peace Memorial
+  Ceremony batch (2020-2025, Abe/Suga/Kishida/Ishiba) filled most of the
+  gap via the same proximity-keyword sweep method as the earlier 6-record
+  batch. The 30th record, Kishida's July 2024 Sado Island Gold Mines
+  UNESCO message, was included as a deliberate *silence* data point: the
+  message omits any mention of the wartime forced-Korean-labor dispute
+  that was the actual diplomatic story behind the inscription (see its
+  `coder_notes`) — an intentional test of the codebook's non-hallucination
+  rule (code what the text says, not what the surrounding controversy
+  implies) rather than a coding oversight.
+- **Korea**: 10 → **30**. New sources beyond the original pilot's
+  Briefing Room/current-admin listing: the `eng.president.go.kr/speeches/*`
+  path (previously untried, distinct from `/briefing/*`, found via Wayback
+  CDX), a 6-year (2021-2026) annual series of MOFA Spokesperson protest
+  statements on Japan's textbook authorizations (found via web search
+  identifying the `mofa.go.kr` press-release board's `seq=` numbering
+  scheme, then fetched directly from the live site rather than Wayback),
+  a MOFA Yasukuni statement, two March First Independence Day addresses, a
+  Keio University lecture, and several Lee Jae Myung-era records (a
+  Yomiuri Shimbun interview via `korea.net`, two Comfort Women Memorial
+  Day messages, Tokyo-summit remarks). The Sado Island Gold Mines dispute
+  ended up as a three-point, two-country trace across time (Korea's Jan
+  2024 pre-inscription protest, Japan's own July 2024 silence, Korea's
+  July 2026 UNESCO follow-up assessment) — one of the more complete
+  single-dispute threads in the corpus.
+- **China**: 8 → **30**. New annual-commemoration genres beyond the
+  existing Yasukuni-response series: Dec 13 Nanjing Massacre National
+  Memorial Day (2021-2024, filling out the series alongside the existing
+  2025 record), Sept 18 (Mukden/September 18 Incident) sirens ceremony
+  (2020, 2023, 2024), and July 7 (Lugou/Marco Polo Bridge Incident)
+  commemoration (2021, 2023, 2024) — found via targeted web search per
+  year rather than the `english.www.gov.cn/news/page_N.html` archive's own
+  page-number index, since attempting to calibrate a date-to-page-number
+  mapping for that archive this session found the rate highly non-linear
+  (a naive linear extrapolation from known anchor points missed target
+  dates by 30-100+ pages in both directions; recovered via iterative
+  probing instead — see the corresponding batch scripts' commit messages
+  for the anchor points used, if this needs to be redone). Also added the
+  corpus's first HEAD-level China records outside the Sept 3, 2025 Xi
+  speeches: three Xi Jinping-Japan PM APEC-sidelines summit readouts
+  (2022 Kishida/Bangkok, 2023 Kishida/San Francisco, 2024 Ishiba/Lima),
+  each raising history alongside Taiwan as a "major issue of principle" in
+  near-identical language regardless of which PM Xi is meeting — a
+  genuinely different register from the sharper MOFA spokesperson
+  Yasukuni/Nanjing-genre language, itself a notable finding for the
+  genre-confound question below.
+
+**Final tallies: Japan 30, Korea 30, China 30 (90 main-axis records
+total)**, up from 34 (16/10/8) at the point the ~20/country section above
+was written. `pilot_japan_2020_2025.csv` was kept in sync with the main
+file throughout (including fixing a pre-existing 1-record undercount
+found during the Japan batch). `pilot_manual_review.csv` (the Japan
+keyword-filtered backlog) is now 718 rows, down from 731, after removing
+the 13 promoted URLs (12 Hiroshima/Nagasaki + 1 Sado message). A full
+enum-validation pass against `codebook.md`'s controlled vocabularies was
+added partway through this push and run after every batch from then on —
+it caught and fixed a few invalid values introduced in early drafts
+(an out-of-vocabulary `document_type`, an invalid `issue_primary`, and
+similar) before they were committed; none of the resulting fixes changed
+a record's substantive coding, only its literal field value.
+
+Provenance note that applies to several Korea and China records added in
+this final push: where a direct fetch of the official government page
+failed repeatedly (connection resets, an unindexed or unguessable
+`seq=`/page-number scheme) but a reliable wire-service report (Xinhua,
+Yonhap via Korea Times/Korea Herald) quoted the official statement
+directly and at length, that wire report was used as `source_url` instead
+of the primary page, with `classification_confidence` downgraded to
+MEDIUM and the limitation stated explicitly in `coder_notes`. This is a
+deliberate, flagged departure from the primary-source-only sourcing this
+corpus otherwise follows, not a silent substitution — see individual
+records' `coder_notes` and this file's batch-script commit messages for
+which records this applies to.
+
+## Revisiting the genre/confound question with the expanded sample
+
+The methodology stress-test above (28-row sample) found Japan's finding
+"relatively well supported" (agency_explicit=0 held across both SPEECH and
+PRESS_CONFERENCE genres), Korea's "60%" figure administration-contingent
+rather than a stable trait (Moon/Lee vs. Yoon), and China's finding "not
+decomposable" because 7 of 8 records were the same genre (spokesperson
+press conference). With 90 records and substantially more genre/speaker-
+level diversity per country (see the per-country `document_type` and
+`speaker_level` breakdowns obtainable from `pilot_east_asia_2020_2025.csv`
+directly), this stress-test should be re-run before finalizing the paper's
+3-type conclusion — it has **not** been re-run as part of this push
+(scope was data collection only, per the user's "a" instruction to
+continue toward 30/country). In particular:
+
+- China now has HEAD-level records (the 3 APEC summit readouts) alongside
+  the OFFICIAL-level MOFA series, which directly addresses the earlier
+  "cannot rule out this is just how MFA briefings talk" concern — the
+  summit readouts show a *different*, softer register at HEAD level
+  ("draw lessons from history," agency_explicit=0) than the OFFICIAL-level
+  Yasukuni/Nanjing genre's sharper, agency_explicit=1 language, which is
+  itself a finding, not a null result.
+- Korea now has a much larger OFFICIAL-level (MOFA spokesperson) sub-
+  sample (11 records) that did not exist in the 28-row analysis at all,
+  which should be checked against the HEAD-level (presidential) records
+  for the same kind of genre/level decomposition already done for Japan.
+- Japan's 30th-record silence-by-omission case (Sado) and the Hiroshima/
+  Nagasaki batch's confirmation that Ishiba's Aug 15 "remorse" pattern-
+  break does not carry over to the Hiroshima/Nagasaki genre are both
+  directly relevant to how confidently the paper can generalize from any
+  single Japan genre to a country-level claim.
+
 ## Remaining before this phase is publication-ready
 
 - Refresh `pilot_coverage_report.md`'s per-country tables and narrative,
-  and `README.md`'s "Current status" section, for the Japan 10->16 change
-  (the Korea/China 2026-09-22-earlier additions are already reflected).
-- The remaining ~731-item Japan `pilot_manual_review.csv` backlog is
+  and `README.md`'s "Current status" section, for the 34 -> 90 change
+  (in progress in this same session, alongside this file's update).
+- Re-run the genre/speaker-level/administration confound stress-test
+  above against the full 90-record sample before finalizing the paper's
+  "3-type" conclusion wording — not yet done (see previous section).
+- The remaining ~718-item Japan `pilot_manual_review.csv` backlog is
   still mostly untouched -- out of scope per the user's "low priority,
   not full-scale" framing, not an oversight.
+- Recompute the paper's quantitative tables (keyness analysis, apology/
+  responsibility vocabulary table) against the full 90-record corpus —
+  the existing tables in `draft_paper_ja.md` and `draft_paper_ja.docx`
+  still reflect the earlier 28-record state.
 
 This file is a working tracker, not a publication output — delete or fold its
 content into `pilot_coverage_report.md` once phase 2 is complete.
