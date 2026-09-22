@@ -230,15 +230,34 @@ behavior already documented below for `japan.kantei.go.jp`'s statement
 pages) to be **video-only with no English text transcripts** for any date
 tested.
 
-**Preliminary read (n=4, not yet folded into the paper):** Japan's MINISTER
-level shows 0/4 apology, 0/4 remorse, and 0/4 `agency_explicit` — matching
-HEAD level's 0.00 exactly — but 2/4 reflection (both Hayashi records, both
-"cannot be left as it is") vs. HEAD level's 0.67 reflection rate. This is
-consistent with, but on 4 records cannot yet confirm, the hypothesis that
-Japan's policy-management register is a genuinely national/institutional
-trait held across both HEAD and MINISTER levels, unlike Korea's and China's
-register gaps, which are sharply level-specific. n=4 is too small to update
-the paper's speaker-level claims on; noted here for a future analysis pass.
+**Confound stress-test re-run against the full 94-record sample
+(2026-09-22, after Round 4):** re-running the same `agency_explicit`/
+`apology`/`remorse`/`reflection`/`remedy` cross-tab (see the dedicated
+section below) with Japan's speaker_level split gives, by level:
+
+| Japan | apology | remorse | reflection | remedy | agency_explicit |
+|---|---|---|---|---|---|
+| HEAD (n=30) | 0.00 | 0.13 | 0.67 | 0.70 | 0.00 |
+| MINISTER (n=4) | 0.00 | 0.00 | 0.50 | 0.00 | 0.00 |
+
+`agency_explicit=0` now holds in **all 34 of 34** Japan records regardless
+of speaker_level — the single most direct confirmation available in this
+corpus that Japan's "no named responsible actor" pattern is not
+head-of-state-specific, unlike Korea's and China's register gaps (both
+sharply level-specific — see below). Country-level `apology`/`remorse` also
+stay at 0 across both levels. The two fields that do move are `reflection`
+(0.67 HEAD → 0.50 MINISTER — both Hayashi MINISTER records code
+`reflection=1` for "cannot be left as it is," but Motegi's and Kamikawa's
+do not) and, more sharply, `remedy` (0.70 HEAD → 0.00 MINISTER): none of
+the 4 MINISTER records commit to or describe a concrete relief/policy
+measure the way roughly seven in ten HEAD-level records do (the Hiroshima/
+Nagasaki addresses' peace-fund/hibakusha-support references, Kishida's
+forced-labor and shuttle-diplomacy records, etc.) — the MINISTER-level
+genre sampled here (routine press-conference Q&A, one UNESCO statement) may
+simply not be the genre where Japan states remedies, rather than a
+level-based difference in willingness to state them. n=4 remains a small
+sample for `reflection`/`remedy`, but `agency_explicit`'s 0/34 result is
+about as clean a finding as the corpus can currently produce.
 
 ## Fully coded records by country
 
@@ -481,10 +500,17 @@ quantitative tables (keyness analysis, apology/responsibility vocabulary
 table) were also recomputed against the full 90-record corpus as part of
 this pass.
 
-**Not yet done**: re-running this stress-test against the current 94-record
-sample (i.e., incorporating the 4 Round-4 MINISTER records) — the
-preliminary n=4 read in "Round 4" above is suggestive but was explicitly
-not treated as sufficient to revise the paper's speaker-level claims.
+**Done, 2026-09-22**: re-run against the current 94-record sample,
+incorporating the 4 Round-4 MINISTER records — see "Round 4"'s "Confound
+stress-test re-run against the full 94-record sample" subsection above for
+the Japan HEAD-vs-MINISTER breakdown. Headline result: `agency_explicit=0`
+now holds across all 34 Japan records (both speaker_levels), strengthening
+rather than qualifying Japan's existing finding; `reflection` and
+`remedy` both drop at MINISTER level relative to HEAD, though n=4 is too
+small to treat that gap as more than suggestive. **Not yet reflected in
+`draft_paper_ja.md`/`.docx`** — updating the paper's speaker-level claims
+and quantitative tables for this is a separate drafting task, not done as
+part of this analysis pass.
 
 ## Network access notes
 
@@ -619,6 +645,90 @@ PDF preview.
   (`pilot_manual_review.csv`, `classification_confidence=LOW`) — out of
   scope for this phase's non-full-scale framing, not an oversight.
 
+## China State Council discovery, and landmark anchors: 2026-09-22 follow-up
+
+Two more open items were attempted this session: finding a working discovery
+mechanism for China's State Council `english.www.gov.cn/news/` portal-page
+problem, and extending `landmark_anchors.csv` with the remaining four
+planned pre-2020 flashpoints.
+
+**China discovery method — partially resolved.** `english.www.gov.cn`'s own
+site search does not help: its homepage search form points to a separate
+`search.english.www.gov.cn` subdomain that is a JS single-page app with no
+discoverable backend API (its bundled `search.js` was inspected directly;
+no API endpoint string could be found in it), and the Chinese-language
+`sousuo.www.gov.cn/search-gov/data` API that does work is scoped to the
+State Council's policy-document library (`zhengcelibrary`, e.g. 国发/国办发
+notices), not news articles — a different content type entirely, unable to
+find e.g. Nanjing Memorial Day or Yasukuni-response wire reports. However,
+a **working substitute was found**: Google-style `site:english.www.gov.cn`
+web search (via this session's WebSearch tool) does index the portal's news
+content and can be keyword-searched directly, unlike the site's own broken
+in-site search — e.g. `site:english.www.gov.cn "Nanjing Massacre" memorial
+2020` immediately surfaced
+`https://english.www.gov.cn/news/photos/202012/14/content_WS5fd6bf48c6d0f72576941d63.html`,
+a Dec 13, 2020 Nanjing Massacre memorial ceremony report **not currently in
+the corpus** (the existing series starts at 2021). This confirms the
+targeted-search method already used to build the corpus's annual-
+commemoration series can be made systematic (keyword search across all
+years at once, not one manually-guessed year at a time) rather than staying
+manual guesswork. **Not yet acted on**: fetching that specific 2020 URL (and
+any other gaps this method would surface) failed — the live URL now 302-
+redirects to the homepage (site restructured since 2020, as with Kantei's
+pre-redesign URLs) and its Wayback Machine snapshot could not be retrieved
+because of a site-wide `web.archive.org` outage encountered this session
+(see below) — to be retried once that clears.
+
+**Landmark anchors — blocked, not extended this session.** All four
+remaining planned anchors (Koizumi's 2001–2006 Yasukuni visits, the 2005
+textbook controversy, the 2015 Japan-Korea comfort women agreement, the
+2018 Korea Supreme Court forced-labor ruling) were investigated but none
+could be sourced to a primary government document this session:
+
+- A site-wide `web.archive.org` outage was encountered partway through this
+  attempt: the Wayback Machine's content-serving path
+  (`web.archive.org/web/<timestamp>id_/...`) returned `Recv failure:
+  Connection reset by peer` for **every** URL tried, including one that had
+  worked earlier this same session (the Motegi 2020 MOFA record) and even a
+  snapshot of `example.com` — while `archive.org`'s own homepage and its
+  `wayback/available` JSON API (a different subdomain/path) stayed up
+  throughout. This matches a previously-documented outage pattern in this
+  project's history ("archive.org went fully offline site-wide" earlier in
+  the session that produced the original landmark-anchor plan) recurring
+  again today. Since most of these four anchors' Japan-side documents live
+  on the permanently-blocked `www.mofa.go.jp` (Akamai `403`), Wayback is
+  their only viable path, so this outage blocks them directly.
+- Tried as non-Wayback alternatives, without success: `japan.kantei.go.jp`'s
+  live "statement" archive (PM's own formal statements/speeches) is
+  reachable without Wayback and does extend back to Nov 2017 (the 98th Abe
+  Cabinet; confirmed by fetching `/98_abe/statement/201811/index.html`
+  directly), but none of the four events' Japan-side response was a formal
+  PM statement in this archive — the 2015 comfort women agreement was
+  announced via a Foreign Ministers' joint press conference (Kishida
+  speaking on Abe's behalf, a MOFA event) and the 2018 ruling reaction was
+  a Chief Cabinet Secretary press-conference response (the same video-only,
+  no-transcript archive already ruled out as a source this session for
+  other purposes) — neither genre is in Kantei's statement archive, and
+  pre-2017 content (Koizumi 2001–2006, the 2005 textbook controversy) is
+  not on the live Kantei site at all (old `koizumispeech`-path URLs
+  identified via web search all 404 on both `www.kantei.go.jp` and
+  `japan.kantei.go.jp`). Korea's Supreme Court website (`eng.scourt.go.kr`,
+  `engnew.scourt.go.kr`) is also currently unreachable through this
+  environment's network path (connection reset / proxy policy rejection),
+  ruling out the ruling's own text as an alternative primary source for
+  now. A wire-service fallback (the precedent used elsewhere in this
+  corpus for Korea/China records, downgrading `classification_confidence`
+  to MEDIUM) was considered for the 2018 ruling but no source was found
+  quoting Japan's official statement verbatim in full — only paraphrased
+  news coverage and a private company's (Nippon Steel's) own press
+  release, which is not a government source and would not satisfy
+  `codebook.md`'s sourcing rule even as a quoted-statement fallback.
+
+None of the four anchors were added. Retry once `web.archive.org` recovers;
+Koizumi/2005-textbook in particular have no viable path other than Wayback
+snapshots of MOFA (and, for Korea/China reactions, the equivalent blocked
+`www.mofa.go.kr`/possibly-reachable `mfa.gov.cn`).
+
 ## Remaining open items
 
 1. Continue the contextual-coding pass over `pilot_manual_review.csv` (718
@@ -626,24 +736,44 @@ PDF preview.
    two targeted proximity-keyword sweeps already done.
 2. Periodically re-test `www.mofa.go.jp` / `www.mofa.go.kr` direct access —
    both still blocked as of 2026-09-22 (see "Network access notes").
-3. Find a working discovery mechanism for China's State Council
-   `english.www.gov.cn/news/` portal-page problem — unresolved;
-   `mfa.gov.cn`'s press-conference archive was confirmed real and crawlable
-   but has a hard ~July-2022 lower bound, so it cannot substitute for a
-   State Council source reaching further back.
+3. ~~Find a working discovery mechanism for China's State Council
+   `english.www.gov.cn/news/` portal-page problem~~ — **partially done
+   2026-09-22**: `site:english.www.gov.cn` web search substitutes for the
+   site's own broken/wrong-content-type in-site search and already
+   surfaced one new candidate (a 2020-12-13 Nanjing Memorial Day record not
+   currently in the corpus) — see "China State Council discovery, and
+   landmark anchors" above. Fetching that candidate (and using the method
+   to find further gaps) is blocked by the `web.archive.org` outage noted
+   there; retry once it clears. `mfa.gov.cn`'s press-conference archive
+   still has its hard ~July-2022 lower bound, unaffected by this finding.
 4. Extend `landmark_anchors.csv` with the remaining four planned pre-2020
    flashpoints (Koizumi's 2001–2006 Yasukuni visits, the 2005 textbook
    controversy, the 2015 Japan-Korea comfort women agreement, the 2018
-   Korea Supreme Court forced-labor ruling) — blocked earlier in this
-   project's history by a site-wide Internet Archive outage; not yet
-   retried since, and still out of scope for the 2020-2025-main-axis-focused
-   rounds completed so far.
-5. Re-run the genre/speaker-level/administration confound stress-test above
-   against the current 94-record sample (incorporating the 4 Round-4
-   MINISTER records) before treating the register-level finding as settled
-   for Japan — the current n=4 MINISTER sample is suggestive but was
-   explicitly not treated as sufficient on its own.
+   Korea Supreme Court forced-labor ruling) — **attempted again 2026-09-22,
+   still blocked**: see "China State Council discovery, and landmark
+   anchors" above for the full investigation (a site-wide `web.archive.org`
+   outage, which these anchors depend on for their MOFA-hosted Japan-side
+   documents; Kantei's own live statement archive does not cover the
+   relevant event types even where it reaches back far enough in time;
+   Korea's Supreme Court website is separately unreachable; no
+   codebook-compliant wire-service fallback was found for the one anchor
+   where that precedent might otherwise have applied). Retry once
+   `web.archive.org` recovers.
+5. ~~Re-run the genre/speaker-level/administration confound stress-test
+   above against the current 94-record sample~~ — **done 2026-09-22**, see
+   "Round 4"'s "Confound stress-test re-run against the full 94-record
+   sample" subsection above. Headline result: `agency_explicit=0` now holds
+   across all 34 Japan records regardless of speaker_level; `reflection`
+   and `remedy` both drop at MINISTER level relative to HEAD (n=4, still
+   too small to treat as more than suggestive). Not yet reflected in
+   `draft_paper_ja.md`/`.docx` — a separate drafting task.
 6. Fix LibreOffice's headless conversion (or find an alternative renderer)
    so `.docx` outputs can get a rendered visual check, not just XSD schema
    validation — diagnosed as an environment-level break (see "Network
    access notes"), not something resolved this session.
+7. **New, 2026-09-22**: retry the `web.archive.org` outage-blocked items
+   above once the Wayback Machine's content-serving path is confirmed
+   working again — both item 3's new China candidate and all four of item
+   4's landmark anchors are otherwise ready to pursue with a known method
+   and, for item 4's 2015/2018 anchors, known specific event details, just
+   blocked on this one external dependency.
