@@ -403,18 +403,51 @@ as the concrete finding the next paper-drafting pass should work from.
   entirely by their OFFICIAL/bureaucratic-level records (~90-100%), while
   their HEAD-level records look quite different (Korea: administration-
   contingent, 43-100%; China: mostly agency_explicit=0, the opposite of
-  the aggregate figure). The paper's 3-type wording should be revised to
-  name the speaker_level each claim actually describes, not stated as an
-  undifferentiated national trait — not yet done, flagged for the next
-  drafting pass.
+  the aggregate figure).
+- ~~The paper's 3-type wording should be revised to name the
+  speaker_level each claim actually describes~~ — **done 2026-09-22**
+  (same day, later pass, explicitly requested by the user as a follow-up
+  to the stress-test re-run above). `draft_paper_ja.md`'s abstract
+  (Japanese, English, and the Japanese restatement), Section 4
+  (theoretical framework), Section 7 (discussion), and Section 8
+  (conclusion) were rewritten to reformulate the three types as two
+  discourse registers rather than three fixed national characters: a
+  **bureaucratic/media register** (stable across administrations —
+  Korea's MOFA spokesperson ~91%, China's MOFA/state-media ~100% — which
+  the original "victim-politics" and "sovereignty-legitimacy" labels
+  describe well) and a **head-of-state register** (highly variable —
+  Japan uniformly 0% across four PMs, Korea 43-100% depending on
+  administration, China's Xi only 20% in APEC summit meetings — into
+  which Japan's "policy-management" style extends without exception,
+  while South Korea's and China's heads of state/government increasingly
+  converge toward it). The paper's revised conclusion argues that the
+  persistent gap between these two registers, not either alone, is what
+  keeps historical-recognition disputes structurally available for
+  renewed friction even as head-of-state dialogue grows more
+  conciliatory. The three-type labels themselves (政策管理型/被害政治型/
+  主権・正統性型) were kept, per the user's framing of this as a
+  "wording" revision rather than a request for entirely new labels; the
+  title/subtitle were left untouched (the subtitle is still marked
+  provisional in the draft's own editorial memo, with a note that a
+  register-themed subtitle could fit better if the author wants to
+  revisit it).
 - The remaining ~718-item Japan `pilot_manual_review.csv` backlog is
   still mostly untouched -- out of scope per the user's "low priority,
   not full-scale" framing, not an oversight.
-- Recompute the paper's quantitative tables (keyness analysis, apology/
-  responsibility vocabulary table) against the full 90-record corpus —
-  the existing tables in `draft_paper_ja.md` and `draft_paper_ja.docx`
-  still reflect the earlier 28-record state. In progress alongside this
-  update.
+- ~~Recompute the paper's quantitative tables (keyness analysis, apology/
+  responsibility vocabulary table) against the full 90-record corpus~~ —
+  **done 2026-09-22**; `draft_paper_ja.docx` (Japanese and English) has
+  been regenerated twice this session (once for the table recomputation,
+  once more for the 3-type reformulation above) and structurally
+  validated (XSD schema check via the docx skill's validate.py), since
+  LibreOffice headless PDF conversion remains broken in this environment.
+- New follow-up opened by the reformulation above: Section 8 now names
+  "collect Japan's own bureaucratic/spokesperson-level data" as the
+  paper's first open item, since the current Japan sample is HEAD-level
+  only and cannot yet confirm whether Japan's policy-management register
+  is head-of-state-specific (as Korea's and China's registers turn out to
+  be level-specific) or holds at the bureaucratic level too. Not
+  attempted this session — a new discovery task, not a data-analysis one.
 
 This file is a working tracker, not a publication output — delete or fold its
 content into `pilot_coverage_report.md` once phase 2 is complete.
