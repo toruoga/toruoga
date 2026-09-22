@@ -72,11 +72,58 @@ Yoon-era Japan-relevant content would need a different source entirely
 (e.g. targeted web search for specific known events, the same
 hand-verification method the original pilot used).
 
+## Contextual coding (③ in the 2026-09-22 priority order) -- complete
+
+All 8 newly collected documents have been read in full and coded per
+`codebook.md`, producing **9 records** (the Oct 17, 2025 China page yielded
+two separate Q&A records: the Yasukuni response and a separate response
+about Murayama Tomiichi's death) in `phase2_new_records.csv` (repo root,
+same column schema as `pilot_east_asia_2020_2025.csv`). None are LOW
+confidence, so none needed to be added to `manual_review.csv` (matching the
+precedent set by the original 20-record pilot, which also kept its 9
+MEDIUM-confidence records out of `pilot_manual_review.csv` -- that file is
+reserved for keyword-matched-but-uncoded candidates, not fully-coded
+records regardless of confidence).
+
+Notable coding decisions:
+- The Murayama 1995 Danwa is coded `HISTORICAL_RECOGNITION_GENERAL`
+  (secondary: `COLONIAL_RULE;AGGRESSION;APOLOGY_GENERAL`) since it
+  substantively covers all three rather than one narrow issue.
+- All three China Yasukuni-response records (Aug 2022, Oct 2025, plus the
+  three already in the main pilot file) code `reflection=0` despite
+  containing "reflect on its history" language, following the established
+  precedent: that phrase demands Japan's reflection, it is not China's own
+  reflection on its own conduct. The same logic applies to the new
+  Murayama-death response (`APOLOGY_GENERAL`, `apology=0`) -- it describes
+  and endorses Murayama's historical apology rather than being one itself.
+- The Korea-Japan summit joint statement (2026-05-19) is the lowest-
+  confidence new record (`MEDIUM`): its sole relevant passage (Chosei coal
+  mine remains DNA analysis) names no responsible actor
+  (`responsibility_actor=UNSPECIFIED`, `agency_explicit=0`), and no
+  "(Unofficial Translation)" marker was found on the page, so
+  `official_translation=NA` rather than assumed.
+
 ## Running tallies after 2026-09-22 session
 
-- Japan: 10 main-axis (unchanged) + 1 landmark anchor (Murayama 1995)
-- Korea: 6 → 10 (candidates; none of the 4 new ones contextually coded yet)
-- China: 4-5 → 8 (candidates; none of the 3 new ones contextually coded yet)
+- Japan: 10 main-axis (unchanged) + 1 landmark anchor (Murayama 1995, coded)
+- Korea: 6 → 10 candidates, +4 new ones now coded (9 records total incl.
+  the 2-record China page = see below)
+- China: 4-5 → 8 candidates, +3 new ones now coded (yielding 4 new records,
+  since one page had 2 relevant Q&A pairs)
+- **9 new fully-coded records** in `phase2_new_records.csv`, none LOW
+  confidence. Combined with the original pilot's 20, phase 2 now has 29
+  fully-coded records across the two files (not yet merged into one).
+
+## Remaining before this phase is publication-ready
+
+- Merge `phase2_new_records.csv` into `pilot_east_asia_2020_2025.csv` (or
+  regenerate a combined output) and refresh `pilot_coverage_report.md`'s
+  per-country tables and narrative to include the 9 new records.
+- Update `README.md`'s "Current status" section with the new counts and
+  the landmark-anchor design.
+- The 736-item Japan `pilot_manual_review.csv` backlog is still untouched
+  by this phase-2 session -- out of scope per the user's "low priority,
+  not full-scale" framing, not an oversight.
 
 This file is a working tracker, not a publication output — delete or fold its
 content into `pilot_coverage_report.md` once phase 2 is complete.
