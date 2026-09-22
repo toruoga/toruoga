@@ -1,1 +1,636 @@
-record_id,country,date,year,speaker_name,speaker_position,speaker_level,institution,document_type,document_title,question_text,response_text,relevant_excerpt,issue_primary,issue_secondary,kingdon_problem,kingdon_policy,kingdon_politics,kingdon_confidence,apology,explanation,remorse,reflection,remedy,pardon_or_forgiveness,responsibility_actor,agency_explicit,audience_orientation,source_language,official_translation,source_url,retrieval_date,archive_url,collection_method,coder_notes,classification_confidence
+record_id,country,date,year,speaker_name,speaker_position,speaker_level,institution,document_type,document_title,question_text,response_text,relevant_excerpt,issue_primary,issue_secondary,kingdon_problem,kingdon_policy,kingdon_politics,kingdon_confidence,apology,explanation,remorse,reflection,remedy,pardon_or_forgiveness,responsibility_actor,agency_explicit,audience_orientation,source_language,official_translation,source_url,retrieval_date,archive_url,collection_method,coder_notes,classification_confidence,duplicate_group_id,canonical_record
+51d5a996-370d-4d60-a412-50e61c80a95e,japan,2022-08-15,2022,KISHIDA Fumio,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by Prime Minister Kishida at the Seventy-Seventh National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Address by Prime Minister Kishida at the Seventy-Seventh National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Seventh National Memorial Ceremony for the War Dead
+August 15, 2022
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the violent turmoil of war in the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+We will not forget, even for a moment, that the peace and prosperity we enjoy today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time.
+Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity.
+We must never again repeat the devastation of war. We will continue to remain committed to this resolute pledge. In this world in which conflicts have not yet ceased, under the banner of ""Proactive Contribution to Peace,"" Japan is determined to join forces with the international community and do its utmost to resolve the various challenges facing the world. We shall carve out the future of our nation for the sake of the generation alive now and the generations of tomorrow.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2022
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister","Address by Prime Minister Kishida at the Seventy-Seventh National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Seventh National Memorial Ceremony for the War Dead
+August 15, 2022
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the violent turmoil of war in the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. We will not forget, even for a moment, that the peace and prosperity we enjoy today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time. Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity. We must never again repeat the devastation of war. We will continue to remain committed to this resolute pledge. In this world in which conflicts have not yet ceased, under the banner of ""Proactive Contribution to Peace,"" Japan is determined to join forces with the international community and do its utmost to resolve the various challenges facing the world. We shall carve out the future of our nation for the sake of the generation alive now and the generations of tomorrow. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2022
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister",WAR_GENERAL,NA,0,1,0,MEDIUM,0,0,0,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/101_kishida/statement/202208/_00006.html,NA,NA,NA,"77th National Memorial Ceremony for the War Dead (Kishida's first). Adds ""taking the lessons of history deeply into our hearts"" but still no apology/remorse toward foreign victims.",MEDIUM,6d37ea79-403b-52b7-a520-3f8875766af8,1
+b16dbf67-1492-47a5-b565-71eeff70af14,japan,2023-03-06,2023,KISHIDA Fumio,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),PRESS_CONFERENCE,Press Conference by the Prime Minister regarding the Issue of Former Civilian Workers from the Korean Peninsula (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Press Conference by the Prime Minister regarding the Issue of Former Civilian Workers from the Korean Peninsula (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+#DiplomacySecurity
+Press Conference by the Prime Minister regarding the Issue of Former Civilian Workers from the Korean Peninsula
+March 6, 2023
+Tweet
+[Provisional translation]
+[Provisional translation]
+(On the Government’s reaction to the issue of former civilian workers from the Korean Peninsula, the Japan-ROK Summit Meeting and his historic recognition of the Japan-ROK relations)
+Earlier today, the Government of the Republic of Korea (ROK) announced their measures regarding the issue of former civilian workers from the Korean Peninsula. We regard the latest measures announced by the Government of ROK as a step towards restoring healthy Japan-ROK relations. ROK President Yoon Suk Yeol and I have been in communication on various occasions, including our meeting in New York and the Japan-ROK Summit Meeting in Cambodia. I believe that Japan and the ROK are important neighboring countries in addressing various issues in the international community, and in light of the current international situation and strategic environment, we recognize the importance of Japan-ROK and Japan-U.S.-ROK cooperation, as well as the importance of cooperation with the ROK in working toward a Free and Open Indo-Pacific. We intend to closely communicate with President Yoon down the road. Regarding the question about a future Japan-ROK Summit Meeting, we have not yet decided on any specific diplomatic schedule in Japan-ROK relations. We have taken over the position of previous cabinets on the recognition of the history, including the Japan-ROK Joint Declaration announced in October 1998. This is the position that the Government of Japan takes.
+(On his thoughts on ensuring the irreversibility)
+We regard the measures announced today by the Government of ROK as a step towards restoring healthy Japan-ROK relations. We understand that the Government of ROK has also made various efforts on its part. We have high hopes that this could be an opportunity to strengthen and strongly advance Japan-ROK relations while implementing the measures. To this end, I would like to emphasize the importance of communicating closely with President Yoon.
+(On whether the concerns over possible reversal on the irreversibility has been eliminated)
+I would like to refrain from going into a hypothetical question. We appreciate the announced measures and hope that Japan-ROK relations will move forward. To that end, we will continue to communicate with each other.
+(On the Japan-ROK Export Control Policy Dialogue)
+Let me first clarify that the ""update of licensing policies and procedures on exports of controlled items to the ROK"" has been conducted to ensure proper implementation of export control from a security perspective and therefore is a separate issue from the issue of former civilian workers from the Korean Peninsula. And today, I have been informed that in order to restore the pre-July 2019 status quo regarding the pending issue of export control, both sides have decided to promptly hold related bilateral consultations between the Japanese and ROK authorities, in light of the ROK's announcement of its decision to suspend its WTO dispute settlement procedures. I hope that the consultations will proceed steadily. For further details, the Ministry of Economy, Trade and Industry is ready to answer your questions.
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Related Pages
+Return to the Speeches and Statements by the Prime Minister","Press Conference by the Prime Minister regarding the Issue of Former Civilian Workers from the Korean Peninsula (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+#DiplomacySecurity
+Press Conference by the Prime Minister regarding the Issue of Former Civilian Workers from the Korean Peninsula
+March 6, 2023
+Tweet
+[Provisional translation]
+[Provisional translation]
+(On the Government’s reaction to the issue of former civilian workers from the Korean Peninsula, the Japan-ROK Summit Meeting and his historic recognition of the Japan-ROK relations)
+Earlier today, the Government of the Republic of Korea (ROK) announced their measures regarding the issue of former civilian workers from the Korean Peninsula. We regard the latest measures announced by the Government of ROK as a step towards restoring healthy Japan-ROK relations. ROK President Yoon Suk Yeol and I have been in communication on various occasions, including our meeting in New York and the Japan-ROK Summit Meeting in Cambodia. I believe that Japan and the ROK are important neighboring countries in addressing various issues in the international community, and in light of the current international situation and strategic environment, we recognize the importance of Japan-ROK and Japan-U.S.-ROK cooperation, as well as the importance of cooperation with the ROK in working toward a Free and Open Indo-Pacific. We intend to closely communicate with President Yoon down the road. Regarding the question about a future Japan-ROK Summit Meeting, we have not yet decided on any specific diplomatic schedule in Japan-ROK relations. We have taken over the position of previous cabinets on the recognition of the history, including the Japan-ROK Joint Declaration announced in October 1998. This is the position that the Government of Japan takes. (On his thoughts on ensuring the irreversibility)
+We regard the measures announced today by the Government of ROK as a step towards restoring healthy Japan-ROK relations. We understand that the Government of ROK has also made various efforts on its part. We have high hopes that this could be an opportunity to strengthen and strongly advance Japan-ROK relations while implementing the measures. To this end, I would like to emphasize the importance of communicating closely with President Yoon. (On whether the concerns over possible reversal on the irreversibility has been eliminated)
+I would like to refrain from going into a hypothetical question. We appreciate the announced measures and hope that Japan-ROK relations will move forward. To that end, we will continue to communicate with each other. (On the Japan-ROK Export Control Policy Dialogue)
+Let me first clarify that the ""update of licensing policies and procedures on exports of controlled items to the ROK"" has been conducted to ensure proper implementation of export control from a security perspective and therefore is a separate issue from the issue of former civilian workers from the Korean Peninsula.",FORCED_LABOR,COMPENSATION_REPARATION;HISTORICAL_RECOGNITION_GENERAL,1,1,1,HIGH,0,1,0,0,1,0,UNSPECIFIED,0,MIXED,en,1,https://japan.kantei.go.jp/101_kishida/statement/202303/_00004.html,NA,NA,NA,"Kishida's reaction to the ROK government's March 2023 third-party reimbursement plan for wartime forced-labor court judgments against Japanese firms. Cites the Oct 1998 Japan-ROK Joint Declaration (Obuchi-Kim) as the standing ""recognition of history"" position by reference only, without re-quoting its apology/remorse language. remedy=1 refers to the ROK's own compensation measure, which Japan welcomes, not a new Japanese remedy.",HIGH,fcb0a3eb-0570-5882-8283-33e807cdb232,1
+e4d65cfe-ab80-4422-ae9f-6727d08fd66a,japan,2023-03-16,2023,KISHIDA Fumio,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),PRESS_CONFERENCE,Joint Press Conference by the Leaders of Japan and the Republic of Korea (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Joint Press Conference by the Leaders of Japan and the Republic of Korea (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+#DiplomacySecurity
+#JPNKORsummit
+#FreeOpenIndoPacific
+#AbductionsByNK
+#NKmissile
+Joint Press Conference by the Leaders of Japan and the Republic of Korea
+March 16, 2023
+Tweet
+[Provisional translation]
+[Opening Statement by Prime Minister KISHIDA Fumio]
+I welcome President YOON Suk Yeol of the Republic of Korea (ROK) most wholeheartedly in his visit to Japan. This week, in Tokyo the cherry blossoms have come into full bloom, and now, as we emerge from a long period of winter, we welcome the President of the ROK to Japan as the first bilateral visit in roughly 12 years.
+In my meeting with President Yoon, we were in full agreement that the strengthening of Japan-ROK relations is a matter of pressing urgency in the current strategic environment, and that we will further develop Japan-ROK relations, based on the foundation of the friendly and cooperative relations we have cultivated since the normalization of our diplomatic relations in 1965.
+Recently, the ROK Government announced measures regarding the issue of former civilian workers from the Korean Peninsula. The Government of Japan commends these measures as a step towards restoring healthy Japan-ROK relations, which have been in extremely severe circumstances. During our summit meeting, we confirmed that the Government of Japan takes up in its entirety the position of previous cabinets on the recognition of the history, including the Japan-ROK Joint Declaration announced in October 1998. I look forward to a robust expansion of exchanges between our two countries in the future in such fields as politics, the economy, and culture, alongside the implementation of these measures.
+In order to open up a new chapter in Japan-ROK relations, during the meeting I held with President Yoon today, we agreed to restart ""shuttle diplomacy,"" with the leaders of our nations each frequently visiting the other's country, regardless of the form in which those visits take place.
+In addition, with regard to Japan-ROK relations, we agreed to invigorate communications between our governments across a wide range of fields. In concrete terms, first of all, we shared the same stance that we will restart at an early time the Japan-ROK Security Dialogue and also the Japan-ROK Vice-Ministerial Strategic Dialogue, both of which have been suspended for a long time, and we agreed on the importance of relaunching the high-level Japan-ROK-China trilateral process at an early time. We also decided to launch consultations between Japan and the ROK regarding economic security. In addition, we made progress in the area of export control. In the future we will promote a wide range of dialogue in various policy areas between our respective ministries and agencies in charge.
+In addition, private sector exchanges and cooperation are a framework supporting bilateral relations. I welcome the fact that, taking the opportunity of President Yoon's visit to Japan, economic federations in both Japan and the ROK have announced they will each establish a fund for future-oriented Japan-ROK cooperation and exchange. The Government of Japan will continue to support exchanges among young people, who will hold the key to our nations' futures.
+Exchanges between our two countries have now recovered, and as for the number of foreign visitors to our two countries, it is ROK and Japanese nationals that are each visiting the other's country in the greatest number. I very much look forward to a further acceleration of the virtuous cycle of increasingly active people-to-people exchanges and improvements in our relations.
+President Yoon and I also shared a common recognition of the current harsh security environment. In particular, with regard to responses to North Korea, which is further pursuing nuclear and missile activities, including this morning's launch of an ICBM-class ballistic missile, we confirmed the importance of further reinforcing the deterrence and response capabilities of the Japan-U.S. Alliance and ROK-U.S. Alliance and of vigorously promoting security cooperation both between Japan and the ROK and among Japan, the ROK, and the U.S. The window for dialogue with North Korea remains open. That fact has not changed. President Yoon also expressed strong support once again regarding the abductions issue.
+Moreover, we reaffirmed the importance of bringing about a free and open Indo-Pacific at this historic turning point, and we shared a common recognition of the importance of like-minded countries working together to fully defend the free and open international order based on the rule of law.
+This visit by President Yoon to Japan has been a major step forward for the normalization of Japan-ROK relations. I am looking forward to the opportunity to speak in even greater depth with President Yoon and the First Lady at the dinner scheduled to take place after this. With President Yoon's visit to Japan as a turning point, I have high hopes for us to cultivate our trust and friendship and for Japan-ROK relations to make great strides forward.
+More
+Related Link
+Photos (PM in Action)
+Summary
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Related Pages
+Return to the Speeches and Statements by the Prime Minister","In my meeting with President Yoon, we were in full agreement that the strengthening of Japan-ROK relations is a matter of pressing urgency in the current strategic environment, and that we will further develop Japan-ROK relations, based on the foundation of the friendly and cooperative relations we have cultivated since the normalization of our diplomatic relations in 1965. Recently, the ROK Government announced measures regarding the issue of former civilian workers from the Korean Peninsula. The Government of Japan commends these measures as a step towards restoring healthy Japan-ROK relations, which have been in extremely severe circumstances. During our summit meeting, we confirmed that the Government of Japan takes up in its entirety the position of previous cabinets on the recognition of the history, including the Japan-ROK Joint Declaration announced in October 1998. I look forward to a robust expansion of exchanges between our two countries in the future in such fields as politics, the economy, and culture, alongside the implementation of these measures. In order to open up a new chapter in Japan-ROK relations, during the meeting I held with President Yoon today, we agreed to restart ""shuttle diplomacy,"" with the leaders of our nations each frequently visiting the other's country, regardless of the form in which those visits take place. In addition, with regard to Japan-ROK relations, we agreed to invigorate communications between our governments across a wide range of fields. In the future we will promote a wide range of dialogue in various policy areas between our respective ministries and agencies in charge. In addition, private sector exchanges and cooperation are a framework supporting bilateral relations. I welcome the fact that, taking the opportunity of President Yoon's visit to Japan, economic federations in both Japan and the ROK have announced they will each establish a fund for future-oriented Japan-ROK cooperation and exchange. The Government of Japan will continue to support exchanges among young people, who will hold the key to our nations' futures. Exchanges between our two countries have now recovered, and as for the number of foreign visitors to our two countries, it is ROK and Japanese nationals that are each visiting the other's country in the greatest number. I very much look forward to a further acceleration of the virtuous cycle of increasingly active people-to-people exchanges and improvements in our relations. President Yoon and I also shared a common recognition of the current harsh security environment. In particular, with regard to responses to North Korea, which is further pursuing nuclear and missile activities, including this morning's launch of an ICBM-class ballistic missile, we confirmed the importance of further reinforcing the deterrence and response capabilities of the Japan-U.S. President Yoon also expressed strong support once again regarding the abductions issue. Moreover, we reaffirmed the importance of bringing about a free and open Indo-Pacific at this historic turning point, and we shared a common recognition of the importance of like-minded countries working together to fully defend the free and open international order based on the rule of law. This visit by President Yoon to Japan has been a major step forward for the normalization of Japan-ROK relations. I am looking forward to the opportunity to speak in even greater depth with President Yoon and the First Lady at the dinner scheduled to take place after this. With President Yoon's visit to Japan as a turning point, I have high hopes for us to cultivate our trust and friendship and for Japan-ROK relations to make great strides forward. More
+Related Link
+Photos (PM in Action)
+Summary
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Related Pages
+Return to the Speeches and Statements by the Prime Minister",FORCED_LABOR,HISTORICAL_RECOGNITION_GENERAL,1,1,1,HIGH,0,1,0,0,1,0,UNSPECIFIED,0,MIXED,en,1,https://japan.kantei.go.jp/101_kishida/statement/202303/_00010.html,NA,NA,NA,"Opening statement, joint press conference with ROK President Yoon Suk Yeol marking the restart of ""shuttle diplomacy"" (first bilateral visit in ~12 years). Confirms Japan ""takes up in its entirety the position of previous cabinets on the recognition of the history, including the Japan-ROK Joint Declaration announced in October 1998"" -- by reference only, no apology/remorse language re-quoted directly. Coded from the opening statement only; the source page may contain a following Q&A section not captured by the automated Q&A splitter (no ""Question:""-style markers) -- flagged for a follow-up pass.",HIGH,572c38b4-5546-595a-afd6-e20a9c92e73a,1
+0084c760-507f-4073-a567-35c528e6cc8f,japan,2023-08-15,2023,KISHIDA Fumio,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by Prime Minister Kishida at the Seventy-Eighth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Address by Prime Minister Kishida at the Seventy-Eighth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Eighth National Memorial Ceremony for the War Dead
+August 15, 2023
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall continue to spare no effort to collect the remains of the war dead in an intensive manner and bring them back to their hometowns at the earliest possible time.
+Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity.
+We must never again repeat the devastation of war. We will remain committed to this resolute pledge. In this world in which conflicts have not yet ceased, under the banner of “Proactive Contribution to Peace,” Japan is determined to join forces with the international community and do its utmost to resolve the various challenges facing the world. We shall carve out the future of our nation for the sake of the present generations and the generations of the future.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2023
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister","Address by Prime Minister Kishida at the Seventy-Eighth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Eighth National Memorial Ceremony for the War Dead
+August 15, 2023
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall continue to spare no effort to collect the remains of the war dead in an intensive manner and bring them back to their hometowns at the earliest possible time. Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity. We must never again repeat the devastation of war. We will remain committed to this resolute pledge. In this world in which conflicts have not yet ceased, under the banner of “Proactive Contribution to Peace,” Japan is determined to join forces with the international community and do its utmost to resolve the various challenges facing the world. We shall carve out the future of our nation for the sake of the present generations and the generations of the future. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2023
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister",WAR_GENERAL,NA,0,1,0,MEDIUM,0,0,0,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/101_kishida/statement/202308/15shikiji.html,NA,NA,NA,78th National Memorial Ceremony for the War Dead. Same pattern as 2022.,MEDIUM,dd35d14a-9e02-57bc-a3d8-9c2909307f26,1
+d9a6ab18-0343-44f3-9e55-fff5cfeb1d9e,japan,2024-08-15,2024,KISHIDA Fumio,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by Prime Minister Kishida at the Seventy-Ninth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Address by Prime Minister Kishida at the Seventy-Ninth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Ninth National Memorial Ceremony for the War Dead
+August 15, 2024
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. We will continue to spare no effort to collect the remains of the war dead in an intensive manner and return them to their hometowns at the earliest possible time, taking it as the responsibility of the nation.
+Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity.
+We must never again repeat the devastation of war. Although 79 years have now passed, no matter how time flows, we will remain committed to this resolute pledge, passing it down across generations. In this world in which tragic conflicts have not yet ceased, Japan will do its utmost to resolve the various challenges facing the world as it works to maintain and strengthen the free and open international order based on the rule of law while placing human dignity at the very center. In this way we will carve out the future of our nation.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2024
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister","Address by Prime Minister Kishida at the Seventy-Ninth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Kishida at the Seventy-Ninth National Memorial Ceremony for the War Dead
+August 15, 2024
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. We will continue to spare no effort to collect the remains of the war dead in an intensive manner and return them to their hometowns at the earliest possible time, taking it as the responsibility of the nation. Since the end of the war, Japan has consistently walked the path of a peace-loving nation. Taking the lessons of history deeply into our hearts, we have made all possible efforts for world peace and prosperity. We must never again repeat the devastation of war. Although 79 years have now passed, no matter how time flows, we will remain committed to this resolute pledge, passing it down across generations. In this world in which tragic conflicts have not yet ceased, Japan will do its utmost to resolve the various challenges facing the world as it works to maintain and strengthen the free and open international order based on the rule of law while placing human dignity at the very center. In this way we will carve out the future of our nation. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. KISHIDA Fumio
+Prime Minister of Japan
+August 15, 2024
+More
+Related Link
+Japanese
+Tweet
+Archives (Archived entries for the 101st through 103rd Prime Ministers)
+The 103rd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2025
+2024
+The 102nd Prime Minister
+ISHIBA Shigeru
+Open
+Close
+2024
+The 101st Prime Minister
+KISHIDA Fumio
+Open
+Close
+2024
+2023
+2022
+2021
+Tag List
+View All
+Return to the Speeches and Statements by the Prime Minister",WAR_GENERAL,NA,0,1,0,MEDIUM,0,0,0,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/101_kishida/statement/202408/15shikiji.html,NA,NA,NA,"79th National Memorial Ceremony for the War Dead. Adds ""human dignity"" / ""free and open international order"" framing; still no apology/remorse toward foreign victims.",MEDIUM,93f33e5f-3eee-57cb-ba7f-d3a247a4160f,1
+8292f669-e146-4a41-8192-07d25a32baed,japan,2025-08-15,2025,ISHIBA Shigeru,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),PRESS_CONFERENCE,Press Conference by Prime Minister ISHIBA Shigeru regarding the Address He Delivered at the National Memorial Ceremony for the War Dead and Other Matters (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Press Conference by Prime Minister ISHIBA Shigeru regarding the Address He Delivered at the National Memorial Ceremony for the War Dead and Other Matters (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Press Conference by Prime Minister ISHIBA Shigeru regarding the Address He Delivered at the National Memorial Ceremony for the War Dead and Other Matters
+August 15, 2025
+Tweet
+[Provisional translation]
+(On why, in the address he delivered at the National Memorial Ceremony for the War Dead, Prime Minister Ishiba used the word ""remorse"" when stating that Japan must take remorse and also the lessons learned from that war deeply to heart, in the context of that word being used by the prime minister during that address for the first time in 13 years; on when, and in what format, Prime Minister Ishiba intends to release a message to mark the passing of 80 years since the end of the war)
+At today's ceremony, I delivered my remarks with the aims of offering my heartfelt condolences to all the war dead, and also of handing down across generations the sorrowful memories of the war once again, in consideration of the fact that 80 years have now passed since the war ended and generations with no firsthand experience of war now make up the great majority. Another aim I had was to state we will continue to make all possible efforts for world peace and prosperity while never again repeating the horrors of war.
+As for using the word ""remorse"" in my address, I believe that lessons to be learned arise through remorse -- one feels remorse and then lessons emerge from that. It is not the case that lessons to be learned suddenly appear out of nowhere. So my personal philosophy on the matter is that remorse comes first, and after that, lessons to be learned will come to light. In that sense we could say that it forms an interconnected whole.
+I do not believe that thinking is in any way different from the views and the thinking held by the Government until now. I made that statement intending to express the need for us to take deeply into our hearts once again our remorse and also the lessons learned, so that we never again repeat such a war.
+As for a message marking 80 years since the end of the war, if I may speak hypothetically, my cabinet would maintain overall the position held by previous administrations with regard to our recognition of history, including the official statements made by prime ministers over the years. We would carry that into the future.
+As for what the message for the 80th anniversary year would entail, as of right now, nothing has been decided in concrete terms. As I stated recently in the Diet in response to a question, I will make an appropriate decision on the matter giving due consideration to the official statements released by prime ministers over the years.
+If I were to release a message, I would consider it important to come from the perspective that we must not allow memories of the war to fade, and that such a war must never be repeated. Building upon the official statements made by prime ministers until now, I would also consider one of the significant aspects to be articulating a message regarding the matters raised in those statements as well as things we must contemplate. But it is not the case that the specific contents of any such message have been decided.
+Related Link
+Japanese
+Tweet
+Return to the Speeches and Statements by the Prime Minister","Press Conference by Prime Minister ISHIBA Shigeru regarding the Address He Delivered at the National Memorial Ceremony for the War Dead and Other Matters (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Press Conference by Prime Minister ISHIBA Shigeru regarding the Address He Delivered at the National Memorial Ceremony for the War Dead and Other Matters
+August 15, 2025
+Tweet
+[Provisional translation]
+(On why, in the address he delivered at the National Memorial Ceremony for the War Dead, Prime Minister Ishiba used the word ""remorse"" when stating that Japan must take remorse and also the lessons learned from that war deeply to heart, in the context of that word being used by the prime minister during that address for the first time in 13 years; on when, and in what format, Prime Minister Ishiba intends to release a message to mark the passing of 80 years since the end of the war)
+At today's ceremony, I delivered my remarks with the aims of offering my heartfelt condolences to all the war dead, and also of handing down across generations the sorrowful memories of the war once again, in consideration of the fact that 80 years have now passed since the war ended and generations with no firsthand experience of war now make up the great majority. Another aim I had was to state we will continue to make all possible efforts for world peace and prosperity while never again repeating the horrors of war. As for using the word ""remorse"" in my address, I believe that lessons to be learned arise through remorse -- one feels remorse and then lessons emerge from that. It is not the case that lessons to be learned suddenly appear out of nowhere. So my personal philosophy on the matter is that remorse comes first, and after that, lessons to be learned will come to light. In that sense we could say that it forms an interconnected whole. I do not believe that thinking is in any way different from the views and the thinking held by the Government until now. I made that statement intending to express the need for us to take deeply into our hearts once again our remorse and also the lessons learned, so that we never again repeat such a war. As for a message marking 80 years since the end of the war, if I may speak hypothetically, my cabinet would maintain overall the position held by previous administrations with regard to our recognition of history, including the official statements made by prime ministers over the years. We would carry that into the future. As for what the message for the 80th anniversary year would entail, as of right now, nothing has been decided in concrete terms. As I stated recently in the Diet in response to a question, I will make an appropriate decision on the matter giving due consideration to the official statements released by prime ministers over the years. If I were to release a message, I would consider it important to come from the perspective that we must not allow memories of the war to fade, and that such a war must never be repeated. Building upon the official statements made by prime ministers until now, I would also consider one of the significant aspects to be articulating a message regarding the matters raised in those statements as well as things we must contemplate. But it is not the case that the specific contents of any such message have been decided.",HISTORICAL_RECOGNITION_GENERAL,WAR_GENERAL,1,1,1,HIGH,0,1,1,1,0,0,STATE,0,MIXED,en,1,https://japan.kantei.go.jp/103/statement/202508/15kaiken.html,NA,NA,NA,"Same-day press conference where Ishiba is asked directly why he used ""remorse"" for the first time in 13 years, and whether/when he will issue an 80th-anniversary statement. He explicitly says his Cabinet ""would maintain overall the position held by previous administrations with regard to our recognition of history, including the official statements made by prime ministers over the years"" and that nothing on a possible anniversary statement has been decided. High-value record for tracking continuity/change in Japan's official historical-recognition posture.",HIGH,65c1d6c7-b98a-5355-a64f-2c88296af848,1
+16db406e-a769-460e-a7b6-b5f83f43d7cb,japan,2025-08-15,2025,ISHIBA Shigeru,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by Prime Minister Ishiba at the Eightieth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan,,"Address by Prime Minister Ishiba at the Eightieth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Ishiba at the Eightieth National Memorial Ceremony for the War Dead
+August 15, 2025
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids and naval bombardments on numerous cities, and the ground battles in Okinawa. Others, after the war ended, died in distant foreign lands. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. We will continue to spare no effort to return them to their hometowns at the earliest possible time.
+Eighty years have now passed since the war ended. Today, generations with no firsthand experience of war make up the great majority. We must never again repeat the horrors of war. We must never again lose our way. We must now take deeply into our hearts once again our remorse and also the lessons learned from that war.
+At the same time, over the past 80 years, Japan has consistently walked the path of a peace-loving nation and made all possible efforts for world peace and prosperity.
+No matter how much time passes, we will hand down across generations the sorrowful memories of the war and our resolute pledge to renounce war, and we will remain steadfast in our actions to foster lasting peace. In this world in which tragic conflicts rage on, Japan will, by rejecting division and cultivating tolerance, pave the way to a better tomorrow for the sake of both present and future generations.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+ISHIBA Shigeru
+Prime Minister of Japan
+August 15, 2025
+Related Link
+Japanese
+Tweet
+Return to the Speeches and Statements by the Prime Minister","Address by Prime Minister Ishiba at the Eightieth National Memorial Ceremony for the War Dead (Speeches and Statements <br>by the Prime Minister) | Prime Minister's Office of Japan
+Address by Prime Minister Ishiba at the Eightieth National Memorial Ceremony for the War Dead
+August 15, 2025
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead, distinguished representatives of all sectors of society, and many others, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Many fell victim to the atomic bombings of Hiroshima and Nagasaki, the air raids and naval bombardments on numerous cities, and the ground battles in Okinawa. Others, after the war ended, died in distant foreign lands. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. We will not forget, even for a moment, that the peace and prosperity that Japan enjoys today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. We will continue to spare no effort to return them to their hometowns at the earliest possible time. Eighty years have now passed since the war ended. Today, generations with no firsthand experience of war make up the great majority. We must never again repeat the horrors of war. We must never again lose our way. We must now take deeply into our hearts once again our remorse and also the lessons learned from that war. At the same time, over the past 80 years, Japan has consistently walked the path of a peace-loving nation and made all possible efforts for world peace and prosperity. No matter how much time passes, we will hand down across generations the sorrowful memories of the war and our resolute pledge to renounce war, and we will remain steadfast in our actions to foster lasting peace. In this world in which tragic conflicts rage on, Japan will, by rejecting division and cultivating tolerance, pave the way to a better tomorrow for the sake of both present and future generations. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. ISHIBA Shigeru
+Prime Minister of Japan
+August 15, 2025
+Related Link
+Japanese
+Tweet
+Return to the Speeches and Statements by the Prime Minister",WAR_GENERAL,HISTORICAL_RECOGNITION_GENERAL,1,1,0,MEDIUM,0,0,1,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/103/statement/202508/15shikiji.html,NA,NA,NA,"80th National Memorial Ceremony for the War Dead. Notable: first use of the word ""remorse"" (kuiaratame/hansei) in this annual address in 13 years (see companion press conference same day) -- ""we must now take deeply into our hearts once again our remorse and also the lessons learned from that war."" Still agentless/general (does not name Japan or specific foreign victims as the object of remorse) -- coded agency_explicit=0 on that basis; flag for review as this is a genuinely borderline call given the significance of reintroducing ""remorse.""",MEDIUM,eebad3b7-7af8-50d4-93c7-ab295412b511,1
+f58527cb-9e89-4294-b261-706d0a93e6eb,japan,2020-08-15,2020,ABE Shinzo,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet,,"Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+August 2020
+>
+Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead
+Speeches and Statements by the Prime Minister
+Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead
+August 15, 2020
+Tweet
+[Provisional Translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead and distinguished representatives of all sectors of society, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war, which was extremely fierce and harsh.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. The atomic bombings of Hiroshima and Nagasaki, the air raids on Tokyo and other cities, and the ground battles in Okinawa, among others, took a heavy toll without mercy. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+Again now on the 75th anniversary of the end of the war, we will never forget that the peace and prosperity we enjoy today was built atop the precious sacrifices of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time.
+Over the 75 years since the end of the war, Japan has consistently walked the path of a country that values peace. We have worked to the very best of our ability to transform the world into a better place.
+We must never again repeat the devastation of war. We will continue to remain committed to this resolute pledge. Under the banner of ""Proactive Contribution to Peace,"" we are determined to join hands with the international community and play a greater role than ever before in resolving the various challenges facing the world. We shall overcome the current novel coronavirus disease (COVID-19) and carve out the future of our nation for the sake of the generation alive now and the generations of tomorrow.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+ABE Shinzo
+Prime Minister of Japan
+August 15, 2020
+Related Link
+Japanese
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Cabinet Public Affairs Office, Cabinet Secretariat, 1-6-1 Nagata-cho, Chiyoda-ku, Tokyo 100 - 8968, Japan
+Copyright© Cabinet Public Affairs Office, Cabinet Secretariat. All Rights Reserved.","Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+August 2020
+>
+Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead
+Speeches and Statements by the Prime Minister
+Address by the Prime Minister at the Seventy-Fifth National Memorial Ceremony for the War Dead
+August 15, 2020
+Tweet
+[Provisional Translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead and distinguished representatives of all sectors of society, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war, which was extremely fierce and harsh. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. The atomic bombings of Hiroshima and Nagasaki, the air raids on Tokyo and other cities, and the ground battles in Okinawa, among others, took a heavy toll without mercy. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. Again now on the 75th anniversary of the end of the war, we will never forget that the peace and prosperity we enjoy today was built atop the precious sacrifices of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time. Over the 75 years since the end of the war, Japan has consistently walked the path of a country that values peace. We have worked to the very best of our ability to transform the world into a better place. We must never again repeat the devastation of war. We will continue to remain committed to this resolute pledge. Under the banner of ""Proactive Contribution to Peace,"" we are determined to join hands with the international community and play a greater role than ever before in resolving the various challenges facing the world. We shall overcome the current novel coronavirus disease (COVID-19) and carve out the future of our nation for the sake of the generation alive now and the generations of tomorrow. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. ABE Shinzo
+Prime Minister of Japan
+August 15, 2020
+Related Link
+Japanese
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Cabinet Public Affairs Office, Cabinet Secretariat, 1-6-1 Nagata-cho, Chiyoda-ku, Tokyo 100 - 8968, Japan
+Copyright© Cabinet Public Affairs Office, Cabinet Secretariat. All Rights Reserved.",WAR_GENERAL,NA,0,1,0,MEDIUM,0,0,0,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/98_abe/statement/202008/_00003.html,NA,NA,NA,"75th National Memorial Ceremony for the War Dead. Domestic mourning address for Japan's own war dead; no apology/remorse toward foreign victims; ""responsibility of the nation"" refers to remains repatriation, not war-causing responsibility. remedy=1 refers to the remains-repatriation program (directed at Japan's own bereaved families, not foreign victims -- noted for coder review).",MEDIUM,671e0049-f3ab-5fcc-947b-8886e29b704e,1
+0146de47-cc0b-49a9-a1eb-02d7f1c16ae3,japan,2021-01-08,2021,SUGA Yoshihide,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),PRESS_CONFERENCE,Press Conference by the Prime Minister on the court case brought by a group of former comfort women (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet,,"Press Conference by the Prime Minister on the court case brought by a group of former comfort women (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+January 2021
+>
+Press Conference by the Prime Minister on the court case brought by a group of former comfort women
+Speeches and Statements by the Prime Minister
+Press Conference by the Prime Minister on the court case brought by a group of former comfort women
+January 8, 2021
+Tweet
+[Provisional Translation]
+(On the court case brought by a group of former comfort women in the Republic of Korea)
+First and foremost, under international law, sovereign states are immune from the jurisdiction of foreign courts. Since that is well-established, we believe that this suit must be dismissed. The issue of comfort women between Japan and the Republic of Korea is already settled completely and finally, through the 1965 Agreement on the Settlement of Problems concerning Property and Claims and on Economic Cooperation. We strongly demand that the ROK take measures to remedy breaches of international law.
+Such a ruling is totally unacceptable in light of Japan's position.
+(On the intrusion by rioters at the U.S. Capitol)
+I hope the citizens of the United States will unite and move on under President-elect Biden.
+(On the future responses regarding Japan-ROK relations)
+Firstly, this case must be dismissed. That must be the starting point.
+Related Link
+Japanese
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Cabinet Public Affairs Office, Cabinet Secretariat, 1-6-1 Nagata-cho, Chiyoda-ku, Tokyo 100 - 8968, Japan
+Copyright© Cabinet Public Affairs Office, Cabinet Secretariat. All Rights Reserved.","Press Conference by the Prime Minister on the court case brought by a group of former comfort women (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+January 2021
+>
+Press Conference by the Prime Minister on the court case brought by a group of former comfort women
+Speeches and Statements by the Prime Minister
+Press Conference by the Prime Minister on the court case brought by a group of former comfort women
+January 8, 2021
+Tweet
+[Provisional Translation]
+(On the court case brought by a group of former comfort women in the Republic of Korea)
+First and foremost, under international law, sovereign states are immune from the jurisdiction of foreign courts. Since that is well-established, we believe that this suit must be dismissed. The issue of comfort women between Japan and the Republic of Korea is already settled completely and finally, through the 1965 Agreement on the Settlement of Problems concerning Property and Claims and on Economic Cooperation. We strongly demand that the ROK take measures to remedy breaches of international law. Such a ruling is totally unacceptable in light of Japan's position.",COMFORT_WOMEN,COMPENSATION_REPARATION,1,1,1,HIGH,0,1,0,0,1,0,UNSPECIFIED,0,MIXED,en,1,https://japan.kantei.go.jp/99_suga/statement/202101/_00004.html,NA,NA,NA,"Suga's response to the Seoul Central District Court ruling ordering Japan to pay compensation to former comfort women. Asserts sovereign immunity and that the issue is ""already settled completely and finally"" via the 1965 Agreement; demands the ROK ""take measures to remedy breaches of international law."" A denial/closure-framing statement rather than an apology -- remedy=1 refers to the pre-existing 1965 Agreement being invoked as the settlement mechanism, not a new remedy offered here.",HIGH,eeb64e05-d5db-505f-af4c-561e7108ba3e,1
+89974291-1a3b-4af2-9c96-2ff147960919,japan,2021-08-15,2021,SUGA Yoshihide,Prime Minister of Japan,HEAD,Prime Minister's Office of Japan (Kantei),SPEECH,Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet,,"Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+August 2021
+>
+Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead
+Speeches and Statements by the Prime Minister
+Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead
+August 15, 2021
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead and distinguished representatives of all sectors of society, I hereby commence the annual National Memorial Ceremony for the War Dead.
+More than three million of our compatriots lost their lives during the war.
+Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the violent turmoil of war in the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose.
+We will not forget, even for a moment, that the peace and prosperity we enjoy today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more.
+Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time.
+Since the end of the war, Japan has consistently walked the path of a country that values peace. We have made every possible effort to bring about a world in which all people around the globe can enjoy peace and live in a way rich in spirit.
+We will remain committed to our conviction that we must never again repeat the devastation of war. Under the banner of ""Proactive Contribution to Peace,"" we are determined to join forces with the international community and do our utmost to resolve the various challenges facing the world. We will overcome COVID-19, which continues to spread even now, restore at the earliest possible time our vibrant daily lives in which we feel at ease, and carve out the future of our nation.
+I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families.
+SUGA Yoshihide
+Prime Minister of Japan
+August 15, 2021
+Related Link
+Japanese
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Cabinet Public Affairs Office, Cabinet Secretariat, 1-6-1 Nagata-cho, Chiyoda-ku, Tokyo 100 - 8968, Japan
+Copyright© Cabinet Public Affairs Office, Cabinet Secretariat. All Rights Reserved.","Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead (Speeches and Statements by the Prime Minister) | Prime Minister of Japan and His Cabinet
+Skip to main content
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Home
+>
+News
+>
+Speeches and Statements by the Prime Minister
+>
+August 2021
+>
+Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead
+Speeches and Statements by the Prime Minister
+Address by the Prime Minister at the Seventy-Sixth National Memorial Ceremony for the War Dead
+August 15, 2021
+Tweet
+[Provisional translation]
+In the gracious presence of Their Majesties the Emperor and Empress, and with the attendance of bereaved families of the war dead and distinguished representatives of all sectors of society, I hereby commence the annual National Memorial Ceremony for the War Dead. More than three million of our compatriots lost their lives during the war. Some fell on the battlefields worrying about the future of their homeland and wishing for the happiness of their families. Others perished in remote foreign countries after the war. And many fell victim to the violent turmoil of war in the atomic bombings of Hiroshima and Nagasaki, the air raids on numerous cities, and the ground battles in Okinawa, among others. Here, before the souls of all who lost their lives, I offer my heartfelt prayers for their repose. We will not forget, even for a moment, that the peace and prosperity we enjoy today was built atop the precious lives and the history of suffering of the war dead. I express my deepest respect and gratitude once more. Never will we forget the large number of war dead whose remains have still not been recovered. Taking it as the responsibility of the nation, we shall spare no effort to enable their remains to return to their hometowns at the earliest possible time. Since the end of the war, Japan has consistently walked the path of a country that values peace. We have made every possible effort to bring about a world in which all people around the globe can enjoy peace and live in a way rich in spirit. We will remain committed to our conviction that we must never again repeat the devastation of war. Under the banner of ""Proactive Contribution to Peace,"" we are determined to join forces with the international community and do our utmost to resolve the various challenges facing the world. We will overcome COVID-19, which continues to spread even now, restore at the earliest possible time our vibrant daily lives in which we feel at ease, and carve out the future of our nation. I will conclude my address by once again offering my heartfelt prayers for the repose of the souls of the war dead and for the happiness of the members of their bereaved families. SUGA Yoshihide
+Prime Minister of Japan
+August 15, 2021
+Related Link
+Japanese
+Home
+News
+Videos
+Policy
+The Cabinet
+Links
+Cabinet Public Affairs Office, Cabinet Secretariat, 1-6-1 Nagata-cho, Chiyoda-ku, Tokyo 100 - 8968, Japan
+Copyright© Cabinet Public Affairs Office, Cabinet Secretariat. All Rights Reserved.",WAR_GENERAL,NA,0,1,0,MEDIUM,0,0,0,1,1,0,UNSPECIFIED,0,DOMESTIC,en,1,https://japan.kantei.go.jp/99_suga/statement/202108/_00006.html,NA,NA,NA,76th National Memorial Ceremony for the War Dead. Same genre/pattern as the 2020 (75th) address; no apology/remorse toward foreign victims.,MEDIUM,5926ff7f-ab33-5fb8-af79-578cbec6ccc6,1
