@@ -441,13 +441,52 @@ as the concrete finding the next paper-drafting pass should work from.
   once more for the 3-type reformulation above) and structurally
   validated (XSD schema check via the docx skill's validate.py), since
   LibreOffice headless PDF conversion remains broken in this environment.
-- New follow-up opened by the reformulation above: Section 8 now names
+- ~~New follow-up opened by the reformulation above: Section 8 now names
   "collect Japan's own bureaucratic/spokesperson-level data" as the
   paper's first open item, since the current Japan sample is HEAD-level
   only and cannot yet confirm whether Japan's policy-management register
   is head-of-state-specific (as Korea's and China's registers turn out to
-  be level-specific) or holds at the bureaucratic level too. Not
-  attempted this session — a new discovery task, not a data-analysis one.
+  be level-specific) or holds at the bureaucratic level too.~~ — **done
+  2026-09-22**: 4 Japan MINISTER-level (Foreign Minister, Cabinet rank
+  per codebook.md) records added via Wayback Machine snapshots of
+  `www.mofa.go.jp` (live-blocked in this environment):
+  - MOTEGI Toshimitsu, May 19, 2020 regular press conference: declines to
+    comment on ROK-internal criticism of the comfort-women survivor
+    foundation, restates the 2015 agreement's "final and irreversible
+    resolution" as Japan's standing position (apology/remorse/reflection/
+    remedy all 0).
+  - HAYASHI Yoshimasa, Aug 10, 2022 press conference (on reappointment in
+    the reshuffled second Kishida Cabinet): asked about the forced-labor
+    asset-liquidation crisis and comfort women issue, calls the situation
+    "very difficult" and says it "cannot be left as it is" (reflection=1)
+    but commits only to communication on Japan's existing position — no
+    remedy, no explicit agency attribution.
+  - HAYASHI Yoshimasa, May 10, 2022 extraordinary press conference
+    (Seoul, after attending President Yoon's inauguration as PM Kishida's
+    Special Envoy): same "cannot leave this as it is" framing
+    (reflection=1), emphasis on process/communication over substance. The
+    near-duplicate May 9, 2022 pre-departure press conference (same
+    event, nearly identical wording) was deliberately excluded to avoid
+    double-counting.
+  - KAMIKAWA Yoko, July 27, 2024 MOFA statement on the Sado Island Gold
+    Mines' UNESCO inscription: a direct same-day MINISTER-level companion
+    to the already-coded Kishida (HEAD) message on the same event —
+    frames the site purely as pre-modern mining heritage, no mention of
+    Korea or forced labor at all (deliberate null/silence data point,
+    all content fields 0/NA).
+
+  **Preliminary read (not yet folded into the paper — draft revision is a
+  separate task per the user's own framing):** at n=4, Japan's MINISTER
+  level shows the same broad shape as HEAD level — 0/4 apology, 0/4
+  remorse, but 2/4 reflection (both Hayashi records, both "cannot be left
+  as it is") vs. Japan's HEAD-level 0.67 reflection rate, and 0/4
+  agency_explicit, matching HEAD level's 0.00 exactly. This is consistent
+  with — but on 4 records cannot yet confirm — the hypothesis that
+  Japan's policy-management register is a genuinely national trait held
+  across both HEAD and MINISTER levels, unlike Korea's and China's
+  register gaps which are sharply level-specific. n=4 is too small to
+  update the paper's speaker-level claims on; flagged here for a future
+  analysis pass, not acted on in this task.
 
 This file is a working tracker, not a publication output — delete or fold its
 content into `pilot_coverage_report.md` once phase 2 is complete.
