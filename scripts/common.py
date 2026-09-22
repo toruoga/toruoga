@@ -73,8 +73,16 @@ KNOWN_INSTITUTIONS = {
     "www.kantei.go.jp": ("Prime Minister's Office of Japan (Kantei)", "japan"),
     "www.mofa.go.jp": ("Ministry of Foreign Affairs of Japan", "japan"),
     "eng.president.go.kr": ("Office of the President, Republic of Korea", "korea"),
+    "en.president.go.kr": ("Office of the President, Republic of Korea", "korea"),
+    "english.president.go.kr": ("Office of the President, Republic of Korea", "korea"),
+    "english1.president.go.kr": ("Office of the President, Republic of Korea", "korea"),
     "www.president.go.kr": ("Office of the President, Republic of Korea", "korea"),
     "www.mofa.go.kr": ("Ministry of Foreign Affairs, Republic of Korea", "korea"),
+    # National Archives of Korea's official web-archiving service (WARP-equivalent):
+    # eng.president.go.kr / english1.president.go.kr were retired when the
+    # presidential administration changed (2022, 2025) and are DNS-dead; their
+    # content is preserved verbatim here under /<ordinal>th/<original-host>/<path>.
+    "webarchives.pa.go.kr": ("Office of the President, Republic of Korea (via National Archives of Korea web archive)", "korea"),
     "english.www.gov.cn": ("State Council of the People's Republic of China", "china"),
     "www.gov.cn": ("State Council of the People's Republic of China", "china"),
     "www.mfa.gov.cn": ("Ministry of Foreign Affairs of the People's Republic of China", "china"),
