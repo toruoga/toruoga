@@ -10,36 +10,65 @@ scheme and `config.yaml` for source lists, keyword lists, and crawl settings.
 
 A later session re-tested network access and found the picture had changed
 from the original blocker (see "Network access notes" below), then ran the
-pipeline for real across all three countries. Full detail (per-country
-coverage numbers, what was and wasn't reachable, a real pipeline bug found
-and fixed along the way) is in `pilot_coverage_report.md`. Summary:
+pipeline for real across all three countries. A 2026-09-22 phase 2 session
+(see `phase2_plan.md`), scoped for a low-priority Japan-journal paper
+rather than a full-scale international-journal version, then improved
+Korea's and China's discovery methods for real (not just more hand
+search — see below) and added a first pre-2020 landmark anchor. Full
+detail (per-country coverage numbers, what was and wasn't reachable, a
+real pipeline bug found and fixed along the way) is in
+`pilot_coverage_report.md`. Summary:
 
 - **Japan**: `japan.kantei.go.jp` reachable; `www.mofa.go.jp` blocked
   site-wide (Akamai WAF `403`, independent of headers). 1096 URLs
   discovered via a real archive crawl of every 2020–2025 administration's
   monthly statement archives, 1081 downloaded, 746 kept after the keyword
   filter, **10 fully contextually coded** (`pilot_japan_2020_2025.csv`).
-- **Korea**: `en.president.go.kr` (current administration) and
-  `webarchives.pa.go.kr` (the National Archives of Korea's official web
+- **Korea**: `en.president.go.kr` (current, Lee Jae Myung administration)
+  and `webarchives.pa.go.kr` (the National Archives of Korea's official web
   archive, covering the Moon Jae-in and Yoon Suk Yeol eras whose original
   English-language domains are now DNS-dead) both reachable;
   `www.mofa.go.kr` blocked site-wide (TLS ClientHello reset, independent
-  of headers — same class of block as MOFA Japan). 6 hand-verified
-  candidate URLs (Korea's site structure doesn't support the same
-  archive-crawl approach as Japan's — see coverage report), all 6 **fully
-  contextually coded**.
+  of headers — same class of block as MOFA Japan). The current
+  administration's listing turned out to load via an AJAX POST
+  (`/ajaxf/frBoard/bbsViewGalleryList.do`), not the dead end an earlier
+  session assumed from the `?page=N` GET failing — a single call returns
+  the full listing. The Moon-era National Archives listing also supports
+  real `?page=N` pagination; the Yoon-era one does not (its snapshot only
+  ever captured page 1 of each category — a hard limit, confirmed
+  unfixable). **10 candidate URLs, all 10 fully contextually coded**
+  (6 from the original hand-verified pilot, 4 found via the newly-solved
+  archive methods).
 - **China**: `www.mfa.gov.cn` reachable (with intermittent, retriable
-  connection resets). 5 hand-verified candidate URLs, 4 **fully
-  contextually coded** (1 was a stale URL now serving a generic
-  "system maintenance" placeholder, logged as inaccessible rather than
-  used).
-- **20 records total are fully contextually coded** per `codebook.md`
-  (read in full, not keyword-matched) — see `pilot_east_asia_2020_2025.csv`
-  for all 20, or the per-country files (`pilot_japan_2020_2025.csv`, etc.)
-  Every row's `coder_notes` documents the specific textual basis for every
-  field, including explicitly-flagged borderline calls.
+  connection resets). Its press-conference archive
+  (`mfa.gov.cn/eng/xw/fyrbt/lxjzh/index_N.html`) is real and date-ordered,
+  but has a hard lower bound around July 2022 — earlier content isn't
+  reachable through it at all, and there's no working site search, so
+  finding relevant content means grepping full daily transcripts around
+  known high-salience weeks (Yasukuni's biannual shrine festivals) rather
+  than a keyword search. **8 candidate URLs, all 8 fully contextually
+  coded** (5 from the original hand-verified pilot, 1 of which was a stale
+  URL logged as inaccessible rather than used, plus 4 new ones found via
+  the targeted date search this session).
+- **28 main-axis records total are fully contextually coded** per
+  `codebook.md` (read in full, not keyword-matched) — see
+  `pilot_east_asia_2020_2025.csv` for all 28, or the per-country file
+  (`pilot_japan_2020_2025.csv`). Every row's `coder_notes` documents the
+  specific textual basis for every field, including explicitly-flagged
+  borderline calls.
+- **Plus 1 pre-2020 landmark anchor** — the 1995 Murayama Danwa, retrieved
+  via a Wayback Machine snapshot of the blocked `mofa.go.jp` — in the
+  separate `landmark_anchors.csv`, kept apart from the main-axis file
+  because it follows a different, purposive sampling design (historical
+  flashpoints across 1995-2025, not the 2020-2025 window). See
+  `phase2_plan.md` for the rest of the planned anchor set (Koizumi's
+  2001-2006 Yasukuni visits, the 2005 textbook controversy, the 2015
+  Japan-Korea "comfort women" agreement, the 2018 Korea Supreme Court
+  forced-labor ruling), blocked as of 2026-09-22 by a site-wide Internet
+  Archive outage encountered mid-session.
 - The remaining **736 candidates** (all from Japan; Korea/China's smaller,
-  hand-verified candidate pools were each coded in full) are real,
+  hand-verified/archive-crawled candidate pools were each coded in full)
+  are real,
   downloaded, keyword-matched documents that have not yet been
   contextually coded — the keyword filter is deliberately recall-oriented
   (it also matches, e.g., "war" in statements about Ukraine, or "victims"
