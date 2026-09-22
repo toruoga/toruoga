@@ -11,31 +11,42 @@ scheme and `config.yaml` for source lists, keyword lists, and crawl settings.
 A later session re-tested network access and found the picture had changed
 from the original blocker (see "Network access notes" below), then ran the
 pipeline for real across all three countries. A 2026-09-22 phase 2 session
-(see `phase2_plan.md`), scoped for a low-priority Japan-journal paper
+(see `pilot_coverage_report.md`), scoped for a low-priority Japan-journal paper
 rather than a full-scale international-journal version, then improved
 Korea's and China's discovery methods for real (not just more hand
 search — see below) and added a first pre-2020 landmark anchor, bringing
 the main axis to 34 records (Japan 16, Korea 10, China 8). Later the same
 session, the user set a 30/country scaling target and the pilot was pushed
 to it in Japan → Korea → China order, reaching **90 main-axis records
-(30/30/30)** — see `phase2_plan.md`'s "Target reset to 30/country and
-final push" section for the discovery methods used per country in that
-push, and `pilot_coverage_report.md` for the full numbers. Summary of the
-current state:
+(30/30/30)** — see `pilot_coverage_report.md`'s "History of the scaling
+target" section for the discovery methods used per country in that push. A
+final round then added 4 Japan Foreign-Minister-level (`speaker_level=
+MINISTER`) records via Wayback Machine snapshots of the blocked
+`www.mofa.go.jp`, closing a gap where Japan's sample was HEAD-level only —
+see `pilot_coverage_report.md`'s "Round 4" section — bringing the corpus to
+its current **94 main-axis records (Japan 34, Korea 30, China 30)**. See
+`pilot_coverage_report.md` for the full numbers. Summary of the current
+state:
 
 - **Japan**: `japan.kantei.go.jp` reachable; `www.mofa.go.jp` blocked
-  site-wide (Akamai WAF `403`, independent of headers). 1096 URLs
+  site-wide (Akamai WAF `403`, independent of headers) — Wayback Machine
+  snapshots substitute where MOFA content is needed. 1096 URLs
   discovered via a real archive crawl of every 2020–2025 administration's
   monthly statement archives, 1081 downloaded, 746 kept after the keyword
-  filter. **30 fully contextually coded** (`pilot_japan_2020_2025.csv`),
-  up from an initial 10: two further proximity-keyword sweeps of the
-  backlog found 6 then 12 more genuinely on-topic candidates (a 6-record
-  batch including an Okinawa memorial press conference and a forced-labor
-  temporal series, then a 12-record Hiroshima/Nagasaki Peace Memorial
-  Ceremony batch spanning Abe/Suga/Kishida/Ishiba), plus one deliberate
-  silence/omission record (Kishida's July 2024 Sado Island Gold Mines
-  UNESCO message, which omits the wartime forced-Korean-labor dispute
-  that was the actual story behind the inscription).
+  filter. **34 fully contextually coded** (`pilot_japan_2020_2025.csv`,
+  30 HEAD + 4 MINISTER), up from an initial 10: two further
+  proximity-keyword sweeps of the backlog found 6 then 12 more genuinely
+  on-topic candidates (a 6-record batch including an Okinawa memorial
+  press conference and a forced-labor temporal series, then a 12-record
+  Hiroshima/Nagasaki Peace Memorial Ceremony batch spanning
+  Abe/Suga/Kishida/Ishiba), plus one deliberate silence/omission record
+  (Kishida's July 2024 Sado Island Gold Mines UNESCO message, which omits
+  the wartime forced-Korean-labor dispute that was the actual story behind
+  the inscription); a final round then added 4 Foreign Minister
+  (`speaker_level=MINISTER`) records via Wayback snapshots of
+  `www.mofa.go.jp` (Motegi 2020, Hayashi ×2 2022, Kamikawa 2024 — the last
+  a same-day MINISTER-level companion to the Kishida Sado silence record
+  above), closing the corpus's HEAD-only gap for Japan.
 - **Korea**: `en.president.go.kr` (current, Lee Jae Myung administration)
   and `webarchives.pa.go.kr` (the National Archives of Korea's official web
   archive, covering the Moon Jae-in and Yoon Suk Yeol eras whose original
@@ -76,10 +87,11 @@ current state:
   dates. Also added the corpus's first HEAD-level China records outside
   the Sept 3, 2025 Xi speeches: three Xi-Japan PM APEC-summit readouts
   (2022, 2023, 2024).
-- **90 main-axis records total are fully contextually coded** per
-  `codebook.md` (read in full, not keyword-matched) — exactly 30 per
-  country — see `pilot_east_asia_2020_2025.csv` for all 90, or the
-  per-country file (`pilot_japan_2020_2025.csv`). Every row's
+- **94 main-axis records total are fully contextually coded** per
+  `codebook.md` (read in full, not keyword-matched) — Japan 34 (30 HEAD +
+  4 MINISTER), Korea 30, China 30 — see `pilot_east_asia_2020_2025.csv`
+  for all 94, or the per-country file (`pilot_japan_2020_2025.csv`).
+  Every row's
   `coder_notes` documents the specific textual basis for every field,
   including explicitly-flagged borderline calls. Several Korea/China
   records added in the final push use a wire-service report (Xinhua, or
@@ -93,7 +105,7 @@ current state:
   separate `landmark_anchors.csv`, kept apart from the main-axis file
   because it follows a different, purposive sampling design (historical
   flashpoints across 1995-2025, not the 2020-2025 window). See
-  `phase2_plan.md` for the rest of the planned anchor set (Koizumi's
+  `pilot_coverage_report.md` for the rest of the planned anchor set (Koizumi's
   2001-2006 Yasukuni visits, the 2005 textbook controversy, the 2015
   Japan-Korea "comfort women" agreement, the 2018 Korea Supreme Court
   forced-labor ruling), blocked as of 2026-09-22 by a site-wide Internet
@@ -114,18 +126,21 @@ current state:
 
 **Scaling this beyond the pilot** means continuing the contextual-coding
 pass over `pilot_manual_review.csv`; separately resolving MOFA Japan/Korea
-access; and improving discovery for China's State Council source (real
-and working at `english.www.gov.cn/news/page_N.html`, but its page-number
-index does not map linearly to dates — see `phase2_plan.md`) and Korea's
-JS-paginated live site so they can be archive-crawled as thoroughly as
-Japan's was, rather than relying on search-discovered URLs (see
+access (both remain blocked at the network level as of 2026-09-22 — see
+"Network access notes" below); and improving discovery for China's State
+Council source (real and working at `english.www.gov.cn/news/page_N.html`,
+but its page-number index does not map linearly to dates — see
 `pilot_coverage_report.md`'s "What didn't work" section for specifics).
-Before any further scaling, though, two items from the just-completed
-30/30/30 push take priority: re-running the genre/speaker-level/
-administration confound stress-test in `phase2_plan.md` against the full
-90-record sample, and refreshing `draft_paper_ja.md`/`draft_paper_ja.docx`'s
-quantitative tables against it — both still reflect the earlier 28-record
-state.
+Korea's live-site pagination, previously thought JS-only, turned out to be
+a discoverable AJAX endpoint (see `pilot_coverage_report.md`), so that
+specific gap is resolved; its Yoon-era archive gap is a confirmed final
+limit instead (same section). The genre/speaker-level/administration
+confound stress-test and the paper's quantitative tables have both already
+been re-run against the 90-record (30/30/30) sample — see
+`pilot_coverage_report.md`'s "Confound stress-test" section; the one
+still-open follow-up is re-running that stress-test again against the
+current 94-record sample once more Japan MINISTER-level data exists beyond
+the initial 4 records.
 
 ## Network access notes (for future sessions)
 
