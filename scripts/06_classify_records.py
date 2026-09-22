@@ -91,10 +91,15 @@ def main():
     out_path = REPO_ROOT / cfg["paths"]["metadata_dir"] / "coded_records.csv"
     signal_fields = list(SIGNAL_TERMS.keys())
 
+    already_seen = set()
+    if out_path.exists():
+        with open(out_path, newline="", encoding="utf-8") as f:
+            already_seen = {(r["url"], r.get("section_index", "")) for r in csv.DictReader(f)}
+
     with open(passages_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         base_fields = reader.fieldnames
-        rows = list(reader)
+        rows = [r for r in reader if (r["url"], r.get("section_index", "")) not in already_seen]
 
     out_fields = base_fields + signal_fields + CODING_COLUMNS
     out_rows = []

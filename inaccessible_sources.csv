@@ -45,3 +45,4 @@ https://japan.kantei.go.jp/rekidaisouri/obuchi_e.html,2026-09-22,japan,HTTP_404
 https://nettv.gov-online.go.jp/eng/index.html,2026-09-22,japan,HTTP_403
 https://www.mofa.go.jp/ic/ghp/page1e_000292.html,2026-09-22,japan,HTTP_403
 https://www.mofa.go.jp/s_sa/sw/page3e_001093.html,2026-09-22,japan,HTTP_403
+https://www.mfa.gov.cn/eng/xwfw_665399/s2510_665401/2511_665403/202103/t20210325_9170713.html,2026-09-22,china,"CONTENT_UNAVAILABLE: page returns HTTP 200 but the URL is stale -- content is a generic ""系统维护"" (system maintenance) placeholder page, not the March 25 2021 press conference transcript it was expected to contain (site restructuring; this URL path predates a 2023-era mfa.gov.cn reorganization to /eng/xw/fyrbt/ -- the equivalent live transcript was not relocated during this pilot)."

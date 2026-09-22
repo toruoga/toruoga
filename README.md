@@ -6,46 +6,57 @@ colonial rule, comfort women, Yasukuni, forced labor, apology, compensation,
 etc.), 2000-01-01 through 2025-12-31. See `codebook.md` for the full coding
 scheme and `config.yaml` for source lists, keyword lists, and crawl settings.
 
-## Current status: Stage 1 pilot (Japan, 2020–2025) — partially coded, real data
+## Current status: Stage 1 pilot (Japan, Korea, China, 2020–2025) — partially coded, real data
 
 A later session re-tested network access and found the picture had changed
-from the original blocker (see "Network access notes" below):
+from the original blocker (see "Network access notes" below), then ran the
+pipeline for real across all three countries. Full detail (per-country
+coverage numbers, what was and wasn't reachable, a real pipeline bug found
+and fixed along the way) is in `pilot_coverage_report.md`. Summary:
 
-- **`japan.kantei.go.jp`** (Prime Minister's Office) is reachable. 1096
-  candidate document URLs were discovered by crawling the real monthly
-  statement archives for every 2020–2025 administration (Abe → Suga →
-  Kishida → Ishiba), 1081 pages were downloaded and retained verbatim under
-  `data/raw/japan/`, and 747 passed the Stage 4 keyword filter.
-- **`www.mofa.go.jp`** (Ministry of Foreign Affairs) remains genuinely
-  blocked — Akamai's edge WAF returns `403 Access Denied` regardless of
-  User-Agent or request headers, confirmed with both `curl` and `WebFetch`.
-  This source is absent from the pilot; see `inaccessible_sources.csv`.
-- Of the 747 keyword-filtered candidates, **10 have been fully
-  contextually coded** per `codebook.md` (read in full, not
-  keyword-matched) and are in `pilot_japan_2020_2025.csv`:
-  the six annual August 15 National Memorial Ceremony for the War Dead
-  addresses (2020–2025, spanning Abe/Suga/Kishida/Ishiba), Prime Minister
-  Ishiba's same-day press conference explaining his reintroduction of
-  "remorse" language after a 13-year gap, Prime Minister Suga's January
-  2021 press conference on the comfort-women court case, and two records
-  from the March 2023 Kishida-Yoon rapprochement (the forced-labor-issue
-  press conference and the joint press conference restarting "shuttle
-  diplomacy").
-- The remaining **737 candidates are real, downloaded, keyword-matched
-  documents that have not yet been contextually coded** — the keyword
-  filter is deliberately recall-oriented (it also matches, e.g., "war" in
-  statements about Ukraine, or "victims" in disaster-relief statements),
-  so most of the 737 are expected to be coded `OTHER`/excluded once
-  reviewed, not additional historical-recognition records. They are in
-  `pilot_manual_review.csv` with `classification_confidence=LOW`,
-  per the pipeline's design (`06_classify_records.py` never assigns
-  substantive codes by keyword alone).
+- **Japan**: `japan.kantei.go.jp` reachable; `www.mofa.go.jp` blocked
+  site-wide (Akamai WAF `403`, independent of headers). 1096 URLs
+  discovered via a real archive crawl of every 2020–2025 administration's
+  monthly statement archives, 1081 downloaded, 746 kept after the keyword
+  filter, **10 fully contextually coded** (`pilot_japan_2020_2025.csv`).
+- **Korea**: `en.president.go.kr` (current administration) and
+  `webarchives.pa.go.kr` (the National Archives of Korea's official web
+  archive, covering the Moon Jae-in and Yoon Suk Yeol eras whose original
+  English-language domains are now DNS-dead) both reachable;
+  `www.mofa.go.kr` blocked site-wide (TLS ClientHello reset, independent
+  of headers — same class of block as MOFA Japan). 6 hand-verified
+  candidate URLs (Korea's site structure doesn't support the same
+  archive-crawl approach as Japan's — see coverage report), all 6 **fully
+  contextually coded**.
+- **China**: `www.mfa.gov.cn` reachable (with intermittent, retriable
+  connection resets). 5 hand-verified candidate URLs, 4 **fully
+  contextually coded** (1 was a stale URL now serving a generic
+  "system maintenance" placeholder, logged as inaccessible rather than
+  used).
+- **20 records total are fully contextually coded** per `codebook.md`
+  (read in full, not keyword-matched) — see `pilot_east_asia_2020_2025.csv`
+  for all 20, or the per-country files (`pilot_japan_2020_2025.csv`, etc.)
+  Every row's `coder_notes` documents the specific textual basis for every
+  field, including explicitly-flagged borderline calls.
+- The remaining **736 candidates** (all from Japan; Korea/China's smaller,
+  hand-verified candidate pools were each coded in full) are real,
+  downloaded, keyword-matched documents that have not yet been
+  contextually coded — the keyword filter is deliberately recall-oriented
+  (it also matches, e.g., "war" in statements about Ukraine, or "victims"
+  in disaster-relief statements), so most are expected to resolve to
+  `OTHER`/excluded once reviewed, not additional historical-recognition
+  records. They are in `pilot_manual_review.csv` with
+  `classification_confidence=LOW`, per the pipeline's design
+  (`06_classify_records.py` never assigns substantive codes by keyword
+  alone).
 
 **Scaling this beyond the pilot** means continuing the contextual-coding
-pass over `pilot_manual_review.csv`, then re-running `07_deduplicate.py`,
-`08_validate.py`, `09_export_csv.py`; and separately resolving MOFA
-access (see below) and doing the same discovery/download/code cycle for
-Korea and China.
+pass over `pilot_manual_review.csv`; separately resolving MOFA Japan/Korea
+access; and finding a working discovery mechanism for China's State
+Council source and Korea's JS-paginated live site so they can be
+archive-crawled as thoroughly as Japan's was, rather than relying on
+hand-picked search results (see `pilot_coverage_report.md`'s "What didn't
+work" section for specifics).
 
 ## Network access notes (for future sessions)
 
@@ -77,6 +88,40 @@ Korea and China.
   (see git history of `scripts/01_discover_urls.py` for the resolved
   slugs/date ranges used: `98_abe`, `99_suga`, `100_kishida`,
   `101_kishida`, `102_ishiba`, `103`, `104` for 2020-01 through 2025-12).
+- **Korea**: `www.mofa.go.kr` and its embassy subdomains (`*.mofa.go.kr`)
+  reset the TLS connection at the ClientHello regardless of headers/UA —
+  the same class of block as MOFA Japan, confirmed reproducible (not a
+  one-off flake) and not fixed by retrying. `eng.president.go.kr` /
+  `english1.president.go.kr` / `english.president.go.kr` (the pre-Lee-
+  administration English presidential domains) do not resolve at all
+  (DNS `NXDOMAIN`, confirmed via both this environment's proxy and
+  WebFetch's independent network path) — genuinely retired when the
+  presidential administration changed (Yoon → Lee, June 2025), not
+  blocked. Their content is preserved verbatim on
+  `webarchives.pa.go.kr` (the National Archives of Korea's official
+  web-archiving service) at
+  `http://webarchives.pa.go.kr/<ordinal>th/<original-host>/<original-path>`
+  — `19th` for Moon Jae-in, `20th` for Yoon Suk Yeol (ordinals per
+  `https://japan.kantei.go.jp/past_cabinet/` \-style numbering, but on
+  the Korean side at `https://en.president.go.kr/eng/index.do`'s "Previous
+  Presidents" equivalent). The current administration's live site,
+  `en.president.go.kr`, is reachable directly but paginates its
+  `/president/statements-remarks` index via client-side JS — `?page=N`
+  query strings return no additional links over plain HTTP GET, so it
+  could not be archive-crawled the way Kantei was within this pilot;
+  candidate URLs were found via targeted web search instead.
+- **China**: `www.mfa.gov.cn` and `english.www.gov.cn` are both reachable,
+  but intermittently reset the TLS connection mid-handshake (not a hard
+  block — retrying the same request, sometimes seconds later, routinely
+  succeeds; observed ~1-in-3 failure rate). `config.yaml`'s
+  `english.www.gov.cn/news/` section is a general links/portal page
+  (links to ~200 unrelated provincial government offices), not a news
+  article archive as originally assumed — do not treat its crawl results
+  as candidate documents without checking first. MFA China's real,
+  working "Regular Press Conferences" archive is
+  `https://www.mfa.gov.cn/eng/xw/fyrbt/lxjzh/index_1.html` (config.yaml's
+  `xwfw_665399/s2510_665401/` path redirects to an unrelated treaties
+  page — stale, like Kantei's and Korea's pre-redesign URLs).
 
 ## Pipeline
 

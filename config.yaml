@@ -31,12 +31,25 @@ sources:
         - "https://www.mofa.go.jp/policy/q_a/faq16.html"         # History Issues Q&A
 
   korea:
+    # eng.president.go.kr is DNS-dead (retired when the administration
+    # changed to Lee Jae Myung, June 2025); the current live site is
+    # en.president.go.kr, but its /president/statements-remarks index
+    # paginates via client-side JS (?page=N returns nothing over plain
+    # HTTP GET) so it cannot be archive-crawled the way Kantei is --
+    # candidates must be found via search and added with --seed-urls.
+    # Pre-Lee-administration content (Moon Jae-in, Yoon Suk Yeol) survives
+    # on webarchives.pa.go.kr (National Archives of Korea) at
+    # /<19th|20th>/<original-host>/<original-path> -- see README's
+    # "Network access notes" for how those ordinals/hosts were resolved.
     - name: "Office of the President (ROK)"
-      base_url: "https://eng.president.go.kr/"
+      base_url: "https://en.president.go.kr/"
       sections:
-        - "https://eng.president.go.kr/briefing/speeches"
-        - "https://eng.president.go.kr/briefing/statements"
+        - "https://en.president.go.kr/president/statements-remarks"   # JS-paginated; seed individual URLs instead
     - name: "Ministry of Foreign Affairs of the Republic of Korea"
+      # BLOCKED: www.mofa.go.kr and all its subdomains (embassy sites
+      # included) reset the TLS connection at the ClientHello regardless
+      # of headers/UA -- same class of block as MOFA Japan. Confirmed
+      # reproducible, not a transient flake.
       base_url: "https://www.mofa.go.kr/"
       sections:
         - "https://www.mofa.go.kr/eng/press/pressbrief"
@@ -46,11 +59,17 @@ sources:
     - name: "State Council of the PRC"
       base_url: "https://english.www.gov.cn/"
       sections:
+        # NOTE: this is a general links/portal page (links to ~200
+        # unrelated provincial government offices), NOT a news article
+        # archive -- do not treat its crawl results as candidate
+        # documents without checking first (see README). No verified
+        # replacement URL identified yet.
         - "https://english.www.gov.cn/news/"
     - name: "Ministry of Foreign Affairs of the PRC"
       base_url: "https://www.mfa.gov.cn/eng/"
       sections:
-        - "https://www.mfa.gov.cn/eng/xwfw_665399/s2510_665401/"   # regular press conferences
+        - "https://www.mfa.gov.cn/eng/xw/fyrbt/lxjzh/index_1.html"   # regular press conferences (verified working; the xwfw_665399/s2510_665401/ path below is STALE and redirects to an unrelated treaties page)
+        - "https://www.mfa.gov.cn/eng/xwfw_665399/s2510_665401/"     # stale -- kept for reference, do not use
         - "https://www.mfa.gov.cn/eng/wjbz_665378/"                 # statements
 
 # ---------------------------------------------------------------------------

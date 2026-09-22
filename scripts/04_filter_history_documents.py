@@ -63,9 +63,19 @@ def main():
     out_fields = ["url", "country", "institution", "document_title", "document_type_guess",
                   "date_guess", "cleaned_file", "matched_keywords"]
 
+    already_seen = set()
+    if out_path.exists():
+        with open(out_path, newline="", encoding="utf-8") as f:
+            already_seen |= {r["url"] for r in csv.DictReader(f)}
+    if exclusion_path.exists():
+        with open(exclusion_path, newline="", encoding="utf-8") as f:
+            already_seen |= {r["url"] for r in csv.DictReader(f)}
+
     rows = []
     with open(meta_path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
+            if r["url"] in already_seen:
+                continue
             if any(kw in r["url"].lower() for kw in excluded_kw):
                 append_exclusion(exclusion_path, {"url": r["url"], "date": r["date_guess"],
                                                     "country": r["country"], "reason_for_exclusion": "NOT_OFFICIAL"})

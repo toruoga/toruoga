@@ -1,139 +1,187 @@
-# Pilot Coverage Report — Japan, 2020–2025
+# Pilot Coverage Report — Japan, Korea, China, 2020–2025
 
-## Status: real data collected; 10 records fully contextually coded, 737 pending
+## Status: real data collected across all three countries; 20 records fully
+## contextually coded, 737 pending
 
 An earlier session in this repository's history reported the pilot fully
 blocked by an org-level egress policy denying every government domain
 (`mofa.go.jp`, `kantei.go.jp`, `mofa.go.kr`, and even `en.wikipedia.org` as
 a control). A later session re-tested and found that policy no longer in
-effect: `en.wikipedia.org` and `mfa.gov.cn` are reachable directly, and
-`japan.kantei.go.jp` — the earlier 404s were actually the site rejecting
-curl's bare default `User-Agent`, not an access block — is reachable with
-any explicit UA (the pipeline's own `AcademicResearchBot/1.0`, already
-configured, works). `www.mofa.go.jp` remains genuinely blocked, now
-confirmed as the site's own Akamai WAF returning `403 Access Denied`
-regardless of headers/UA (tested with both `curl` and `WebFetch`) — a
-per-site block, not an environment policy issue. See "Network access
-notes" in `README.md` for full detail.
+effect. See "Network access notes" in `README.md` for the full diagnosis
+per domain; in short:
 
-## Coverage table (2020–2025, Japan)
+- **Japan** — `japan.kantei.go.jp` reachable (earlier 404s were the site
+  rejecting curl's bare default User-Agent, not a block). `www.mofa.go.jp`
+  genuinely blocked site-wide (Akamai WAF `403`, independent of headers).
+- **Korea** — `en.president.go.kr` (current, Lee Jae Myung administration)
+  and `webarchives.pa.go.kr` (National Archives of Korea's official web
+  archive, covering the retired `eng.president.go.kr` / Moon Jae-in and
+  Yoon Suk Yeol eras) both reachable. `www.mofa.go.kr` and its embassy
+  subdomains reset the TLS connection at the ClientHello regardless of
+  headers — the same class of block as MOFA Japan.
+- **China** — `www.mfa.gov.cn` reachable directly (with intermittent,
+  retriable connection resets — not a hard block). `english.www.gov.cn`
+  reachable but its `/news/` page turned out to be a general links/portal
+  page, not a news archive (see "What didn't work" below).
 
-Per-year columns are computed by extracting the `YYYYMM` segment from each
-URL's path. This is exact for "URLs discovered" (grouped by the monthly
-archive page it was crawled from). "Downloaded" and "kept after keyword
-filter" are grouped by the *document's own* URL month, which occasionally
-differs by one adjacent month from its archive page (e.g. a "previous
-month" navigation link on a January index page pointing to a December
-document) — real boundary noise from the crawl, not an error; the **Total**
-row is exact regardless.
+## Coverage table
 
-| Year | URLs discovered (by archive month) | Downloaded (by document URL month) | Kept after keyword filter (by document URL month) |
-|------|--------------------------------------|--------------------------------------|------------------------------------------------------|
-| 2020 | 106 | 53 | 39 |
-| 2021 | 187 | 176 | 115 |
-| 2022 | 222 | 180 | 146 |
-| 2023 | 169 | 156 | 115 |
-| 2024 | 206 | 196 | 139 |
-| 2025 | 206 | 207 | 158 |
-| pre-2020 / post-2025 stragglers (adjacent-month nav links) | — | 24 | 6 |
-| **Total** | **1096** | **1081** *(1081 successful of 1096 attempted; 15 failed — see below)* | **747** *(one document, an `index.html` itself, was picked up as a candidate — see coder_notes discipline in Stage 6)* |
+| Country | URLs discovered | Downloaded | Kept after keyword filter | Fully coded (non-LOW) | Pending contextual coding |
+|---------|------------------|------------|------------------------------|-------------------------|----------------------------|
+| Japan   | 1096 | 1081 | 746 | 10 | 736 |
+| Korea   | 6 (hand-verified, not archive-crawled — see below) | 6 | 6 | 6 | 0 |
+| China   | 5 (hand-verified; 235 auto-crawled links discarded as noise) | 5 | 4 (1 was a stale "system maintenance" placeholder page, not a real 404 — see `inaccessible_sources.csv`) | 4 | 0 |
+| **Total** | **1107** | **1092** | **756** | **20** | **736** |
 
-The 10 fully-coded records (`pilot_japan_2020_2025.csv`) are dated 2020-08-15,
-2021-01-08, 2021-08-15, 2022-08-15, 2023-03-06, 2023-03-16, 2023-08-15,
-2024-08-15, 2025-08-15 (×2) — i.e. at least one coded record in every
-pilot year. The other 737 keyword-filtered candidates are pending
-contextual coding (`pilot_manual_review.csv`), unevenly distributed across
-2020–2025 per the "kept after keyword filter" column above.
+Japan used the full archive-crawl mechanism (`--seed-index-urls` over 78
+resolved monthly statement archives — see the Japan-only section below).
+Korea and China did not: their site structures (JS-rendered pagination for
+Korea's live site; a portal-style, not article-style, "news" index for
+China's State Council source) made a full archive crawl impractical within
+this pilot's scope, so both were seeded with hand-verified candidate URLs
+found via targeted search instead — a legitimate but narrower discovery
+method than Japan's, meaning Korea/China's candidate pools are **not**
+representative samples of everything available on those sites, unlike
+Japan's.
 
-The 15 download failures were robots.txt-disallowed social/third-party
-links (Twitter, Facebook, a gov-online.go.jp video portal) and
-pre-2020/MOFA URLs incidentally linked from in-range Kantei archive pages
-— see `inaccessible_sources.csv` for the full list with reasons.
+## Fully coded records (20 total)
 
-MOFA (`www.mofa.go.jp`) contributed **0** documents — blocked site-wide;
-see `inaccessible_sources.csv` for the specific URLs attempted (some
-entries from the earlier session's "EGRESS_BLOCKED" diagnosis remain in
-that log verbatim for history; the underlying URLs are still inaccessible,
-just for the corrected reason above).
+### Japan (10) — see `pilot_japan_2020_2025.csv`
 
-## Speaker-level distribution (10 coded records)
+- The six annual August 15 National Memorial Ceremony for the War Dead
+  addresses (2020–2025, Abe/Suga/Kishida/Ishiba)
+- Ishiba's same-day press conference explaining his reintroduction of
+  "remorse" language after 13 years (Aug 15, 2025)
+- Suga's January 2021 press conference on the comfort-women court case
+- Kishida's March 2023 forced-labor-issue press conference and the
+  Kishida-Yoon joint press conference restarting "shuttle diplomacy"
 
-All 10 records: `speaker_level = HEAD` (Prime Minister). Speakers: ABE
-Shinzo (1), SUGA Yoshihide (2), KISHIDA Fumio (5), ISHIBA Shigeru (2).
+Issue distribution: `WAR_GENERAL` 6, `FORCED_LABOR` 2, `COMFORT_WOMEN` 1,
+`HISTORICAL_RECOGNITION_GENERAL` 1. All `speaker_level=HEAD`.
 
-## Issue distribution (10 coded records)
+### Korea (6)
 
-- `WAR_GENERAL`: 6 (the six annual Aug 15 National Memorial Ceremony
-  addresses, 2020–2025)
-- `FORCED_LABOR`: 2 (Kishida, March 2023)
-- `COMFORT_WOMEN`: 1 (Suga, January 2021)
-- `HISTORICAL_RECOGNITION_GENERAL`: 1 (Ishiba's Aug 15, 2025 press
-  conference on "recognition of history")
+- Moon Jae-in: 75th (2020) and 76th (2021) Liberation Day addresses, and
+  his August 2020 message on the National Day to Honor Japanese Military
+  Comfort Women Victims
+- Yoon Suk Yeol: 77th (2022), 78th (2023), 79th (2024) Liberation Day
+  addresses
 
-## Notable substantive finding
+Issue distribution: `COMFORT_WOMEN` 1, `FORCED_LABOR` 1, `COLONIAL_RULE` 1,
+`HISTORICAL_RECOGNITION_GENERAL` 3. All `speaker_level=HEAD`.
 
-The six annual Aug 15 addresses show a consistent pattern across Abe
+### China (4)
+
+- Three MFA spokesperson responses to Japanese PMs' Yasukuni Shrine ritual
+  offerings (Mao Ning, Oct 2023; Wang Wenbin, Apr 2024; Mao Ning, Oct 2024)
+- The Chinese Consul General in Munich's September 2025 keynote at a
+  Bavaria event commemorating the 80th anniversary of victory over Japan,
+  naming the Nanjing Massacre explicitly
+
+Issue distribution: `YASUKUNI` 3, `NANJING` 1. `speaker_level=OFFICIAL` for
+all 4 (spokesperson/consul general, not head of state/government — China's
+routine reactions to Japan's historical-recognition-adjacent acts are
+handled at the MFA spokesperson level, unlike Japan/Korea's head-of-state
+addresses).
+
+## Notable substantive findings
+
+**Japan** — The six Aug 15 addresses show a consistent pattern across Abe
 (2020), Suga (2021), and Kishida (2022–2024): domestically-oriented
-mourning for Japan's own war dead, with no apology, no remorse language,
-and no reference to foreign victims of Japanese aggression/colonial rule —
-a marked contrast with landmark anniversary statements (Murayama 1995,
-Koizumi 2005, Abe's 70th-anniversary statement 2015). Ishiba's 80th
-Memorial Ceremony address (August 15, 2025) breaks this pattern, using the
-word "remorse" for the first time in this annual address in 13 years — a
-change Ishiba directly addresses in the same-day press conference record
-also included in the pilot, where he frames it as consistent with, not a
-departure from, "the position held by previous administrations." Both
-records are in `pilot_japan_2020_2025.csv` with `coder_notes` documenting
-the textual basis.
+mourning for Japan's own war dead, no apology, no remorse language, no
+reference to foreign victims — contrasting with landmark statements
+(Murayama 1995, Abe's 70th-anniversary statement 2015). Ishiba's 80th
+address (Aug 15, 2025) breaks this pattern, reintroducing "remorse" for
+the first time in 13 years, which he frames in the same-day press
+conference as continuity with, not departure from, prior administrations'
+position.
+
+**Korea** — A comparable pattern break, in the opposite direction: Moon's
+addresses (2020, 2021) and comfort-women message engage substantively with
+colonial-era history (forced labor court rulings, comfort women, explicit
+non-retaliation framing), while Yoon's addresses show *declining*
+engagement year over year — 2022 explicitly invokes the 1998 Kim Dae-jung–
+Obuchi Declaration to frame "historical problems" as resolvable, 2023
+mentions Japan only as a trilateral security partner with zero historical
+content, 2024 mentions Japan only in passing (economic comparison, a
+liberation-framing aside). This progression is directly relevant to a
+Kingdon "problem stream" analysis: the same annual genre, same country,
+visibly dropping historical-recognition framing over three consecutive
+years.
+
+**China** — The three Yasukuni responses use near-identical formulaic
+language each time ("spiritual tool and symbol of Japanese militarists'
+war of aggression," "14 convicted Class-A war criminals"), suggesting a
+standing institutional script rather than case-by-case drafting — itself a
+finding worth noting for a genre/formula analysis.
 
 ## What worked
 
-- The full 9-stage pipeline (`scripts/01`–`09`), `config.yaml`,
-  `codebook.md`, directory scaffolding, deduplication logic, validation
-  logic, and CSV schema all ran end-to-end against real data.
-- `scripts/01_discover_urls.py` was extended with `--seed-index-urls` to
-  crawl resolved administration-slug/month archive pages (the config.yaml
-  `{pm_slug}` templates require this manual resolution step — see
-  `https://japan.kantei.go.jp/past_cabinet/index.html` for the
-  slug-to-date mapping used).
-- 1081 real, verified pages were downloaded and retained verbatim.
-- 10 records were fully read in context and coded per `codebook.md`
-  (not keyword-matched) — see `coder_notes` on each row in
-  `pilot_japan_2020_2025.csv` for the specific textual basis of every
-  field, including borderline calls flagged for a second look.
+- The full 9-stage pipeline ran end-to-end across three countries and two
+  discovery methods (archive crawl for Japan, hand-verified search-seeded
+  URLs for Korea/China).
+- `scripts/01_discover_urls.py --seed-index-urls` (added this pilot) for
+  Japan's resolved administration-slug/month archives.
+- `scripts/common.py`'s institution map now covers Korea's National
+  Archives web-archive mirror (`webarchives.pa.go.kr`) and multiple retired
+  presidential-site domain variants.
+- All 20 coded records were read in full context (not keyword-matched) —
+  see `coder_notes` on each row for the specific textual basis of every
+  field, including explicitly-flagged borderline calls.
 
-## What is still pending
+## What didn't work / open items
 
-- 737 real, downloaded, keyword-filtered candidates have not yet been
-  contextually coded (`pilot_manual_review.csv`, all
-  `classification_confidence=LOW`). Given the filter's deliberate
-  recall-orientation (matches generic terms like "war", "fund",
-  "aggression", "victim" — mostly hits on Ukraine, North Korea, natural
-  disasters, and COVID-19 press conferences, not Japan's own historical
-  recognition), most of these are expected to resolve to `OTHER`/excluded
-  on review, not to additional historical-recognition records — but that
-  determination requires the same per-document contextual reading applied
-  to the 10 coded records, which this pilot did not have scope to
-  complete for all 747.
-- MOFA (`www.mofa.go.jp`) is entirely unrepresented; its "History Issues
-  Q&A" (`faq16.html`) and postwar-policy pages in particular would likely
-  add COMFORT_WOMEN/SEXUAL_SLAVERY/HISTORY_TEXTBOOK records this Kantei-
-  only pilot cannot surface (Kantei's PM statements skew toward war
-  memorial and forced-labor/diplomatic-summit genres; MOFA's spokesperson
-  briefings are where textbook and comfort-women legal-position statements
-  are typically most detailed).
-- Korea and China were out of scope for this pilot (Japan-only per the
-  task spec's Section 24).
+- **MOFA Japan, MOFA Korea (all subdomains)** — both blocked at the network
+  level (Akamai WAF for `.go.jp`; TLS ClientHello reset for `.go.kr`),
+  independent of headers/UA. Neither contributed any documents.
+- **`eng.president.go.kr` / `english1.president.go.kr` / `english.president.go.kr`**
+  (Korea's pre-Lee-administration English presidential domains) are DNS-dead
+  — retired when the administration changed, not blocked. Their content
+  survives verbatim on `webarchives.pa.go.kr` and was used instead.
+- **China's State Council `english.www.gov.cn/news/`** section in
+  `config.yaml` is a general links/portal page (links to ~200 unrelated
+  provincial government offices), not a news article archive as assumed —
+  its auto-crawled results were discarded as noise. No replacement URL was
+  identified within this pilot's scope; `english.www.gov.cn/policies/` or
+  a State Council Information Office-specific section might be a better
+  target for a future session.
+- **Korea's live site (`en.president.go.kr`) pagination** is JS-rendered
+  (`?page=N` query strings return empty listings via plain HTTP GET), so
+  it could not be archive-crawled the way Japan's Kantei was; only
+  individually-verified URLs found via search were used. Lee Jae Myung's
+  own 80th Liberation Day address (Aug 2025) could not be located this way
+  and is not in this pilot despite being clearly relevant.
+- **A stale China MFA URL** (`.../xwfw_665399/s2510_665401/2511_665403/202103/...`,
+  a March 2021 comfort-women remarks page found via search) now serves a
+  generic "系统维护" (system maintenance) placeholder with HTTP 200 — a
+  soft-404 from a pre-2023 URL structure the site never redirected. Logged
+  to `inaccessible_sources.csv` with the correct reason rather than
+  fabricating content or mis-filing it as "not relevant."
+- **A real pipeline bug was found and fixed this session**:
+  `04_filter_history_documents.py` and `05/06`'s per-stage scripts had no
+  "already processed" check, so re-running them after adding new
+  countries silently reprocessed and duplicated every prior row (Japan's
+  756→1502 candidate rows, 757→2251 passages, before being caught and
+  fixed). All three scripts now skip already-seen URLs. A second bug —
+  `common.py`'s `is_allowed_by_robots()` declared a `timeout` parameter but
+  never applied it to the network call, so `RobotFileParser.read()` could
+  hang indefinitely against a flaky host (observed against `mfa.gov.cn`) —
+  was also fixed (explicit `urlopen(..., timeout=...)`).
+- 736 real, downloaded, keyword-filtered Japan candidates remain
+  uncoded (`pilot_manual_review.csv`, `classification_confidence=LOW`) —
+  see the "What is still pending" discussion in earlier revisions of this
+  report; unchanged by this session's Korea/China work.
 
 ## Proposed next steps
 
 1. Continue the contextual-coding pass over `pilot_manual_review.csv`
-   (737 rows), reading each full document (not the `relevant_excerpt`
-   alone, which is a keyword-context slice) before assigning any code
-   above `LOW` confidence.
-2. Periodically re-test `www.mofa.go.jp` access (see README's "Network
-   access notes"); if it opens up, re-run Stages 1–9 to add MOFA sources.
-3. Once Japan coding is materially more complete, repeat discovery/
-   download/coding for Korea (`eng.president.go.kr`, `www.mofa.go.kr`) and
-   China (`english.www.gov.cn`, `www.mfa.gov.cn`) and re-run
-   `07_deduplicate.py` onward across all three countries together.
+   (736 Japan rows).
+2. Periodically re-test `www.mofa.go.jp` / `www.mofa.go.kr` access.
+3. Find a working discovery mechanism for China's State Council source and
+   for Korea's live-site pagination (an API endpoint likely exists behind
+   the JS pagination; worth a dedicated investigation), then run a proper
+   archive crawl for both countries the way Japan's was done, rather than
+   relying on hand-picked search results.
+4. Locate and code Lee Jae Myung's 80th Liberation Day address (Aug 2025)
+   and any of his other 2025 statements once a working discovery path for
+   `en.president.go.kr` exists.

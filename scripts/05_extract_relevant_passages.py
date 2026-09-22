@@ -81,9 +81,16 @@ def main():
     fields = ["url", "country", "institution", "document_title", "document_type_guess", "date_guess",
               "section_index", "question_text", "response_text", "relevant_excerpt", "matched_keywords_in_passage"]
 
+    already_seen = set()
+    if out_path.exists():
+        with open(out_path, newline="", encoding="utf-8") as f:
+            already_seen = {r["url"] for r in csv.DictReader(f)}
+
     rows = []
     with open(cand_path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
+            if r["url"] in already_seen:
+                continue
             cleaned_path = REPO_ROOT / r["cleaned_file"]
             text = cleaned_path.read_text(encoding="utf-8", errors="ignore") if cleaned_path.exists() else ""
             qa_pairs = split_qa(text)
