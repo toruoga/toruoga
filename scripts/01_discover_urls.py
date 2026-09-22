@@ -68,6 +68,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--country", choices=["japan", "korea", "china", "all"], default="all")
     ap.add_argument("--seed-urls", nargs="*", default=[], help="Additional explicit URLs to enqueue")
+    ap.add_argument(
+        "--seed-index-urls", nargs="*", default=[],
+        help="Additional archive/index pages (e.g. resolved {pm_slug} monthly archives) to crawl "
+             "for document links, exactly like the section_url archive-crawl path -- for cases where "
+             "config.yaml can only express a template (Section 16: administration-slug enumeration is "
+             "left to the operator, not guessed by the script).",
+    )
     args = ap.parse_args()
 
     cfg = load_config()
@@ -106,6 +113,28 @@ def main():
                         "discovered_via": "ARCHIVE_CRAWL", "discovered_date": date.today().isoformat(),
                         "archive_source": section_url, "status": "DISCOVERED",
                     })
+
+    for index_url in args.seed_index_urls:
+        inst, country = institution_for_url(index_url)
+        country = country or (args.country if args.country != "all" else "UNKNOWN")
+        links, status = crawl_index_page(index_url, cfg, session)
+        polite_sleep(cfg["crawl"]["request_delay_seconds"])
+        if status != "OK":
+            rows.append({
+                "url": index_url, "country": country, "institution": inst or "UNKNOWN",
+                "discovered_via": "ARCHIVE_CRAWL_SEEDED_INDEX_FAILED", "discovered_date": date.today().isoformat(),
+                "archive_source": index_url, "status": f"SKIPPED_{status}",
+            })
+            continue
+        for link in links:
+            if link in existing:
+                continue
+            existing.add(link)
+            rows.append({
+                "url": link, "country": country, "institution": inst or "UNKNOWN",
+                "discovered_via": "ARCHIVE_CRAWL_SEEDED_INDEX", "discovered_date": date.today().isoformat(),
+                "archive_source": index_url, "status": "DISCOVERED",
+            })
 
     for url in args.seed_urls:
         if url in existing:
