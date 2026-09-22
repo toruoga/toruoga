@@ -6,13 +6,15 @@
 ## 要旨
 
 本稿は、日本・韓国・中国の政府および指導者が対外的に発信した歴史認識関連の
-公式英語文書を素材に、「記憶レジーム」という分析枠組みを提示する。歴史認識
-問題は単なる謝罪の有無や十分性の問題ではなく、各国が過去をどのように制度化
-し、誰に責任を負わせ、どのような言説で正当化するかという構造の問題である。
-本稿は日本を中心に、韓国・中国の事例を比較の補助線として用いる質的比較分析
-により、この記憶レジームの3類型(日本=政策管理型、韓国=被害政治型、中国=
-主権・正統性型)を提示し、Kingdonの政策の窓モデルと接続することで、歴史認識
-問題がなぜ反復的に再燃するのかを説明する。
+公式英語文書29件(2020〜2026年の主軸28件+1995年の歴史的画期1件)を素材
+に、「記憶レジーム」という分析枠組みを提示する。歴史認識問題は単なる謝罪の
+有無や十分性の問題ではなく、各国が過去をどのように制度化し、誰に責任を負わ
+せ、どのような言説で正当化するかという構造の問題である。全文の文脈的コーデ
+ィングの結果、行為主体を明示する発話の比率は日本0%・韓国60%・中国100%
+と顕著な差があり、この差異は各国の記憶レジームの類型――日本=政策管理型、
+韓国=被害政治型、中国=主権・正統性型――と対応することを示す。本稿はこの3
+類型をKingdonの政策の窓モデルと接続することで、歴史認識問題がなぜ反復的に
+再燃するのかを説明する。
 
 ---
 
@@ -360,6 +362,104 @@ Relations," *Oxford Research Encyclopedia of Politics*, 2025.
 
 ---
 
+Historical Recognition Issues and Memory Regimes: The Organization of
+History, the Construction of Responsibility, and the Politics of
+Diplomatic Friction in Japan, South Korea, and China (provisional)
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　Toru Oga
+
+Abstract
+
+　　Historical recognition issues in East Asia — war responsibility,
+colonial rule, comfort women, the Yasukuni Shrine, forced labor, apology,
+and compensation — have repeatedly generated diplomatic friction among
+Japan, South Korea, and China. Existing scholarship has largely asked
+whether apologies are sufficient, sincere, or effective as diplomatic
+signals, but has not adequately explained why these disputes recur even
+after apologies or agreements have been reached. This paper argues that
+recurrence is better explained not by the sufficiency of apology but by
+each country's "memory regime" — the institutional and discursive
+structure through which a state remembers the past and constructs
+responsibility for it, comprising (i) the agents of public memory, (ii)
+the institutional devices that fix that memory, and (iii) the
+vocabulary through which responsibility is constructed and justified.
+
+　　Drawing on Kingdon's multiple-streams framework as an auxiliary lens,
+the paper codes 29 official English-language statements by government
+leaders and spokespersons of Japan, South Korea, and China (28 from a
+2020-2026 main sample plus one pre-2020 landmark statement, the 1995
+Murayama Statement), read in full and coded for issue type, Kingdon's
+problem/policy/politics dimensions, apology-related vocabulary
+(apology, explanation, remorse, reflection, remedy, forgiveness), and
+the explicitness of attributed responsibility. The share of statements
+that explicitly name a responsible agent differs sharply by country —
+0% for Japan, 60% for South Korea, and 100% for China — and this
+difference maps onto three distinct memory-regime types: a
+policy-management regime in Japan, in which responsibility is
+consistently left unattributed while institutional remedies (e.g.
+repatriation of war dead's remains) are foregrounded; a victim-politics
+regime in South Korea, in which Japan is more often named explicitly and
+the issue is activated as both a domestic-political and diplomatic
+resource, albeit with engagement that has fluctuated across the Moon,
+Yoon, and Lee administrations; and a sovereignty-legitimacy regime in
+China, in which every statement both names an explicit responsible agent
+and is coded as belonging to Kingdon's political dimension, reflecting a
+standing institutional script deployed by the Ministry of Foreign
+Affairs. A keyness (log-likelihood) analysis of the corpus's vocabulary
+corroborates this typology at the lexical level: Japan's most
+distinctive words reflect a ceremonial genre (prime, minister, memorial,
+cabinet), South Korea's reflect a national-independence narrative
+(freedom, independence, liberation), and China's are the only ones in
+which the substantive issue vocabulary itself (aggression, resistance,
+Yasukuni, justice) rises to the top.
+
+　　The paper concludes that the recurrence of historical recognition
+disputes in East Asia is not simply a matter of insufficiently sincere
+apologies, but of how each country's memory regime differently links the
+problem, policy, and politics dimensions of the issue — and that this
+structural difference, rather than apology sufficiency per se, should be
+the object of comparative analysis going forward.
+
+---
+
+歴史認識問題と記憶レジーム:日中韓における歴史の編成、責任の構築、外交的軋
+轢の政治学(和文要旨・再掲)
+
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　大　賀　　哲
+
+　　東アジアでは、戦争責任、植民地支配、慰安婦問題、靖国神社参拝、強制労
+働、謝罪、補償をめぐる歴史認識問題が、日中韓の間で繰り返し外交的摩擦を生ん
+できた。既存研究の多くは謝罪の十分性・誠実性・外交的効果の有無を問うてきた
+が、なぜ謝罪や合意が成立した後もこれらの問題が反復的に再燃するのかを十分に
+説明してこなかった。本稿は、この反復性を謝罪の十分性ではなく、各国が過去を
+記憶し責任を構築する制度的・言説的構造――「記憶レジーム」――の違いから説明
+する。記憶レジームは、①公的記憶の主体、②記憶を固定化する制度装置、③責任
+を構築し正当化する語彙、の三要素からなる。
+
+　　本稿はKingdonの政策の窓モデルを補助線として、日中韓の政府首脳・報道官
+による公式英語発話29件(2020〜2026年の主軸28件+1995年の村山談話1件)を全
+文読解し、争点類型、Kingdonの問題・政策・政治の三次元、謝罪関連語彙(謝
+罪・説明・悔恨・反省・救済・赦し)、行為主体の明示性についてコーディングし
+た。行為主体を明示する発話の比率は、日本0%、韓国60%、中国100%と国によ
+って顕著に異なり、この差異は三つの異なる記憶レジーム類型に対応する。すなわ
+ち、行為主体を一貫して曖昧化しながら遺骨収集事業等の制度的対応を前面に出す
+日本の「政策管理型」、日本を名指しする頻度が相対的に高く、文在寅・尹錫悦・
+李在明の各政権を通じて強度が変動しながらも国内政治・外交双方の資源として問
+題を活性化させる韓国の「被害政治型」、そして全件が行為主体を明示しKingdon
+の政治次元に該当する、外交部の定型的スクリプトを反映した中国の「主権・正統
+性型」である。語彙レベルのキーネス分析もこの類型論を裏づける――日本の特徴
+語は儀礼的ジャンルを反映し(prime, minister, memorial, cabinet)、韓国のそ
+れは自国独立史ナラティブを反映し(freedom, independence, liberation)、実
+質的な争点語彙そのものが上位に現れるのは中国のみである(aggression,
+resistance, yasukuni, justice)。
+
+　　本稿は、東アジアにおける歴史認識問題の反復的再燃が、単なる謝罪の不誠実
+さの問題ではなく、各国の記憶レジームが問題・政策・政治の三次元をいかに異な
+る形で結びつけているかという構造の問題であり、今後の比較分析はこの構造的差
+異そのものを対象とすべきであると結論づける。
+
+---
+
 【この草稿についての補足(2026-09-22更新)】
 - サブタイトルは仮のものであり、確定版では調整可能。メインタイトルはご指示
   通り維持している。
@@ -385,3 +485,11 @@ Relations," *Oxford Research Encyclopedia of Politics*, 2025.
   `response_text`全文を国別に結合してLL値を算出)。
 - 7節(考察)・8節(おわりに)は、実際のコーディング結果に基づいて新たに書
   き起こしたもので、旧スライドの記述とは分析の粒度が異なる。
+- **英文タイトル+Abstract、および和文要旨を追加**(ご依頼の通り日英両方)。
+  サンプルPDF(『法政論叢』第51巻第1号)の書式に倣い、本文・註のあとに独立
+  ページとして配置し、著者名は同PDFの通常論文の表記(ローマ字、姓・名の順、
+  大文字化なし――政府発表資料側の慣行(例:KISHIDA Fumio)とは異なる)に合
+  わせた。冒頭の日本語要旨も、実際の集計結果(行為主体明示率 日本0%・韓国
+  60%・中国100%)を反映して更新している。英文要旨は和文要旨の逐語訳では
+  なく、英語論文要旨としての慣用的な構成(背景→方法→主要な知見→結論)で独
+  自に書き起こした。
