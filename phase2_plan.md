@@ -267,53 +267,154 @@ corpus otherwise follows, not a silent substitution — see individual
 records' `coder_notes` and this file's batch-script commit messages for
 which records this applies to.
 
-## Revisiting the genre/confound question with the expanded sample
+## Confound stress-test re-run on the full 90-record sample (2026-09-22, after the 30/30/30 push)
 
-The methodology stress-test above (28-row sample) found Japan's finding
-"relatively well supported" (agency_explicit=0 held across both SPEECH and
-PRESS_CONFERENCE genres), Korea's "60%" figure administration-contingent
-rather than a stable trait (Moon/Lee vs. Yoon), and China's finding "not
-decomposable" because 7 of 8 records were the same genre (spokesperson
-press conference). With 90 records and substantially more genre/speaker-
-level diversity per country (see the per-country `document_type` and
-`speaker_level` breakdowns obtainable from `pilot_east_asia_2020_2025.csv`
-directly), this stress-test should be re-run before finalizing the paper's
-3-type conclusion — it has **not** been re-run as part of this push
-(scope was data collection only, per the user's "a" instruction to
-continue toward 30/country). In particular:
+The original stress-test (28-row sample, above) found Japan's finding
+"relatively well supported," Korea's "60%" figure administration-
+contingent rather than a stable trait, and China's near-uniform pattern
+"not decomposable" because 7 of 8 records were the same genre
+(spokesperson press conference). Re-running the same
+`agency_explicit` cross-tab against the full 90-record sample (code: a
+short pandas/csv snippet grouping by `country`, `document_type`,
+`speaker_level`, and `speaker_name`; not saved as a script since it is
+three lines and easy to regenerate) gives a substantially clearer, and in
+one case reversed, picture. Headline rates (`apology`/`remorse`/
+`reflection`/`remedy`/`agency_explicit`, share of `1` among non-`NA`
+responses, n=30 each):
 
-- China now has HEAD-level records (the 3 APEC summit readouts) alongside
-  the OFFICIAL-level MOFA series, which directly addresses the earlier
-  "cannot rule out this is just how MFA briefings talk" concern — the
-  summit readouts show a *different*, softer register at HEAD level
-  ("draw lessons from history," agency_explicit=0) than the OFFICIAL-level
-  Yasukuni/Nanjing genre's sharper, agency_explicit=1 language, which is
-  itself a finding, not a null result.
-- Korea now has a much larger OFFICIAL-level (MOFA spokesperson) sub-
-  sample (11 records) that did not exist in the 28-row analysis at all,
-  which should be checked against the HEAD-level (presidential) records
-  for the same kind of genre/level decomposition already done for Japan.
-- Japan's 30th-record silence-by-omission case (Sado) and the Hiroshima/
-  Nagasaki batch's confirmation that Ishiba's Aug 15 "remorse" pattern-
-  break does not carry over to the Hiroshima/Nagasaki genre are both
-  directly relevant to how confidently the paper can generalize from any
-  single Japan genre to a country-level claim.
+| | apology | remorse | reflection | remedy | agency_explicit |
+|---|---|---|---|---|---|
+| Japan | 0.00 | 0.13 | 0.67 | 0.70 | 0.00 |
+| Korea | 0.00 | 0.00 | 0.40 | 0.20 | 0.71 |
+| China | 0.00 | 0.00 | 0.17 | 0.00 | 0.87 |
+
+At the country level this is, if anything, a *cleaner* fit to the
+"policy-management / victimhood-politics / sovereignty-legitimacy" framing
+than the 28-row sample was: Japan pairs zero agency_explicit with the
+corpus's highest remedy (0.70) and reflection (0.67) rates (concrete
+relief/policy measures and self-referential "never again" framing, never
+a named responsible actor); Korea and China both run high on
+agency_explicit (directed at Japan) and near-zero on remedy/remorse/
+apology (neither is apologizing for anything in this corpus — they are
+criticizing Japan). But the country-level numbers hide very different
+internal structure once decomposed by genre and speaker_level, and that
+internal structure is the more important finding for the paper's method
+section:
+
+**Japan — now fully robust, not just "relatively" supported.**
+`agency_explicit=0` holds in **all 30 of 30 records**, across every
+`document_type` (SPEECH n=18, PRESS_CONFERENCE n=11, STATEMENT n=1) and
+every one of the four sampled prime ministers (Abe, Suga, Kishida,
+Ishiba) individually. With three times the sample and a genre the 28-row
+version didn't have (the Hiroshima/Nagasaki addresses) confirming the
+same pattern, this is no longer a "probably genre-robust" claim — it is a
+clean, exceptionless finding across genre and administration, for the
+HEAD-level main-axis sample specifically (see the Sado silence record
+and phase-2's forced-labor temporal series for the caveats already noted
+about within-genre variation in *other* fields like remorse/reflection).
+
+**Korea — the "60% administration-contingent" finding sharpens into a
+level-contingent one.** The 28-row sample had zero OFFICIAL-level Korea
+records; this push added 11 (the MOFA textbook/Yasukuni/Sado statement
+series). Splitting by `speaker_level`:
+
+- HEAD (presidential, n=19; 17 non-NA): overall 0.59, but a clear
+  administration gradient — **Moon 1.00 (4/4) → Yoon 0.50 (3/6, 2 NA
+  cases are his 2023/2024 Aug 15 addresses, which do not mention Japan at
+  all) → Lee 0.43 (3/7)**. This replicates and extends the original
+  finding: not a fixed national trait, and now showing continued decline
+  under Lee rather than a rebound, with three administrations' worth of
+  data instead of two-and-a-fraction.
+- OFFICIAL (MOFA spokesperson, n=11): **0.91**, and — unlike the
+  presidential level — essentially flat across all three administrations'
+  terms in office (Moon-era statements 2/2, Yoon-era 5/6, Lee-era 4/4;
+  the single 0 is the deliberately-included Yoon "dinner" null-engagement
+  record, not a genuine counterexample). This is the push's clearest new
+  finding for Korea: the "sharp, actor-naming" register the original
+  28-row sample's aggregate 60% figure gestured at is concentrated in and
+  driven by the *bureaucratic* level, which does not shift with
+  administration change, while the *political/presidential* level is
+  exactly where the administration-contingent variation lives. A
+  "被害政治型" characterization fits the MOFA-spokesperson register far
+  better than it fits any single president's addresses.
+
+**China — reverses from "not decomposable" to "decomposable, and the
+apparent uniformity was a genre artifact after all."** The 28-row
+sample's near-100% figure came from a sample that was 7/8 the same genre
+(spokesperson press conference); this push added the corpus's first
+HEAD-level China data (5 records: the 2025-09-03 Xi speeches, already
+present, plus three new Xi-Japan-PM APEC summit readouts). Splitting by
+`speaker_level`:
+
+- OFFICIAL (MOFA spokesperson, n=13) and UNKNOWN (third-person Xinhua/
+  State Council wire narration of ceremonies — Nanjing, Sept 18, July 7,
+  n=12): **1.00 each**. Both genres explicitly name "Japanese
+  militarists," specific Class-A war criminals, or "Japanese troops" as
+  the actor, in near-formulaic language.
+- HEAD (Xi Jinping himself, n=5): **0.20** (1 of 5) — the opposite
+  pattern. All three APEC summit readouts (2022 Kishida/Bangkok, 2023
+  Kishida/San Francisco, 2024 Ishiba/Lima) code `agency_explicit=0`: Xi's
+  language is "draw lessons from history" / "face history squarely,"
+  abstract and unaddressed to a named actor, paired with an explicit pivot
+  to present-day cooperation — structurally the closest thing in the
+  whole corpus to Japan's own register. Only one of the two 2025-09-03
+  war-anniversary speeches names Japan explicitly.
+
+  This is exactly the test the original stress-test's diagnosis called
+  for ("Xi Jinping's own speeches on the same topic, to test if the
+  pattern holds at HEAD level") and the answer is **no, it does not
+  hold** — China's near-uniform agency_explicit=1 finding is a property
+  of the OFFICIAL-level MOFA-spokesperson-and-state-media commemorative
+  register specifically, not a China-wide "sovereignty/legitimacy" trait
+  that also describes how its head of state actually talks to Japan's
+  leaders in person. Note that `document_type` alone does not cleanly
+  separate this (the three summit readouts and the Xinhua wire narration
+  are both coded `document_type=OTHER`); `speaker_level` is the variable
+  that does the work here, not genre in the document-type sense.
+
+**Implication for the paper's "3-type" wording.** All three countries now
+show that their headline agency_explicit rate is concentrated at a
+specific speaker_level rather than holding uniformly across the whole
+national apparatus: Japan's 0% is genuinely level-independent (only HEAD
+data exists in this corpus, and it's uniform within that level across
+four administrations); Korea's aggregate 71% is really "OFFICIAL ~90%,
+flat across administrations" plus "HEAD ~50-100% declining by
+administration"; China's aggregate 87% is really "OFFICIAL/media ~100%"
+plus "HEAD ~20%." A revised conclusion should probably name the
+speaker_level the claim is actually about (e.g., "Korea's and China's
+*bureaucratic/spokesperson* apparatus consistently names Japan as the
+actor; their heads of state/government do not, and vary further by who
+holds the office and, for China, by the diplomatic occasion") rather than
+stating the 3-type claim as an undifferentiated national trait. This has
+not been decided or written into `draft_paper_ja.md` yet — flagged here
+as the concrete finding the next paper-drafting pass should work from.
 
 ## Remaining before this phase is publication-ready
 
-- Refresh `pilot_coverage_report.md`'s per-country tables and narrative,
-  and `README.md`'s "Current status" section, for the 34 -> 90 change
-  (in progress in this same session, alongside this file's update).
-- Re-run the genre/speaker-level/administration confound stress-test
-  above against the full 90-record sample before finalizing the paper's
-  "3-type" conclusion wording — not yet done (see previous section).
+- ~~Refresh `pilot_coverage_report.md`'s per-country tables and narrative,
+  and `README.md`'s "Current status" section, for the 34 -> 90 change~~ —
+  **done 2026-09-22**.
+- ~~Re-run the genre/speaker-level/administration confound stress-test
+  above against the full 90-record sample~~ — **done 2026-09-22**, see
+  the "Confound stress-test re-run on the full 90-record sample" section
+  above. Headline result: Japan's finding is now fully robust (0/30
+  exceptions across genre and administration); Korea's and China's
+  aggregate agency_explicit rates both turn out to be driven almost
+  entirely by their OFFICIAL/bureaucratic-level records (~90-100%), while
+  their HEAD-level records look quite different (Korea: administration-
+  contingent, 43-100%; China: mostly agency_explicit=0, the opposite of
+  the aggregate figure). The paper's 3-type wording should be revised to
+  name the speaker_level each claim actually describes, not stated as an
+  undifferentiated national trait — not yet done, flagged for the next
+  drafting pass.
 - The remaining ~718-item Japan `pilot_manual_review.csv` backlog is
   still mostly untouched -- out of scope per the user's "low priority,
   not full-scale" framing, not an oversight.
 - Recompute the paper's quantitative tables (keyness analysis, apology/
   responsibility vocabulary table) against the full 90-record corpus —
   the existing tables in `draft_paper_ja.md` and `draft_paper_ja.docx`
-  still reflect the earlier 28-record state.
+  still reflect the earlier 28-record state. In progress alongside this
+  update.
 
 This file is a working tracker, not a publication output — delete or fold its
 content into `pilot_coverage_report.md` once phase 2 is complete.
