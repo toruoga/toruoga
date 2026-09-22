@@ -6,32 +6,77 @@ colonial rule, comfort women, Yasukuni, forced labor, apology, compensation,
 etc.), 2000-01-01 through 2025-12-31. See `codebook.md` for the full coding
 scheme and `config.yaml` for source lists, keyword lists, and crawl settings.
 
-## ⚠️ Current status: Stage 1 pilot blocked by network access
+## Current status: Stage 1 pilot (Japan, 2020–2025) — partially coded, real data
 
-This repository currently contains the **full pipeline scaffolding**
-(scripts, config, codebook) but **no verified corpus records yet**. The
-Stage 1 pilot (Section 24 of the task spec: Japan, 2020–2025) could not be
-completed in the session that built this scaffolding because outbound
-network access to every required official domain
-(`mofa.go.jp`, `kantei.go.jp`, `mofa.go.kr`, `mfa.gov.cn`, `gov.cn`, and even
-`en.wikipedia.org` as a control) was blocked by that environment's egress
-policy (confirmed via both the `WebFetch` tool and direct `curl`, which
-returned `CONNECT tunnel failed, response 403` / "denied by organization
-policy"). Only GitHub's own API was reachable; a web-search tool that runs
-server-side (not through the local proxy) also worked, but it returns
-snippets only, and this project's own integrity rules (Section 14/21 of the
-spec) forbid building a record from a search snippet instead of the opened,
-verified page.
+A later session re-tested network access and found the picture had changed
+from the original blocker (see "Network access notes" below):
 
-Real candidate URLs discovered via search during that session are logged in
-`data/logs/search_log.csv` and `inaccessible_sources.csv` (reason:
-`EGRESS_BLOCKED`) rather than being used to fabricate record text.
+- **`japan.kantei.go.jp`** (Prime Minister's Office) is reachable. 1096
+  candidate document URLs were discovered by crawling the real monthly
+  statement archives for every 2020–2025 administration (Abe → Suga →
+  Kishida → Ishiba), 1081 pages were downloaded and retained verbatim under
+  `data/raw/japan/`, and 747 passed the Stage 4 keyword filter.
+- **`www.mofa.go.jp`** (Ministry of Foreign Affairs) remains genuinely
+  blocked — Akamai's edge WAF returns `403 Access Denied` regardless of
+  User-Agent or request headers, confirmed with both `curl` and `WebFetch`.
+  This source is absent from the pilot; see `inaccessible_sources.csv`.
+- Of the 747 keyword-filtered candidates, **10 have been fully
+  contextually coded** per `codebook.md` (read in full, not
+  keyword-matched) and are in `pilot_japan_2020_2025.csv`:
+  the six annual August 15 National Memorial Ceremony for the War Dead
+  addresses (2020–2025, spanning Abe/Suga/Kishida/Ishiba), Prime Minister
+  Ishiba's same-day press conference explaining his reintroduction of
+  "remorse" language after a 13-year gap, Prime Minister Suga's January
+  2021 press conference on the comfort-women court case, and two records
+  from the March 2023 Kishida-Yoon rapprochement (the forced-labor-issue
+  press conference and the joint press conference restarting "shuttle
+  diplomacy").
+- The remaining **737 candidates are real, downloaded, keyword-matched
+  documents that have not yet been contextually coded** — the keyword
+  filter is deliberately recall-oriented (it also matches, e.g., "war" in
+  statements about Ukraine, or "victims" in disaster-relief statements),
+  so most of the 737 are expected to be coded `OTHER`/excluded once
+  reviewed, not additional historical-recognition records. They are in
+  `pilot_manual_review.csv` with `classification_confidence=LOW`,
+  per the pipeline's design (`06_classify_records.py` never assigns
+  substantive codes by keyword alone).
 
-**To actually populate the corpus**, run this pipeline from an environment
-whose network policy allows outbound HTTPS to the domains in `config.yaml`
-(`sources:` section) — e.g. locally, or in a Claude Code on the web
-environment configured with a permissive/allowlisted network policy that
-includes those government domains.
+**Scaling this beyond the pilot** means continuing the contextual-coding
+pass over `pilot_manual_review.csv`, then re-running `07_deduplicate.py`,
+`08_validate.py`, `09_export_csv.py`; and separately resolving MOFA
+access (see below) and doing the same discovery/download/code cycle for
+Korea and China.
+
+## Network access notes (for future sessions)
+
+- The org-level egress block reported by an earlier session in this
+  environment (`CONNECT tunnel failed, response 403` to every government
+  domain, including `en.wikipedia.org` as a control) is **no longer
+  present** — `curl`/`WebFetch` reach `en.wikipedia.org`, `mfa.gov.cn`, and
+  `japan.kantei.go.jp` directly now.
+- `japan.kantei.go.jp` returns a **fake-looking custom 404 page** to
+  requests with curl's bare default `User-Agent` (or no UA override at
+  all) — this is what the earlier session's `curl` probes without a UA
+  header actually hit, not a real block. Any explicit `User-Agent` header
+  (browser-style or the pipeline's own `AcademicResearchBot/1.0`,
+  already set in `config.yaml`) gets a real `200` with real content. All
+  of this pipeline's scripts already send that UA, so no further change
+  is needed to crawl Kantei.
+- `www.mofa.go.jp` is blocked at the site's own edge (Akamai WAF, `403
+  Access Denied`) independent of User-Agent — this is a real per-site
+  block, not an environment/org policy issue, and headers/UA spoofing do
+  not bypass it. Re-test periodically; if still blocked, MOFA content for
+  this corpus needs a different network path (e.g. a residential/non-
+  datacenter egress IP) or must be sourced from Kantei's mirrored
+  statements where available.
+- Kantei's site was redesigned at some point after the original archive
+  URLs (`https://japan.kantei.go.jp/{pm_slug}/statement/{YYYYMM}/...`)
+  were indexed by search engines; those exact URLs are still live and
+  correct (verified), but the administration-slug-to-date mapping had to
+  be re-derived from `https://japan.kantei.go.jp/past_cabinet/index.html`
+  (see git history of `scripts/01_discover_urls.py` for the resolved
+  slugs/date ranges used: `98_abe`, `99_suga`, `100_kishida`,
+  `101_kishida`, `102_ishiba`, `103`, `104` for 2020-01 through 2025-12).
 
 ## Pipeline
 
@@ -56,7 +101,13 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python3 scripts/01_discover_urls.py --country japan
-# Optionally seed with search-discovered URLs, e.g.:
+# config.yaml's Kantei sections are {pm_slug} templates (the site has no
+# single "all statements" index); resolve slugs/months and crawl them as a
+# further archive level with --seed-index-urls, e.g.:
+python3 scripts/01_discover_urls.py --country japan --seed-index-urls \
+  "https://japan.kantei.go.jp/101_kishida/statement/202208/index.html"
+# --seed-urls (singular) instead enqueues specific document URLs directly,
+# e.g. from search-discovered candidates:
 python3 scripts/01_discover_urls.py --country japan --seed-urls \
   "https://japan.kantei.go.jp/101_kishida/statement/202208/_00006.html"
 
