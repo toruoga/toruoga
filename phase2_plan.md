@@ -114,15 +114,80 @@ Notable coding decisions:
   confidence. Combined with the original pilot's 20, phase 2 now has 29
   fully-coded records across the two files (not yet merged into one).
 
+## Methodology stress-test (2026-09-22, later in session): is the 3-type claim actually supported?
+
+The user asked directly whether "日本=政策管理型、韓国=被害政治型、中国=主権・
+正統性型" is a defensible conclusion. A genre/speaker-level cross-tab over the
+28-row main axis (at the time) showed:
+
+- **Japan**: agency_explicit=0 holds across BOTH document_type=SPEECH (the
+  annual ceremony) AND document_type=PRESS_CONFERENCE within the sample --
+  i.e. not purely a ceremonial-genre artifact. Relatively well supported.
+- **Korea**: the aggregate "60%" hid a sharp split by *administration*, not
+  genre: Moon (4/4 agency_explicit=1) and Lee (2/3) cluster opposite Yoon
+  (0/3, with 2 NA). "被害政治型" describes Moon/Lee-era discourse, not a
+  stable Korean national trait -- Yoon is a real counter-example within the
+  same country and genre.
+- **China**: 7 of 8 records are the same genre (spokesperson press
+  conference), so the "100%/100%" finding is *not decomposable* from this
+  sample alone -- cannot rule out "this is just how MFA briefings talk
+  about anything" vs. a memory-regime-specific finding. Weakest-supported
+  leg of the three.
+
+Diagnosis of what would fix each, discussed with the user:
+- **Korea**: fixable by more data of the *same kind* (Yoon-era press
+  conferences specifically, more per-administration N) -- but the fix
+  changes the conclusion (administration-contingent, not a fixed "type"),
+  it doesn't rescue the original claim as stated.
+- **China**: NOT fixable by more of the same genre. Needs a different kind
+  of data -- Xi Jinping's own speeches on the same topic (to test if the
+  pattern holds at HEAD level, not just OFFICIAL/spokesperson), and/or
+  MFA responses to non-historical disputes (to test if it's a general
+  institutional-communication-style artifact vs. history-specific).
+
+## Revised scale target (2026-09-22): ~20/country, not 30 or 50
+
+After estimating effort for 50/country (Japan: achievable via existing
+736-backlog coding; Korea: ~1% hit rate scanning the Moon-era archive by
+title keywords, Yoon-era press conferences not yet sourced at all; China:
+similarly low hit rate per targeted week, plus needs the Xi-speech genre
+diversification above) and finding that even Japan's "easy" backlog has a
+much lower true-positive rate than the raw 736 count suggested (a
+proximity-keyword sweep across all 736 backlog rows for
+comfort-women/forced-labor/colonial/Yasukuni/textbook-type language,
+excluding the already-coded 10, found only **6** new genuinely on-topic
+candidates -- most of the backlog is "war"-keyword false positives from
+COVID-era press conferences, Diet policy speeches mentioning Ukraine, a
+domestic political-funding "apology," etc., exactly as
+`pilot_coverage_report.md` already warned), the user and I agreed to
+retarget at **~20/country** rather than 30 or 50.
+
+Progress toward that revised target: the 6 new Japan candidates found
+(all genuinely on-topic, no more false-positive spending) have been coded
+and merged, bringing Japan's main axis to **16**. They also happen to
+double as evidence for the genre-confound check above (J6, the Okinawa
+memorial press conference, replicates agency_explicit=0 in a
+PRESS_CONFERENCE, not just the SPEECH-genre ceremony) and form a small
+temporal series on the forced-labor issue across five dates
+(2021-10-15 -> 2022-03-11 -> 2022-06-10 -> 2022-11-13 -> 2025-06-09)
+tracking how substantively Kishida/Ishiba engage with it over time and
+across two different ROK presidents (Yoon, Lee) -- see coder_notes on
+each row.
+
+Current tallies: Japan 16, Korea 10, China 8 (34 main-axis total). Korea
+and China still need new discovery work (per the diagnosis above) to
+reach ~20; Japan needs more backlog sweeps of the same
+proximity-keyword kind (has headroom in `pilot_manual_review.csv`,
+now 731 rows after removing the 6 promoted ones, but expect a similarly
+low hit rate, not a straight path to +4 more).
+
 ## Remaining before this phase is publication-ready
 
-- Merge `phase2_new_records.csv` into `pilot_east_asia_2020_2025.csv` (or
-  regenerate a combined output) and refresh `pilot_coverage_report.md`'s
-  per-country tables and narrative to include the 9 new records.
-- Update `README.md`'s "Current status" section with the new counts and
-  the landmark-anchor design.
-- The 736-item Japan `pilot_manual_review.csv` backlog is still untouched
-  by this phase-2 session -- out of scope per the user's "low priority,
+- Refresh `pilot_coverage_report.md`'s per-country tables and narrative,
+  and `README.md`'s "Current status" section, for the Japan 10->16 change
+  (the Korea/China 2026-09-22-earlier additions are already reflected).
+- The remaining ~731-item Japan `pilot_manual_review.csv` backlog is
+  still mostly untouched -- out of scope per the user's "low priority,
   not full-scale" framing, not an oversight.
 
 This file is a working tracker, not a publication output — delete or fold its
