@@ -15,3 +15,18 @@ https://japan.kantei.go.jp/99_suga/actions/202108/_00020.html,2026-09-21,japan,E
 https://japan.kantei.go.jp/99_suga/statement/202108/_00006.html,2026-09-21,japan,"EGRESS_BLOCKED: same as above. Title suggests PM Suga's address at the 76th National Memorial Ceremony for the War Dead (Aug 15, 2021), NOT verified -- treat as unconfirmed."
 https://www.mofa.go.kr/eng/index.do,2026-09-21,korea,"EGRESS_BLOCKED: environment network policy denied outbound HTTPS to www.mofa.go.kr (tested as a control domain, not part of Japan-2020-2025 pilot scope)."
 https://en.wikipedia.org/wiki/Yasukuni_Shrine,2026-09-21,N/A,"EGRESS_BLOCKED: control test, non-official source anyway (excluded per spec Section 2); confirms block is environment-wide, not domain-specific."
+http://twitter.com/@JPN_PMO,2026-09-22,japan,ROBOTS_DISALLOWED
+http://www.facebook.com/Japan.PMO,2026-09-22,japan,ROBOTS_DISALLOWED
+https://japan.kantei.go.jp/abespeech/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/asospeech/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/hatoyama/statement/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/hukudaspeech/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/kan/statement/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/koizumispeech/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/noda/statement/index_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/rekidaisouri/hashimoto_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/rekidaisouri/mori_e.html,2026-09-22,japan,HTTP_404
+https://japan.kantei.go.jp/rekidaisouri/obuchi_e.html,2026-09-22,japan,HTTP_404
+https://nettv.gov-online.go.jp/eng/index.html,2026-09-22,japan,ROBOTS_DISALLOWED
+https://www.mofa.go.jp/ic/ghp/page1e_000292.html,2026-09-22,japan,ROBOTS_DISALLOWED
+https://www.mofa.go.jp/s_sa/sw/page3e_001093.html,2026-09-22,japan,ROBOTS_DISALLOWED

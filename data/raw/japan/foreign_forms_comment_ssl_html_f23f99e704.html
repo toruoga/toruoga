@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, viewport-fit=cover"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><title>Contact us | Prime Minister&#39;s Office of Japan</title><meta name="description" content="Homepage of the Prime Minister's Office. Please tell us your opinions and impressions about the Prime Minister's Office. You can send it directly to each ministry and agency."><meta name="keywords" content="Prime Minister, Japan, Cabinet"><link rel="canonical" href="https://japan.kantei.go.jp/form/comment.html"><meta property="og:title" content="Contact us | Prime Minister's Office of Japan"><meta property="og:type" content="website"><meta property="og:url" content="https://japan.kantei.go.jp/form/comment.html"><meta property="og:image" content="https://japan.kantei.go.jp/assets/images/common/ogp.png"><meta property="og:site_name" content="Prime Minister's Office of Japan"><meta property="og:description" content="Homepage of the Prime Minister's Office. Please tell us your opinions and impressions about the Prime Minister's Office. You can send it directly to each ministry and agency."><meta name="twitter:card" content="summary_large_image"><meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="/assets/css/style.css"><link rel="preload" as="script" href="/assets/js/gate.js"><link rel="preload" as="script" href="/assets/js/common.js"><link rel="preload" as="fetch" href="/parts/common/header.html" crossorigin><link rel="prefetch" as="image" href="/assets/images/common/icon_add.svg"><link rel="prefetch" as="image" href="/assets/images/common/icon_subtract.svg"><link rel="prefetch" as="image" href="/assets/images/common/icon_search_white.svg"><link rel="stylesheet" href="/assets/css/style.css"><script src="/assets/js/gate.js" defer></script><script src="/assets/js/common.js" defer></script><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@500&display=swap" rel="stylesheet"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/form/goiken_ssl.css">
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfvBzcsAAAAAElc0PaEJrjERDMlZZjMLnPpSXyf"></script>
+<script> var english = true; </script>
+<script src="/form/goiken.js" defer></script></head> <body> <nav> <ul>  <li> <a href="#main-container" class="link-block-skip">Skip to Main Content</a> </li>  </ul> </nav> <div class="wrap" id="top"> <header class="header js-header js-html-parts is-top" data-parts-url="/parts/common/header.html"></header> <main class="is-single" role="main">
+  <div class="l-wrapper">
+    <div class="l-main">
+      <article>
+        <div class="container" id="main-container">
+          <h1>Contact us</h1>
+          <div class="section" id="section-message">
+            <template class="js-complete-template">
+              <p class="goiken-title">${title}</p>
+              <p>${message}</p>
+              <div class="module-button-wrap"><a class="module-button primary icon-arrow" href="${href}"><span class="module-button__text">${buttonText}</span></a></div>
+            </template>
+            <div class="input-display confirm-display">
+              <p>
+                Please use the form below to share your comments and opinions with the Prime Minister’s Office.  <!-- 変更箇所(次期での変更) -->
+              </p>
+            </div>
+          </div>
+          <section class="section input-display confirm-display">
+            <h2>Note</h2>
+            <ul class="module-list-note">
+              <li>Feel free to submit your message in Japanese or English.</li>
+              <li>The message is limited to a maximum of 2,000 characters (including line breaks and spaces). You may not be able to enter 2,000 characters depending on your operating system.</li>
+              <li>To prevent your message from being garbled, do not use half-width katakana or special characters.</li>
+              <li>Your message will be forwarded to the appropriate ministry or agency. We may not be able to reply to all messages.</li>
+            </ul>
+          </section>
+          <section class="section input-display confirm-display">
+            <h2>Entry</h2>
+            <div class="block-center" id="block-center">
+              <form action="recaptcha.php" class="goiken" method="post" name="F1" onsubmit="return input_check()" enctype="application/x-www-form-urlencoded"  id="input-form-section">
+                <div class="module-fieldset">
+                  <div class="module-fieldset__head">
+                    <label for="category"><span class="legend-title">Category</span><span class="legend-label required">*Required</span></label>  <!-- 変更箇所(次期での変更) -->
+                  </div>
+                  <div class="module-fieldset__body">
+                    <div class="fieldset-item">
+                      <p id="validation-message-category">Please select a category. If none of the options apply, select "Other."</p>  <!-- 変更箇所(次期での変更) -->
+                      <p id="validation-message-category-error" role="alert"></p>
+                      <div class="fieldset-item__form">
+                        <div class="fieldset-select">
+                          <select name="data[category]" id="category" aria-describedby="validation-message-category validation-message-category-error" onclick="reEditForm();">
+                            <option value="">Select one of the following.</option>
+                            <script>
+                              $(function(){
+                                $("#category").load("material/goiken_en.html");
+                              });
+                            </script>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-fieldset">
+                  <div class="module-fieldset__head">
+                    <label for="theme"><span class="legend-title">Topic</span><span class="legend-label required">*Required</span></label>  <!-- 変更箇所(次期での変更) -->
+                  </div>
+                  <div class="module-fieldset__body">
+                    <div class="fieldset-item">
+                      <p id="validation-message-theme">Please enter a topic.</p>
+                      <p id="validation-message-theme-error" role="alert"></p>
+                      <div class="fieldset-item__form">
+                        <input type="text" id="theme" name="theme" class="wordGoiken" aria-describedby="validation-message-theme validation-message-theme-error" onclick="reEditForm();" maxlength="256">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-fieldset">
+                  <div class="module-fieldset__head">
+                    <label for="goiken"><span class="legend-title">Message <span class="count" role="region" aria-live="polite">0</span>/2000</span><span class="legend-label required">*Required</span></label>  <!-- 変更箇所(次期での変更) -->
+                  </div>
+                  <div class="module-fieldset__body">
+                    <div class="fieldset-item">
+                      <p id="validation-message-goiken">Please enter your message (comments, opinions, etc.).</p>
+                      <p id="validation-message-goiken-error" role="alert"></p>
+                      <div class="fieldset-item__form">
+                        <textarea maxlength="2000" id="goiken" name="detail" class="wordGoiken" aria-describedby="validation-message-goiken validation-message-goiken-error" onclick="reEditForm();"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-fieldset">
+                  <div class="module-fieldset__head">
+                    <label for="age"><span class="legend-title">Age</span></label>
+                  </div>
+                  <div class="module-fieldset__body">
+                    <div class="fieldset-item">
+                      <div class="fieldset-item__form">
+                        <div class="fieldset-select">
+                          <select name="uage" id="age" onclick="reEditForm();">
+                            <option value="no_answer">Prefer not to share</option>
+                            <option value="under_20">Under 20</option>
+                            <option value="20s">20s</option>
+                            <option value="30s">30s</option>
+                            <option value="40s">40s</option>
+                            <option value="50s">50s</option>
+                            <option value="60s">60s</option>
+                            <option value="over_70">70 or over</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-fieldset">
+                  <div class="module-fieldset__head">
+                    <label for="email"><span class="legend-title">Email address</span></label>
+                  </div>
+                  <div class="module-fieldset__body">
+                    <div class="fieldset-item">
+                      <p id="validation-message-email-error" role="alert"></p>
+                      <div class="fieldset-item__form">
+                        <input type="text" id="email" name="email" size="30" class="wordGoiken" aria-describedby="validation-message-email-error" onclick="reEditForm();" maxlength="60">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name=".command" value="confirm">
+              </form>
+              <div class="confirm-display" id="confirm" aria-live="polite">
+                <template class="js-confirm-template">
+                  <p class="goiken-title">Are you sure you want to submit this form?<br>If you need to make changes, please edit the fields above and press the “Confirm” button again.</p>  <!-- 変更箇所(次期での変更) -->
+                  <div class="module-fieldset">
+                    <div class="module-fieldset__head">
+                      <p><span class="legend-title">${message[0]}</span></p>
+                    </div>
+                    <div class="module-fieldset__body">
+                      <div class="fieldset-item">
+                        <p>${category}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="module-fieldset">
+                    <div class="module-fieldset__head">
+                      <p><span class="legend-title">${message[1]}</span></p>
+                    </div>
+                    <div class="module-fieldset__body">
+                      <div class="fieldset-item">
+                        <p>${theme}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="module-fieldset">
+                    <div class="module-fieldset__head">
+                      <p><span class="legend-title">${message[2]}</span></p>
+                    </div>
+                    <div class="module-fieldset__body">
+                      <div class="fieldset-item">
+                        <p>${goiken}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="module-fieldset">
+                    <div class="module-fieldset__head">
+                      <p><span class="legend-title">${message[3]}</span></p>
+                    </div>
+                    <div class="module-fieldset__body">
+                      <div class="fieldset-item">
+                        <p>${age}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="module-fieldset">
+                    <div class="module-fieldset__head">
+                      <p><span class="legend-title">${message[4]}</span></p>
+                    </div>
+                    <div class="module-fieldset__body">
+                      <div class="fieldset-item">
+                        <div class="fieldset-item__form">
+                          <p>${email}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="goiken-title">Please review your input and click Send when you are ready to submit.<br>To make changes, click Edit.</p>  <!-- 変更箇所(次期での変更) -->
+                </template>
+              </div>
+              <div class="module-text--center">
+                <!-- <p class="module-text--note attention">Please read the <a target="_blank" href="//japan.kantei.go.jp/policies/privacy_e.html" class="module-link--inline external">Privacy Policy<img src="/jp/n5-common/img/icon_window.svg" alt="Open in a new window" class="icons"></a> before submitting the form.</p> -->
+                <p class="">Please read the <a target="_blank" href="/policies/privacy_e.html" class="module-link--inline external">Privacy Policy</a> before submitting the form.</p>  <!-- 変更箇所(ローカル開発向け:L219のiconを非表示に) -->
+              </div>
+              <div class="section">
+                <input id="my_token" type="hidden" name="recaptcha_response">
+                <div class="module-button-wrap input-display">
+                  <button id="confirm_button" onclick="inputFormCheck();" name="submit" type="submit" class="module-button general icon-arrow"><span class="module-button__text">Confirm</span></button>
+                </div>
+                <div class="module-button-wrap column confirm-display">
+                  <button id="reedit_button" onclick="reEditForm({ scroll: true });" class="module-button secondary icon-arrow"><span class="module-button__text">Edit</span></button>
+                  <button id="submit_button" onclick="inputFormSubmit();" name="submit" type="submit" class="module-button general icon-arrow"><span class="module-button__text">Send</span></button>
+                </div>
+                <div class="module-button-wrap"><a class="module-button primary icon-arrow" href="//japan.kantei.go.jp/"><span class="module-button__text">Return to the top page</span></a></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </div>
+</main> <div class="js-html-parts" data-parts-url="/parts/common/featured.html" aria-busy="true"></div> <footer class="footer js-footer js-html-parts" data-parts-url="/parts/common/footer.html"></footer> <div class="modal__overlay modal__overlay--behind js-modal-overlay" aria-hidden="true"></div> </div> 
+<!-- User Insight PCDF Code Start : japan.kantei.go.jp -->
+<script type="text/javascript">
+var _uic = _uic ||{}; var _uih = _uih ||{};_uih['id'] = 50293;
+_uih['lg_id'] = '';
+_uih['fb_id'] = '';
+_uih['tw_id'] = '';
+_uih['uigr_1'] = ''; _uih['uigr_2'] = ''; _uih['uigr_3'] = ''; _uih['uigr_4'] = ''; _uih['uigr_5'] = '';
+_uih['uigr_6'] = ''; _uih['uigr_7'] = ''; _uih['uigr_8'] = ''; _uih['uigr_9'] = ''; _uih['uigr_10'] = '';
+_uic['security_type'] = -1;
+/* DO NOT ALTER BELOW THIS LINE */
+/* WITH FIRST PARTY COOKIE */
+(function() {
+var bi = document.createElement('script');bi.type = 'text/javascript'; bi.async = true;
+bi.src = '//cs.nakanohito.jp/b3/bi.js';
+var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bi, s);
+})();
+</script>
+<!-- User Insight PCDF Code End : japan.kantei.go.jp -->
+ </body></html>
