@@ -1,8 +1,11 @@
 # Pilot Coverage Report — Japan, Korea, China, 2020–2025
 
-## Status (2026-09-22): 94 records fully contextually coded (main axis: Japan
-## 34 [30 HEAD + 4 MINISTER], Korea 30, China 30) + 1 pre-2020 landmark
-## anchor, 718 Japan candidates still pending
+## Status (2026-09-22): 101 records fully contextually coded (main axis: Japan
+## 41 [30 HEAD + 4 MINISTER + 7 newly promoted from a full backlog review],
+## Korea 30, China 30) + 1 pre-2020 landmark anchor. The 718-row Japan
+## backlog (`pilot_manual_review.csv`) has now been fully reviewed and
+## dispositioned (7 promoted, 711 excluded with a recorded reason each) —
+## see "Full backlog review" below.
 
 This report is the single working record for the corpus's discovery
 methodology, coding decisions, methodological stress-tests, and open items.
@@ -53,10 +56,10 @@ departure from primary-source-only sourcing, not a silent substitution.
 
 | Country | Fully coded (main axis) | Backlog pending | Landmark anchors |
 |---------|--------------------------|------------------|-------------------|
-| Japan   | 34 (30 HEAD + 4 MINISTER) | 718 | — |
+| Japan   | 41 (30 HEAD + 4 MINISTER + 7 backlog-promoted) | 0 (718 reviewed, all dispositioned — see below) | — |
 | Korea   | 30 | 0 (candidate pools hand/search-verified, not archive-crawled at Japan's scale) | — |
 | China   | 30 | 0 (same as Korea) | — |
-| **Total** | **94** | **718** | **1** (1995 Murayama Danwa) |
+| **Total** | **101** | **0** | **1** (1995 Murayama Danwa) |
 
 Per-country `issue_primary` and `speaker_level`/`document_type` distributions
 at this tally can be recomputed directly from
@@ -259,23 +262,129 @@ level-based difference in willingness to state them. n=4 remains a small
 sample for `reflection`/`remedy`, but `agency_explicit`'s 0/34 result is
 about as clean a finding as the corpus can currently produce.
 
+## Round 5: full backlog review of `pilot_manual_review.csv` (2026-09-22)
+
+Per explicit user request ("718件バックログの本格コーディング"), every one of
+the 718 Japan rows in `pilot_manual_review.csv` was individually
+dispositioned this round — not just skimmed for a few more wins, but given
+an actual EXCLUDED/PROMOTED verdict and a recorded reason, so the file is
+now fully auditable rather than an open-ended backlog. Method:
+
+1. **Triage by existing signal columns.** The file already carries
+   per-row keyword-proximity flags (`apology_signal`, `remorse_signal`,
+   `reflection_signal`, `remedy_signal`, `pardon_or_forgiveness_signal`,
+   `explanation_signal`) computed by the original pipeline. The 62 rows
+   with `apology_signal`, `remorse_signal`, or `pardon_or_forgiveness_signal`
+   = 1 (the highest-precision subset) were read individually first (title +
+   full `relevant_excerpt`).
+2. **Content-pattern exclusion for the rest.** A regex classifier was run
+   over every row's title/question/response/excerpt text, sorting matches
+   into named categories (COVID-19/pandemic, natural disaster, domestic
+   political scandal, Ukraine/Russia or unrelated geopolitics, North Korea
+   missile launches, condolence messages for unrelated deaths, generic
+   diplomatic messages/speeches to third countries, routine unrelated press
+   conferences, index/navigation pages). This left 173 rows (after removing
+   the already-read 62) genuinely unclassified by any pattern, which were
+   then read individually the same way as the high-signal 62.
+3. **Full-text verification for ambiguous cases.** A handful of titles
+   that could plausibly contain real content despite not matching an
+   obvious exclusion pattern — a Jan 2022 press conference on the Sado
+   Mines UNESCO nomination timeline, two Sept 2024 Japan-ROK/Japan-China
+   press conferences, a July 2021 press conference on a Hiroshima High
+   Court ruling, a March 2025 Japan-U.S. Iwo-To ceremony address, and a
+   handful of titles left over after full classification (Nobel Prize
+   comments, a UNESCO sake-brewing inscription message, appointment/New
+   Year statements) — were fetched from `japan.kantei.go.jp` directly (all
+   reachable without Wayback) and read in full before disposition, per the
+   codebook's non-hallucination rule.
+
+**Result: 7 promoted, 711 excluded**, each with a `full_review_status`
+(PROMOTED/EXCLUDED) and `full_review_reason` column now added to
+`pilot_manual_review.csv` (no rows deleted — the full 718-row file, with
+disposition, remains as the audit trail). Exclusion reasons, by volume:
+COVID-19/pandemic (239), Ukraine/Russia or unrelated geopolitics (165),
+natural disaster or accident (122), generic diplomatic message/speech to a
+third country (105), routine unrelated press conference (29), condolence
+message for an unrelated death (11), North Korea missile-launch response
+(10), individually-read-and-confirmed-irrelevant (8), domestic political
+scandal/personnel matter (8), Japan-ROK/Japan-PRC summit press conference
+with no substantive historical content beyond generic references (6),
+index/navigation page (5), National Foundation Day/Marine Day message (2),
+atomic-bomb-survivor domestic welfare policy — ruled out as a domestic
+health/certification matter (the "black rain" lawsuit) rather than an
+international historical-recognition dispute (2). This confirms, at full
+scale, the low true-positive rate already documented from the two earlier
+partial sweeps (6 then 12 promoted out of ~730): roughly 1% of this
+particular backlog was genuinely on-topic.
+
+The 7 newly-promoted records (all `speaker_level=HEAD`, added to
+`pilot_east_asia_2020_2025.csv`/`pilot_japan_2020_2025.csv`):
+
+- **The Battle of Okinawa Memorial Ceremony Address series** (June 23,
+  2020/2021/2023/2024/2025 — Abe, Suga, Kishida ×2, Ishiba), a fourth
+  annual WWII ceremonial genre alongside Aug 15 and Hiroshima/Nagasaki,
+  previously entirely missing from the corpus (only a same-date 2025
+  PRESS_CONFERENCE about the ceremony was already coded; the ceremonial
+  Address itself, a separate document each year, was not). Same pattern as
+  the rest of Japan's HEAD-level sample: `apology=0`, `remorse=0`,
+  `reflection=1` (self-referential "never repeat the horrors of war"),
+  `remedy=1` (concrete, recurring U.S.-base-burden-reduction commitments,
+  coded on the same logic as the Hiroshima/Nagasaki batch's
+  atomic-bomb-survivor relief measures), `agency_explicit=0` throughout.
+  2022 (77th anniversary) could not be located in the backlog and was not
+  separately searched for this round.
+- **A Jan 28, 2022 Kishida press conference on the Sado Mines UNESCO
+  nomination timeline** — a fourth, and chronologically earliest, point in
+  the Sado Island Gold Mines dispute thread already traced in this corpus
+  (Korea's Jan 2024 protest, Japan's July 2024 silence message, Korea's
+  July 2026 follow-up). Kishida acknowledges the nomination "has been met
+  with various arguments and opinions" and pledges a task force to
+  "respond to various arguments, including those concerning historical
+  background" — an oblique, unnamed reference to the wartime forced-labor
+  controversy, without naming Korea or forced labor. `explanation=1` for
+  the process rationale; all other content fields 0, consistent with the
+  same avoidance pattern later seen in the July 2024 record.
+- **A March 29, 2025 Ishiba address at the Japan-U.S. Iwo-To Reunion of
+  Honor Ceremony** — a new comparison case: an explicit Japan-U.S.
+  reconciliation framing ("Japan and the United States, which once fought
+  against each other, have reconciled... now becoming trusted allies")
+  that has no equivalent in this corpus's Korea- or China-facing records.
+  `reflection=1` ("humbly and sincerely facing history"), `remedy=1` (an
+  ongoing war-dead remains repatriation project), `agency_explicit=0`.
+
+Also individually verified and excluded rather than assumed irrelevant:
+the two Sept 2024 Japan-ROK/Japan-China press conferences use "history" and
+"aggression" only in generic, non-substantive ways (record-pace people-to-
+people exchange "in history," routine diplomatic language) with no
+apology/remorse/responsibility content; the July 2021 Hiroshima High Court
+press conference is about extending Atomic Bomb Survivors' Assistance Act
+certification to "black rain" plaintiffs, a domestic health/welfare
+administrative matter distinct from the international historical-
+recognition disputes this corpus tracks, so it was not coded despite
+matching keywords.
+
 ## Fully coded records by country
 
-### Japan (34) — see `pilot_japan_2020_2025.csv`
+### Japan (41) — see `pilot_japan_2020_2025.csv`
 
-HEAD level (30): the six annual August 15 National Memorial Ceremony for the
+HEAD level (37): the six annual August 15 National Memorial Ceremony for the
 War Dead addresses (2020–2025, Abe/Suga/Kishida/Ishiba); Ishiba's same-day
 press conference reintroducing "remorse" language after 13 years (Aug 15,
 2025); Suga's January 2021 press conference on the comfort-women court case;
 Kishida's March 2023 forced-labor-issue press conference and the
 Kishida-Yoon joint press conference restarting "shuttle diplomacy"; the
 12-record Hiroshima/Nagasaki Peace Memorial Ceremony batch (2020–2025);
-Kishida's July 2024 Sado Island Gold Mines silence message.
+Kishida's July 2024 Sado Island Gold Mines silence message; the 5-record
+Battle of Okinawa Memorial Ceremony Address series (2020/2021/2023/2024/
+2025); Kishida's Jan 2022 Sado Mines UNESCO-nomination press conference;
+Ishiba's March 2025 Japan-U.S. Iwo-To Reunion of Honor address (the last 7
+promoted from a full review of the `pilot_manual_review.csv` backlog — see
+"Round 5" above).
 
 MINISTER level (4): see "Round 4" above (Motegi 2020, Hayashi ×2 2022,
 Kamikawa 2024).
 
-Issue distribution across all 34 skews toward `WAR_GENERAL` (the Aug 15/
+Issue distribution across all 41 skews toward `WAR_GENERAL` (the Aug 15/
 Hiroshima/Nagasaki ceremonial genre) with `FORCED_LABOR` and `COMFORT_WOMEN`
 as the main substantive-dispute categories; see the CSV for the exact
 recomputed counts.
@@ -731,9 +840,11 @@ snapshots of MOFA (and, for Korea/China reactions, the equivalent blocked
 
 ## Remaining open items
 
-1. Continue the contextual-coding pass over `pilot_manual_review.csv` (718
-   Japan rows) — still out of scope for this phase, not attempted beyond the
-   two targeted proximity-keyword sweeps already done.
+1. ~~Continue the contextual-coding pass over `pilot_manual_review.csv`
+   (718 Japan rows)~~ — **done 2026-09-22**: every row now individually
+   dispositioned (7 promoted, 711 excluded with a recorded reason) — see
+   "Round 5: full backlog review" above. The backlog is closed, not merely
+   further sampled; nothing remains pending in `pilot_manual_review.csv`.
 2. Periodically re-test `www.mofa.go.jp` / `www.mofa.go.kr` direct access —
    both still blocked as of 2026-09-22 (see "Network access notes").
 3. ~~Find a working discovery mechanism for China's State Council

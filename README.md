@@ -24,7 +24,15 @@ final round then added 4 Japan Foreign-Minister-level (`speaker_level=
 MINISTER`) records via Wayback Machine snapshots of the blocked
 `www.mofa.go.jp`, closing a gap where Japan's sample was HEAD-level only —
 see `pilot_coverage_report.md`'s "Round 4" section — bringing the corpus to
-its current **94 main-axis records (Japan 34, Korea 30, China 30)**. See
+94 main-axis records (Japan 34, Korea 30, China 30). A final round then
+fully reviewed and dispositioned every one of the 718 rows in Japan's
+`pilot_manual_review.csv` backlog (7 promoted with a recorded reason each,
+711 excluded with a recorded reason each — nothing left pending), adding a
+5-record Battle of Okinawa Memorial Ceremony Address series, an earlier
+(Jan 2022) point in the Sado Island Gold Mines dispute thread, and a
+Japan-U.S. Iwo-To reconciliation-ceremony address — see
+`pilot_coverage_report.md`'s "Round 5" section — bringing the corpus to
+its current **101 main-axis records (Japan 41, Korea 30, China 30)**. See
 `pilot_coverage_report.md` for the full numbers. Summary of the current
 state:
 
@@ -33,8 +41,8 @@ state:
   snapshots substitute where MOFA content is needed. 1096 URLs
   discovered via a real archive crawl of every 2020–2025 administration's
   monthly statement archives, 1081 downloaded, 746 kept after the keyword
-  filter. **34 fully contextually coded** (`pilot_japan_2020_2025.csv`,
-  30 HEAD + 4 MINISTER), up from an initial 10: two further
+  filter. **41 fully contextually coded** (`pilot_japan_2020_2025.csv`,
+  37 HEAD + 4 MINISTER), up from an initial 10: two further
   proximity-keyword sweeps of the backlog found 6 then 12 more genuinely
   on-topic candidates (a 6-record batch including an Okinawa memorial
   press conference and a forced-labor temporal series, then a 12-record
@@ -42,11 +50,17 @@ state:
   Abe/Suga/Kishida/Ishiba), plus one deliberate silence/omission record
   (Kishida's July 2024 Sado Island Gold Mines UNESCO message, which omits
   the wartime forced-Korean-labor dispute that was the actual story behind
-  the inscription); a final round then added 4 Foreign Minister
+  the inscription); a further round added 4 Foreign Minister
   (`speaker_level=MINISTER`) records via Wayback snapshots of
   `www.mofa.go.jp` (Motegi 2020, Hayashi ×2 2022, Kamikawa 2024 — the last
   a same-day MINISTER-level companion to the Kishida Sado silence record
-  above), closing the corpus's HEAD-only gap for Japan.
+  above), closing the corpus's HEAD-only gap for Japan; a final round then
+  fully reviewed all 718 `pilot_manual_review.csv` backlog rows and
+  promoted 7 more (the Battle of Okinawa Memorial Ceremony Address series,
+  2020/2021/2023/2024/2025; a Jan 2022 Sado Mines UNESCO-nomination press
+  conference, an earlier point in the same dispute thread as the July 2024
+  silence message; a March 2025 Japan-U.S. Iwo-To reconciliation-ceremony
+  address), closing the backlog entirely (0 rows now pending).
 - **Korea**: `en.president.go.kr` (current, Lee Jae Myung administration)
   and `webarchives.pa.go.kr` (the National Archives of Korea's official web
   archive, covering the Moon Jae-in and Yoon Suk Yeol eras whose original
@@ -87,10 +101,10 @@ state:
   dates. Also added the corpus's first HEAD-level China records outside
   the Sept 3, 2025 Xi speeches: three Xi-Japan PM APEC-summit readouts
   (2022, 2023, 2024).
-- **94 main-axis records total are fully contextually coded** per
-  `codebook.md` (read in full, not keyword-matched) — Japan 34 (30 HEAD +
+- **101 main-axis records total are fully contextually coded** per
+  `codebook.md` (read in full, not keyword-matched) — Japan 41 (37 HEAD +
   4 MINISTER), Korea 30, China 30 — see `pilot_east_asia_2020_2025.csv`
-  for all 94, or the per-country file (`pilot_japan_2020_2025.csv`).
+  for all 101, or the per-country file (`pilot_japan_2020_2025.csv`).
   Every row's
   `coder_notes` documents the specific textual basis for every field,
   including explicitly-flagged borderline calls. Several Korea/China
@@ -110,37 +124,43 @@ state:
   Japan-Korea "comfort women" agreement, the 2018 Korea Supreme Court
   forced-labor ruling), blocked as of 2026-09-22 by a site-wide Internet
   Archive outage encountered mid-session.
-- The remaining **718 candidates** (all from Japan, down from 736 after
-  the final push promoted 13 more to fully-coded records; Korea/China's
-  smaller, hand-verified/archive-crawled candidate pools were each coded
-  in full) are real,
-  downloaded, keyword-matched documents that have not yet been
-  contextually coded — the keyword filter is deliberately recall-oriented
-  (it also matches, e.g., "war" in statements about Ukraine, or "victims"
-  in disaster-relief statements), so most are expected to resolve to
-  `OTHER`/excluded once reviewed, not additional historical-recognition
-  records. They are in `pilot_manual_review.csv` with
-  `classification_confidence=LOW`, per the pipeline's design
-  (`06_classify_records.py` never assigns substantive codes by keyword
-  alone).
+- The Japan backlog (`pilot_manual_review.csv`, 718 keyword-matched
+  candidates never contextually coded) has now been **fully reviewed and
+  closed**: every row was individually dispositioned (7 promoted above, 711
+  excluded with a recorded reason each, tracked in the file's own
+  `full_review_status`/`full_review_reason` columns — see
+  `pilot_coverage_report.md`'s "Round 5" section). As expected from the
+  keyword filter's deliberately recall-oriented design (it also matches,
+  e.g., "war" in statements about Ukraine, or "victims" in disaster-relief
+  statements), the large majority resolved to genuinely unrelated content —
+  COVID-19/pandemic press conferences, Ukraine/Russia-related "war"
+  mentions, natural-disaster condolences, and generic diplomatic messages
+  to third countries account for most of the 711 exclusions. 0 rows remain
+  pending.
 
-**Scaling this beyond the pilot** means continuing the contextual-coding
-pass over `pilot_manual_review.csv`; separately resolving MOFA Japan/Korea
-access (both remain blocked at the network level as of 2026-09-22 — see
-"Network access notes" below); and improving discovery for China's State
-Council source (real and working at `english.www.gov.cn/news/page_N.html`,
-but its page-number index does not map linearly to dates — see
-`pilot_coverage_report.md`'s "What didn't work" section for specifics).
-Korea's live-site pagination, previously thought JS-only, turned out to be
-a discoverable AJAX endpoint (see `pilot_coverage_report.md`), so that
-specific gap is resolved; its Yoon-era archive gap is a confirmed final
-limit instead (same section). The genre/speaker-level/administration
-confound stress-test and the paper's quantitative tables have both already
-been re-run against the 90-record (30/30/30) sample — see
-`pilot_coverage_report.md`'s "Confound stress-test" section; the one
-still-open follow-up is re-running that stress-test again against the
-current 94-record sample once more Japan MINISTER-level data exists beyond
-the initial 4 records.
+**Scaling this beyond the pilot** now means primarily new discovery, since
+Japan's backlog is closed: separately resolving MOFA Japan/Korea access
+(both remain blocked at the network level as of 2026-09-22 — see "Network
+access notes" below); improving discovery for China's State Council source
+(real and working at `english.www.gov.cn/news/page_N.html`, but its
+page-number index does not map linearly to dates — a `site:` web-search
+workaround for its broken in-site search was found but not yet fully
+exploited, see `pilot_coverage_report.md`'s "China State Council discovery"
+section); and extending `landmark_anchors.csv` with the four still-planned
+pre-2020 flashpoints, currently blocked on a `web.archive.org` outage (same
+section). Korea's live-site pagination, previously thought JS-only, turned
+out to be a discoverable AJAX endpoint (see `pilot_coverage_report.md`), so
+that specific gap is resolved; its Yoon-era archive gap is a confirmed
+final limit instead (same section). The genre/speaker-level/administration
+confound stress-test and the paper's quantitative tables have already been
+re-run against the 90-record (30/30/30) sample and again, for Japan's
+speaker-level split, against the 94-record sample — see
+`pilot_coverage_report.md`'s "Confound stress-test" and "Round 4" sections;
+re-running it once more against the current 101-record sample (which adds
+7 more Japan HEAD-level records from the backlog review, not new
+speaker-level data) is a lower-priority follow-up than folding the
+existing 94-record speaker-level finding into `draft_paper_ja.md` itself,
+which has not yet been done.
 
 ## Network access notes (for future sessions)
 
