@@ -2,6 +2,7 @@
 import hashlib
 import re
 import time
+import urllib.request
 import urllib.robotparser as robotparser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -55,7 +56,12 @@ def is_allowed_by_robots(url: str, user_agent: str, timeout: int = 10) -> bool:
     rp = robotparser.RobotFileParser()
     rp.set_url(robots_url)
     try:
-        rp.read()
+        # RobotFileParser.read() calls urlopen() with no timeout, which can
+        # hang indefinitely against a flaky host (observed against
+        # mfa.gov.cn/pa.go.kr); fetch with an explicit timeout instead.
+        with urllib.request.urlopen(robots_url, timeout=timeout) as resp:
+            lines = resp.read().decode("utf-8", errors="ignore").splitlines()
+        rp.parse(lines)
     except Exception:
         return True
     try:
