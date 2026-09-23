@@ -152,15 +152,17 @@ section). Korea's live-site pagination, previously thought JS-only, turned
 out to be a discoverable AJAX endpoint (see `pilot_coverage_report.md`), so
 that specific gap is resolved; its Yoon-era archive gap is a confirmed
 final limit instead (same section). The genre/speaker-level/administration
-confound stress-test and the paper's quantitative tables have already been
-re-run against the 90-record (30/30/30) sample and again, for Japan's
-speaker-level split, against the 94-record sample — see
-`pilot_coverage_report.md`'s "Confound stress-test" and "Round 4" sections;
-re-running it once more against the current 101-record sample (which adds
-7 more Japan HEAD-level records from the backlog review, not new
-speaker-level data) is a lower-priority follow-up than folding the
-existing 94-record speaker-level finding into `draft_paper_ja.md` itself,
-which has not yet been done.
+confound stress-test and the paper's quantitative tables have been re-run
+three times as the corpus scaled — 90 (30/30/30), 94 (adding Japan's 4
+MINISTER records), and now the current 101 (adding 7 more Japan HEAD-level
+records from the backlog review) — see `pilot_coverage_report.md`'s
+"Confound stress-test", "Round 4", and "Confound stress-test re-run
+against the full 101-record sample" sections. The headline findings are
+unchanged and, if anything, more robust with each re-run: Japan's
+`agency_explicit=0` now holds across all 41 records (both speaker levels,
+every document type, every prime minister); Korea's and China's register
+gaps remain sharply speaker-level-specific. These findings are reflected
+in `draft_paper_ja.md`/`.docx` as of 2026-09-22.
 
 ## Network access notes (for future sessions)
 

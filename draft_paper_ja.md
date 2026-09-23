@@ -6,11 +6,11 @@
 ## 要旨
 
 本稿は、日本・韓国・中国の政府および指導者が対外的に発信した歴史認識関連の
-公式英語文書91件(2020〜2026年の主軸90件+1995年の歴史的画期1件)を素材
-に、「記憶レジーム」という分析枠組みを提示する。歴史認識問題は単なる謝罪の
-有無や十分性の問題ではなく、各国が過去をどのように制度化し、誰に責任を負わ
-せ、どのような言説で正当化するかという構造の問題である。全文の文脈的コーデ
-ィングの結果、行為主体を明示する発話の比率は日本0%・韓国67%(欠損2件を
+公式英語文書102件(2020〜2026年の主軸101件+1995年の歴史的画期1件)を素
+材に、「記憶レジーム」という分析枠組みを提示する。歴史認識問題は単なる謝罪
+の有無や十分性の問題ではなく、各国が過去をどのように制度化し、誰に責任を負
+わせ、どのような言説で正当化するかという構造の問題である。全文の文脈的コー
+ディングの結果、行為主体を明示する発話の比率は日本0%・韓国71%(欠損2件を
 除く)・中国87%と顕著な差があり、この差異は当初、各国の記憶レジームの類
 型――日本=政策管理型、韓国=被害政治型、中国=主権・正統性型――に対応する
 ものと解釈された。しかし発話者レベル別に分解すると、この3類型は国家の固
@@ -19,10 +19,15 @@
 型・主権正統性型の描写が当てはまる層)と、政権・指導者・外交場面によって大
 きく変動する「首脳レジスター」(日本は4代の首相を通じ一貫して0%、韓国は
 政権により43〜100%、中国は習近平の対日首脳会談でわずか20%)という、二層
-構造の記憶レジームであることが明らかになった。本稿はこの知見に基づき、3類
-型を国家単位の性格描写から発話レジスター単位の記述へと再定式化し、実務・首
-脳レジスター間の非対称な乖離こそが、首脳間の「未来志向」対話にもかかわらず
-歴史認識問題が反復的に再燃する一因であると論じる。
+構造の記憶レジームであることが明らかになった。日本については、外務大臣級
+の発話4件を新たに収集し、これも首脳級(37件)と同じく例外なく0%であるこ
+とを確認した――件数はなお少ないが、韓国・中国のような実務・首脳間の乖離
+が日本には存在せず、両レベルが同一の非名指しパターンに収斂している可能性
+を示す結果である。本稿はこの知見に基づき、3類型を国家単位の性格描写から発
+話レジスター単位の記述へと再定式化し、韓国・中国については実務・首脳レジ
+スター間の非対称な乖離が、日本については両レジスターを通じた一貫した曖昧
+化(暫定的知見)が、それぞれ異なる経路で、首脳間の「未来志向」対話にもか
+かわらず歴史認識問題が反復的に再燃する一因になっていると論じる。
 
 ---
 
@@ -105,11 +110,20 @@
 の歴代内閣統治期ごとの声明アーカイブを起点として月次索引ページを再帰的に収
 集する方法によって、2020年から2025年の対象期間内の候補URLを1096件、網羅的
 に収集した(うち1081件を実際にダウンロード、キーワードフィルタ通過後746
-件)。外務省サイト(mofa.go.jp)はAkamai製WAFにより恒常的に接続不能であっ
-たため、首相官邸発信の文書に限定される。この746件のうち、本稿執筆時点で全
-文読解による文脈的コーディングを終えているのは30件(近接キーワード探索を
-複数回実施し、当初の10件から段階的に拡張した)で、残る718件は今後の課題と
-して引き続きコーディングを進める。
+件)。この746件については、近接キーワード探索を複数回実施したうえで、最終
+的に残る全候補を一件ずつ目視で判定し(棄却か採用かを個別に記録し、機械的な
+足切りは行っていない)、本稿執筆時点で全件の処理を完了している――全文読解
+による文脈的コーディングを終えたのは37件(当初の10件から複数回の探索で段
+階的に拡張)、残り709件は歴史認識問題と無関係と判定し除外した(除外理由の
+内訳はCOVID-19関連、ウクライナ・ロシア関連、自然災害、儀礼的弔意等が大半
+を占める)。外務省サイト(mofa.go.jp)はAkamai製WAFにより恒常的に接続不能
+であるため、首相官邸発信の文書のみでは首相・内閣官房長官級(HEAD)の発話に
+限定されるという制約が残る。この制約を補うため、Wayback Machineに保存され
+たmofa.go.jpのスナップショットから、外務大臣級(`speaker_level=MINISTER`)
+の発話4件(茂木敏充2020年、林芳正2022年2件、上川陽子2024年)を別途収集・
+コーディングした。これにより日本の主軸サンプルは、首相官邸発信の37件(す
+べて`speaker_level=HEAD`)と外務省発信の4件(`speaker_level=MINISTER`)を
+合わせた41件となった。
 
 韓国・中国については、当初、対象サイトの構造上(注:韓国大統領府サイトの一
 覧表示は一見JavaScriptによる動的読み込みに見えたが、実際には
@@ -134,8 +148,13 @@
 声明の年次系列、中国は英語版新華社・国務院ニュースアーカイブ上の南京事件・
 9月18日事変・7月7日事変の年次追悼報道、および習近平・日本首相間のAPEC首脳
 会談記録)を開拓することで、主軸サンプルを日本・韓国・中国各30件、計90件
-まで拡張した(発見経路の詳細は`pilot_coverage_report.md`を参照)。したがって本稿最終
-的なサンプルは、主軸90件+歴史的画期1件、計91件である。日本の主軸候補群
+まで拡張した(発見経路の詳細は`pilot_coverage_report.md`を参照)。その後、
+日本については外務大臣級の発話4件を追加収集するとともに、746件の候補群全
+件を一件ずつ判定して残り709件を除外し(前段落参照)、この過程で歴史認識問
+題に該当すると判定された候補7件(沖縄戦戦没者追悼式アドレス5件、佐渡金山
+問題の2022年1月時点の記者会見1件、硫黄島日米合同慰霊式典アドレス1件)を追
+加コーディングした。したがって本稿最終的なサンプルは、主軸101件(日本41
+件・韓国30件・中国30件)+歴史的画期1件、計102件である。日本の主軸候補群
 (746件)が同一期間・同一手続きで機械的に発見された母集団であるのに対し、
 韓国・中国の候補群は、上記の技術的制約のもとで複数の発見経路を組み合わせて
 見出しえた文書の集積であり、日本と同水準の意味での母集団代表性は持たない。
@@ -192,58 +211,68 @@ individual の式典演説等、別の資料類型によって捕捉されるべ
 
 ## 6、分析結果
 
-本節の数値はすべて、30/30/30(日本・韓国・中国各30件、計90件)へと拡張し
-た主軸サンプルに基づき改めて集計し直したものである(前回集計時点の28件か
-らの変更点は、本節末尾の各所で注記する)。
+本節の数値はすべて、現在の主軸サンプル101件(日本41件[首脳級`HEAD`37
+件・外務大臣級`MINISTER`4件]・韓国30件・中国30件)に基づき改めて集計し直
+したものである。韓国・中国は前回集計(30/30/30、計90件)時点から変更がな
+く、変動はもっぱら日本側の追加(外務大臣級4件、および`pilot_manual_
+review.csv`の全数レビューにより新たに採用した7件)によるものである。
 
 **(一)頻出語分析**
 
 計量テキスト分析は、5節で述べた通り、文脈的コーディングによって得られた解
-釈を裏づける補助的根拠として用いる。90件の`response_text`(発話全文)を国
+釈を裏づける補助的根拠として用いる。101件の`response_text`(発話全文)を国
 別に結合し、対数尤度比(log-likelihood, LL)によるキーネス分析を実施した。
 すなわち、ある語が特定の国のコーパスにおいて、他の二か国のコーパスと比べて
 どれだけ統計的に有意に高頻度で出現するかを算出したものである(語形は小文字
-化し、機能語を除去、出現数3未満の語は除外)。
+化し、機能語を除去、出現数3未満の語は除外)。韓国・中国は前回集計(90件)
+から語数・上位語とも変化がないため、以下は日本側のみ更新した値である。
 
-| 順位 | 日本(総語数8,419) | LL | 韓国(総語数9,392) | LL | 中国(総語数3,836) | LL |
+| 順位 | 日本(総語数9,413) | LL | 韓国(総語数9,392) | LL | 中国(総語数3,836) | LL |
 |---|---|---|---|---|---|---|
-| 1 | atomic | 294.8 | korea | 193.3 | china | 211.2 |
-| 2 | nuclear | 270.9 | freedom | 140.4 | chinese | 207.7 |
-| 3 | bomb | 188.9 | independence | 99.3 | aggression | 144.8 |
-| 4 | weapons | 150.8 | korean | 81.9 | nanjing | 124.6 |
-| 5 | prime | 147.2 | liberation | 65.0 | japanese | 109.7 |
-| 6 | hiroshima | 109.7 | koreans | 63.4 | war | 102.4 |
-| 7 | minister | 108.1 | government | 57.2 | massacre | 93.4 |
-| 8 | nagasaki | 105.8 | movement | 51.8 | shrine | 88.2 |
-| 9 | dead | 85.6 | north | 50.4 | resistance | 75.1 |
-| 10 | disarmament | 64.2 | unification | 45.1 | yasukuni | 65.4 |
+| 1 | atomic | 273.3 | korea | 199.3 | china | 217.0 |
+| 2 | nuclear | 248.7 | freedom | 148.4 | chinese | 213.0 |
+| 3 | bomb | 175.5 | independence | 105.1 | aggression | 149.2 |
+| 4 | weapons | 139.2 | korean | 79.6 | nanjing | 127.8 |
+| 5 | prime | 132.6 | liberation | 68.9 | japanese | 115.6 |
+| 6 | hiroshima | 101.4 | koreans | 67.2 | war | 93.9 |
+| 7 | nagasaki | 98.3 | government | 57.6 | massacre | 95.9 |
+| 8 | minister | 95.9 | movement | 54.6 | shrine | 90.9 |
+| 9 | dead | 84.2 | north | 48.7 | resistance | 77.2 |
+| 10 | heartfelt | 79.0 | fellow | 48.4 | yasukuni | 67.5 |
 
-30件への拡張は、この表を前回集計(28件、Japan10/Korea10/China8相当)から
-大きく組み替えた。とりわけ日本は、広島・長崎平和式典演説12件の追加によっ
-て、上位語が"atomic / nuclear / bomb / weapons / hiroshima / nagasaki /
-disarmament"という被爆・核軍縮語彙に一変している――これは、前回集計時に上
-位を占めていた"prime / minister / memorial / cabinet"的な儀礼ジャンル語彙
-が、より具体的な下位ジャンル(原爆式典)の語彙に置き換わったことを意味し、
-「日本の上位語は儀礼的ジャンルを反映する」という前回の解釈自体は覆らないも
-のの、そのジャンルの中身がサンプル構成によって大きく変動しうることを示す一
-例である。韓国の上位語(korea, freedom, independence, liberation,
-koreans, movement, unification)は、独立運動・光復節という自国史ナラティ
-ブの語彙が引き続き支配的であり、対日関係語は上位10語には入らない――これ
-は、韓国の発話量の多くが「日本を名指しして問う」ことよりも「自国の独立史を
-物語る」ことに割かれているという構成上の特徴であり、(三)で見る
-`agency_explicit`の高さと矛盾するものではない。中国の上位語(china,
-chinese, aggression, nanjing, japanese, war, massacre, shrine,
-resistance, yasukuni)は、対照的に、日本の歴史的責任を直接に問う語彙・特定
-の歴史的事件名(nanjing, yasukuni)そのものが上位を占めており、争点語彙が
-高頻度語として現れる唯一の国である――この点は前回集計から一貫している。
+30件への拡張(前回集計)は、この表を28件時点の集計から大きく組み替えてい
+たが、41件への今回の拡張(外務大臣級4件+沖縄戦追悼式典5件・佐渡金山関連
+1件・硫黄島式典1件の計11件追加)による語彙構成の変化は相対的に小さい。上
+位10語は"atomic / nuclear / bomb / weapons / prime / hiroshima /
+nagasaki / minister / dead / heartfelt"と、依然として広島・長崎平和式典演
+説に由来する被爆・核軍縮語彙が支配的であり、新たに追加した沖縄戦追悼式典
+(語彙的には"okinawa"はLL=63.2で上位15位程度にとどまる)・佐渡金山・硫黄島の
+語彙は、いずれも件数が少なく(沖縄5件・佐渡1件・硫黄島1件)、広島・長崎の
+12件ほどには上位語構成を動かしていない。これは、「日本の上位語は儀礼的
+ジャンルを反映する」という解釈が、特定のジャンル(原爆式典)の量的優勢に強
+く依存していることを示す一例でもある。韓国の上位語(korea, freedom,
+independence, liberation, koreans, government, movement, north,
+fellow, unification相当)は、独立運動・光復節という自国史ナラティブの語彙
+が引き続き支配的であり、対日関係語は上位10語には入らない――これは、韓国の
+発話量の多くが「日本を名指しして問う」ことよりも「自国の独立史を物語る」こ
+とに割かれているという構成上の特徴であり、(三)で見る`agency_explicit`の
+高さと矛盾するものではない。中国の上位語(china, chinese, aggression,
+nanjing, japanese, war, massacre, shrine, resistance, yasukuni)は、対照
+的に、日本の歴史的責任を直接に問う語彙・特定の歴史的事件名(nanjing,
+yasukuni)そのものが上位を占めており、争点語彙が高頻度語として現れる唯一
+の国である――この点は前回集計から一貫している。
 
 **(二)争点の分布**
 
-日本の30件は`WAR_GENERAL`(戦争一般)19件、`FORCED_LABOR`(強制労働)9
-件、`HISTORICAL_RECOGNITION_GENERAL`(歴史認識一般)1件、`COMFORT_WOMEN`
-(慰安婦)1件で構成され、全件が首脳(`speaker_level=HEAD`)による発話であ
-る。`WAR_GENERAL`の比率が前回集計(6/10)よりさらに高まったのは、広島・長
-崎平和式典演説12件がいずれもこの区分に該当するためである。
+日本の41件は`WAR_GENERAL`(戦争一般)25件、`FORCED_LABOR`(強制労働)13
+件、`COMFORT_WOMEN`(慰安婦)2件、`HISTORICAL_RECOGNITION_GENERAL`(歴史
+認識一般)1件で構成される。`speaker_level`の内訳は、首脳(`HEAD`)37件、
+外務大臣級(`MINISTER`)4件である。`WAR_GENERAL`の比率が高いのは、広島・
+長崎平和式典演説12件に加え、今回新たに追加した沖縄戦戦没者追悼式アドレス
+5件・硫黄島日米合同慰霊式典アドレス1件がいずれもこの区分に該当するためで
+ある。`FORCED_LABOR`の増加(9件→13件)は、外務大臣級4件のうち3件(林芳正
+2件、上川陽子1件)と、佐渡金山問題に関する2022年1月の記者会見1件が、いず
+れもこの区分に該当することによる。
 
 韓国の30件は`HISTORICAL_RECOGNITION_GENERAL` 9件、`HISTORY_TEXTBOOK`(歴
 史教科書)6件、`FORCED_LABOR` 5件、`COLONIAL_RULE`(植民地支配)4件、
@@ -272,18 +301,28 @@ remorse該当4件は、広島・長崎演説の一部に見られる被爆国と
 謝罪する立場ではなく、日本の歴史認識・謝罪の妥当性を評価・要求する立場から
 の発話が大半を占めるため、`apology=0`はほぼ当然の帰結である。
 
-`agency_explicit`(責任主体の明示)は、日本0/30件(0%)、韓国20/28件
-(71%、2件は`NA`)、中国26/30件(87%)である。前回集計(日本0%・韓国
-60%・中国100%)と比べ、韓国はやや上昇、中国はやや低下しているが、より重
-要なのは、この90件サンプルで初めて可能になった発話者レベル別の分解であ
-る。
+`agency_explicit`(責任主体の明示)は、日本0/41件(0%)、韓国20/28件
+(71%、2件は`NA`)、中国26/30件(87%)である。韓国・中国は前回集計(90
+件時点)から変化がない。日本は前回集計の0/30件から0/41件へと分母が増えた
+のみで、比率自体(0%)は変わらない。より重要なのは、この101件サンプルで
+初めて発話者レベル別の分解を日本についても実際のデータで行えるようになっ
+た点である。
 
-日本の30件はすべて`responsibility_actor=UNSPECIFIED`(1件のみ`STATE`)で
-あり、行為主体が一貫して曖昧化されている。この0%という値は、`speaker_
-level`がすべて`HEAD`である30件全体・4代の首相(安倍・菅・岸田・石破)個々
-・`document_type`(SPEECH 18件・PRESS_CONFERENCE 11件・STATEMENT 1件)い
-ずれにおいても例外なく成立しており、ジャンルや政権の違いによる交絡ではな
-い、頑健な知見である。
+日本の首脳級(`speaker_level=HEAD`)37件はすべて`responsibility_
+actor=UNSPECIFIED`または`STATE`であり、行為主体が一貫して曖昧化されてい
+る。この0%という値は、37件全体・4代の首相(安倍・菅・岸田・石破)個々・
+`document_type`(SPEECH 24件・PRESS_CONFERENCE 15件・STATEMENT 2件・た
+だし後二者にはMINISTER級を含む)いずれにおいても例外なく成立しており、ジ
+ャンルや政権の違いによる交絡ではない、頑健な知見である。さらに本稿は、外
+務大臣級(`speaker_level=MINISTER`)の発話4件(茂木敏充2020年、林芳正
+2022年2件、上川陽子2024年)を新たに収集した。いずれもWayback Machineに保
+存された外務省(mofa.go.jp、ライブサイトはAkamai製WAFにより接続不能)の
+スナップショットから取得したものである。この4件もまた例外なく
+`agency_explicit=0`であり、首脳級と実務級を合わせた41件全体で行為主体の
+明示が一件も存在しない。件数(n=4)はなお小さく確定的な結論ではないが、
+「政策管理型」レジスターが日本の首脳固有の現象ではなく、実務・広報レベル
+にも共有される、より一般的な国レベルの特性である可能性を示す、本稿で初め
+ての直接的な証拠である(この点は(三)後段および7節で再論する)。
 
 韓国は、`speaker_level=OFFICIAL`(外交部報道官級、n=11)で91%
 (10/11)、`speaker_level=HEAD`(大統領、n=19)で59%(10/17、2件`NA`)
@@ -313,55 +352,62 @@ level`がすべて`HEAD`である30件全体・4代の首相(安倍・菅・岸�
 る(APEC首脳会談記録・新華社の年次追悼報道はいずれも`document_type=OTHER`
 に分類されており、両者を分けているのは`speaker_level`である)。
 
-謝罪・責任語彙6項目すべての該当件数を国別に示すと、以下の通りである(各国
-n=30)。
+謝罪・責任語彙6項目すべての該当件数を国別に示すと、以下の通りである(日本
+n=41、韓国・中国は各n=30)。
 
 | 項目 | 日本 | 韓国 | 中国 |
 |---|---|---|---|
 | apology(謝罪) | 0 | 0 | 0 |
-| explanation(説明) | 4 | 9 | 10 |
+| explanation(説明) | 5 | 9 | 10 |
 | remorse(悔恨) | 4 | 0 | 0 |
-| reflection(反省) | 20 | 12 | 5 |
-| remedy(救済) | 21 | 6 | 0 |
+| reflection(反省) | 28 | 12 | 5 |
+| remedy(救済) | 27 | 6 | 0 |
 | pardon_or_forgiveness(赦し) | 0 | 0 | 0 |
 
-日本の`remedy`(21/30、70%)・`reflection`(20/30、67%)の高さは、広島・
+日本の`remedy`(27/41、66%)・`reflection`(28/41、68%)の高さは、広島・
 長崎平和式典演説を含む儀礼ジャンルが、自国の犠牲・喪失を悼み、政策的な未来
 志向(被爆者援護策の継続、遺骨収集事業、核軍縮への取り組み)を語る、内省的
 だが自己完結的な発話として機能していることを反映する。すなわち日本の高い
 reflection値は、必ずしも植民地支配・侵略に対する反省を意味するものではな
 く、多くは自国民の犠牲に対する内省である――これは村山談話(1995年)のよう
 な、外国人被害者への言及を伴う談話とは異なる部分集合であることに注意を要す
-る。中国の`explanation`(10/30、33%)は、報道官会見・新華社報道という発話
-形式が事実関係の説明を伴わずに成立しないことを反映しており、他の項目が軒並
-み低い(remorse/remedy/pardonはいずれも0)こととあわせて、中国の発話が
-「説明を通じた告発」に特化していることを示す――この点は前回集計から変わら
-ない。
+る。今回追加した沖縄戦追悼式典5件・硫黄島式典1件も同じ構造(自国民犠牲へ
+の内省、外国人被害者への言及なし)を共有しており、`reflection`・`remedy`
+双方の比率をわずかに押し上げている一方、外務大臣級4件のうち2件
+(remedy=0)がこれをやや相殺しており、比率自体は前回集計(67%・70%)から
+ほぼ変わらない。中国の`explanation`(10/30、33%)は、報道官会見・新華社
+報道という発話形式が事実関係の説明を伴わずに成立しないことを反映してお
+り、他の項目が軒並み低い(remorse/remedy/pardonはいずれも0)こととあわせ
+て、中国の発話が「説明を通じた告発」に特化していることを示す――この点は前
+回集計から変わらない。
 
 **(四)Kingdon三次元への布置**
 
-`kingdon_policy=1`の比率は、日本24/30件(80%)、韓国21/30件(70%)、中
+`kingdon_policy=1`の比率は、日本34/41件(83%)、韓国21/30件(70%)、中
 国10/30件(33%)である。日本の値が高いのは、被爆者援護・遺骨収集事業と
 いった制度的対応が式典発話に組み込まれているためであり、中国が大きく低下し
 たのは、Sept18・July7の年次追悼報道やAPEC首脳会談記録の多くが具体的な政策
 措置に言及しない、儀礼・外交レトリック中心の発話だからである。`kingdon_
-politics=1`の比率は、日本11/30件(37%)、韓国23/30件(77%)、中国18/30
-件(60%)である。`kingdon_problem=1`の比率は、日本22/30件(73%)、韓国
+politics=1`の比率は、日本15/41件(37%)、韓国23/30件(77%)、中国18/30
+件(60%)である。`kingdon_problem=1`の比率は、日本30/41件(73%)、韓国
 26/30件(87%)、中国29/30件(97%)であり、日本の発話の3割弱は、歴史的な
 加害・被害を「問題」として明示的に構成することなく、儀礼・制度的対応のみで
-完結している――これも(三)の`agency_explicit=0%`と符合する。前回集計と比
-べ、日本の`kingdon_policy`・`kingdon_problem`はいずれもやや低下している
-が、これはサンプル拡大に伴い、より儀礼色の強い広島・長崎演説の比重が増した
-ためであり、実質的な解釈の変更を要するものではない。
+完結している――これも(三)の`agency_explicit=0%`と符合する。これらの比率
+は、分母が30件から41件に増えたにもかかわらず前回集計(80%・37%・73%)と
+ほぼ同水準である。これは、新たに追加した外務大臣級4件・沖縄戦追悼式典5
+件・佐渡金山関連1件・硫黄島式典1件が、既存の広島・長崎演説やAug15演説と
+同じく儀礼・制度的対応中心の発話パターンを共有しているためであり、サンプ
+ル拡大が実質的な解釈の変更を要求するものではないことを示している。
 
 **(五)歴史的画期:1995年村山談話との対比**
 
 村山談話(HISTORICAL_RECOGNITION_GENERAL、apology=1、remorse=1、reflec-
 tion=1、remedy=1、responsibility_actor=STATE、agency_explicit=1)は、主軸
-サンプル中の日本の30件と際立った対照をなす。村山談話は「植民地支配と侵略」
-という行為を「日本」という主体に明示的に帰属させ、かつ「深い反省」「心から
-のお詫び」を明言する。これに対し、2020年から2025年の日本側30件は、行為主
-体を一貫して曖昧化し(agency_explicit=0%)、外国人被害者への言及を欠く。
+サンプル中の日本の41件(首脳級37件・外務大臣級4件)と際立った対照をなす。
+村山談話は「植民地支配と侵略」という行為を「日本」という主体に明示的に帰
+属させ、かつ「深い反省」「心からのお詫び」を明言する。これに対し、2020年
+から2025年の日本側41件は、首脳級・実務級を問わず行為主体を一貫して曖昧化
+し(agency_explicit=0%)、外国人被害者への言及を欠く。
 この対比は、1995年から2025年までの30年間で、日本の対外発信における歴史認
 識言説が、明示的謝罪・行為主体の名指しから、自国民の犠牲を悼む儀礼的ジャン
 ルへと、質的に移行したことを示唆する一つの証左である。
@@ -391,25 +437,34 @@ tion=1、remedy=1、responsibility_actor=STATE、agency_explicit=1)は、主軸
 
 これに対し首脳レジスターは、国によっても、同一国内の政権によっても大きく
 異なる。日本の首脳(安倍・菅・岸田・石破)は、本稿がデータを持つ4代を通じ
-て例外なくagency_explicit=0%であり、これは実務レベルのデータを欠くために
-断定はできないものの、少なくとも観察された範囲では、日本の首脳レジスター
-自体が高度に均質かつ非名指し的である――**元の「政策管理型」は、日本につい
-ては首脳レジスターの記述としても支持される**、数少ない例である。韓国の首
-脳レジスターは政権によって大きく異なり、文在寅期100%(4/4、実務レベルの
-91%をも上回る、本稿で唯一「首脳が実務より対日名指しに積極的」な事例)→尹
-錫悦期50%→李在明期43%と、時系列的に低下し、次第に日本の政策管理型に近づ
-いていく。中国の首脳(習近平)レジスターは、本稿が新たに収集した2022〜
-2024年の対日APEC首脳会談3件でいずれもagency_explicit=0%を示し、実務・広報
-レジスター(ほぼ100%)から大きく乖離して、日本の政策管理型ときわめて近い
-語り口(「歴史の教訓に学ぶ」)をとる。
+て例外なくagency_explicit=0%である。**本稿はさらに、日本の外務大臣級
+(茂木・林[2件]・上川、n=4)の発話を新たに収集し、これも例外なく
+agency_explicit=0%であることを確認した。**件数はなお小さく(n=4)確定的
+な結論ではないが、これは日本について首脳レジスターと実務・広報レジスター
+の双方が同一のデータで観察された、本稿で唯一の事例である――韓国・中国が
+実務級と首脳級とで対日名指しの比率が大きく乖離するのに対し、日本はむしろ
+両レベルが収斂している可能性を示唆する。**元の「政策管理型」は、日本につ
+いては首脳レジスターだけでなく、限られたデータの範囲では実務レジスターに
+ついても支持される**、本稿の3か国のうちもっとも国家単位の性格描写に近い
+事例である。韓国の首脳レジスターは政権によって大きく異なり、文在寅期
+100%(4/4、実務レベルの91%をも上回る、本稿で唯一「首脳が実務より対日名
+指しに積極的」な事例)→尹錫悦期50%→李在明期43%と、時系列的に低下し、次
+第に日本の政策管理型に近づいていく。中国の首脳(習近平)レジスターは、本
+稿が新たに収集した2022〜2024年の対日APEC首脳会談3件でいずれもagency_
+explicit=0%を示し、実務・広報レジスター(ほぼ100%)から大きく乖離して、
+日本の政策管理型ときわめて近い語り口(「歴史の教訓に学ぶ」)をとる。
 
 すなわち、**「政策管理型」は本来、一国の国民的性格ではなく、対日外交上の
 特定の局面(儀礼的な国内向け式典、あるいは首脳間の直接対話)で選択される一
 つのレジスターである**ことが、90件サンプルによって明らかになった。日本の
-事例が特異なのは、この政策管理型レジスターが(観察されたすべての発話が首
-脳レベルであるため未確定ではあるものの)首脳レベルにおいて例外なく採用され
-続けている点であり、韓国・中国は同じレジスターに、政権交代や外交上の局面
-(定例会見か首脳会談か)に応じて出入りする、より流動的な関係にある。
+事例が特異なのは、この政策管理型レジスターが、限られた実務レベルのデータ
+(n=4)が示す限りでは首脳・実務いずれのレベルでも一貫して採用されている
+可能性がある点であり、韓国・中国は同じレジスターに、政権交代や外交上の局
+面(定例会見か首脳会談か)に応じて出入りする、より流動的な関係にある。日
+本の実務級データがなお少数にとどまる以上、この収斂を確定的な国家的特性と
+断定することは時期尚早だが、少なくとも本稿が現時点で持つデータの範囲で
+は、日本は首脳・実務間の乖離ではなく両レベルの一致によって特徴づけられ
+る、韓国・中国とは対照的な事例である。
 
 **(二)含意**
 
@@ -426,36 +481,56 @@ tion=1、remedy=1、responsibility_actor=STATE、agency_explicit=1)は、主軸
 近)が実務レベルの言説構造そのものを変えるとは限らない、という非対称性こそ
 が、歴史認識問題の反復性の一因である可能性を、本稿のデータは示唆している。
 
+ただし、この「実務・首脳間の非対称な乖離」という機序は、韓国・中国につい
+て観察されたものであり、日本についても同様の機序が働いているとは限らな
+い点には注意を要する。前段で述べた通り、日本は本稿が現時点で持つ限られた
+実務級データ(n=4)の範囲では、首脳・実務の両レベルが同じ非名指しの語り
+口に収斂しており、韓国・中国のような乖離そのものが存在しない可能性があ
+る。これが正しければ、日本の歴史認識言説が反復的に再燃する回路は、韓国・
+中国とは異なるメカニズム――実務・首脳間の乖離ではなく、両レベルを通じた
+一貫した曖昧化そのもの(行為主体を名指ししないことで、被害を訴える相手国
+との間に解釈の余地を恒常的に残し続けること)――である可能性を示唆する。
+三か国に共通する単一の機序を想定するのではなく、国ごとに異なる経路で歴史
+認識問題の潜在的な再燃可能性が維持されているという含意は、本稿の理論枠組
+みにとって重要な精緻化であり、日本の実務級データがさらに蓄積された段階で
+改めて検証されるべき点である。
+
 ## 8、おわりに
 
-本稿は、日本・韓国・中国の政府発話91件(主軸90件+歴史的画期1件)の文脈的
-コーディングに基づき、歴史認識問題の反復的再燃を、謝罪の十分性ではなく各国
-の記憶レジームの構造差から説明する枠組みを提示した。当初提示した3類型――
-日本=政策管理型、韓国=被害政治型、中国=主権・正統性型――は、行為主体の明
-示性、Kingdonの政策・政治次元への布置という二つの量的指標によって、国レベ
-ルの集計値としては裏づけられる。しかし90件サンプルによる発話者レベル別の
-分解は、この3類型が国家の固定的性格ではなく、政権交代・外交場面をまたいで
-安定的な「実務・広報レジスター」(元の3類型が最もよく当てはまる層)と、政
-権・指導者・場面によって大きく変動する「首脳レジスター」という、二層構造の
-記憶レジームであることを明らかにした。首脳レジスターにおいては、日本の政
-策管理型的な語り口(行為主体の非名指し、未来志向)が、韓国(尹錫悦・李在明
-期)・中国(習近平の対日首脳会談)双方において収斂しつつある一方、実務・広
-報レジスターはその収斂と無関係に対日名指しの言説を再生産し続けている。本稿
-はこの実務・首脳間の非対称な乖離こそが、首脳間の「未来志向」対話にもかかわ
-らず歴史認識問題が反復的に再燃する一因であると結論づける。
+本稿は、日本・韓国・中国の政府発話102件(主軸101件+歴史的画期1件)の文脈
+的コーディングに基づき、歴史認識問題の反復的再燃を、謝罪の十分性ではなく各
+国の記憶レジームの構造差から説明する枠組みを提示した。当初提示した3類型
+――日本=政策管理型、韓国=被害政治型、中国=主権・正統性型――は、行為主体
+の明示性、Kingdonの政策・政治次元への布置という二つの量的指標によって、国
+レベルの集計値としては裏づけられる。しかし発話者レベル別の分解は、この3
+類型が国家の固定的性格ではなく、政権交代・外交場面をまたいで安定的な「実
+務・広報レジスター」(元の3類型が最もよく当てはまる層)と、政権・指導者・
+場面によって大きく変動する「首脳レジスター」という、二層構造の記憶レジー
+ムであることを明らかにした。首脳レジスターにおいては、日本の政策管理型的
+な語り口(行為主体の非名指し、未来志向)が、韓国(尹錫悦・李在明期)・中国
+(習近平の対日首脳会談)双方において収斂しつつある一方、実務・広報レジス
+ターはその収斂と無関係に対日名指しの言説を再生産し続けている。日本につい
+ては、限られた実務級データ(外務大臣級4件)ながら首脳レジスターと同じ非
+名指しの語り口が実務レジスターにも見られ、韓国・中国のような乖離そのもの
+が存在しない可能性を示唆する初期的な知見も得た。本稿はこの実務・首脳間の
+非対称な乖離(韓国・中国)、および乖離のない一貫した曖昧化(日本、暫定的
+知見)こそが、首脳間の「未来志向」対話にもかかわらず歴史認識問題が反復的
+に再燃する一因であると結論づける。
 
-今後の課題として、以下を挙げる。第一に、日本側についても実務・広報レベル
-(外務省報道官等)の発話を収集し、日本の政策管理型が首脳レジスター固有の現
-象か、実務レジスターも含めた国全体の傾向かを検証すること――本稿は首脳レベ
-ルのデータしか持たず、この点は未確定のまま残されている。第二に、日本側の
-未コーディング候補718件のうち、コンテキストに応じて追加コーディングを進
-め、政権交代(菅→岸田→石破)に伴う変化をより精確に捉えること。第三に、
-Internet Archiveへのアクセス回復後、小泉純一郎首相の靖国参拝(2001-2006
-年)、2005年教科書問題、2015年日韓慰安婦合意、2018年徴用工判決という歴史
-的画期を追加し、実務・首脳両レジスターの経時的変化をより長期の視点から検
-証すること。第四に、各国の原語資料との比較を通じて、本稿が対象とした対外
-発信用言説と国内向け言説との異同を検討し、記憶レジーム分析を司法判断・市民
-運動・教育制度・記念施設を含めたより広い制度的射程へと拡張することである。
+今後の課題として、以下を挙げる。第一に、日本側の実務・広報レベルのデータ
+は、本稿執筆時点で外務大臣級4件のみであり、より多くの実務級(とりわけ外
+務省報道官・記者会見レベル)の発話を収集し、日本の政策管理型が真に発話者
+レベルに依存しない国家的特性であるかを、より頑健な件数で検証すること。第
+二に、日本側の`pilot_manual_review.csv`(旧・未コーディング候補)につい
+ては本稿執筆時点で全件(718件)を判定済みであり、新たな一次資料の発見(首
+相官邸・外務省以外の情報源の開拓、あるいは2026年以降の新規発話の追跡)が
+次の課題となる。第三に、Internet Archiveへのアクセス回復後、小泉純一郎首
+相の靖国参拝(2001-2006年)、2005年教科書問題、2015年日韓慰安婦合意、
+2018年徴用工判決という歴史的画期を追加し、実務・首脳両レジスターの経時的
+変化をより長期の視点から検証すること。第四に、各国の原語資料との比較を通
+じて、本稿が対象とした対外発信用言説と国内向け言説との異同を検討し、記憶
+レジーム分析を司法判断・市民運動・教育制度・記念施設を含めたより広い制度
+的射程へと拡張することである。
 
 
 註
@@ -505,27 +580,29 @@ the institutional devices that fix that memory, and (iii) the
 vocabulary through which responsibility is constructed and justified.
 
 　　Drawing on Kingdon's multiple-streams framework as an auxiliary lens,
-the paper codes 91 official English-language statements by government
+the paper codes 102 official English-language statements by government
 leaders, spokespersons, and state media of Japan, South Korea, and China
-(90 from a 2020-2026 main sample, evenly split 30/30/30 across the three
-countries, plus one pre-2020 landmark statement, the 1995 Murayama
-Statement), read in full and coded for issue type, speaker level, Kingdon's
-problem/policy/politics dimensions, apology-related vocabulary
-(apology, explanation, remorse, reflection, remedy, forgiveness), and
-the explicitness of attributed responsibility. At the country level, the
-share of statements that explicitly name a responsible agent differs
-sharply — 0% for Japan, 71% for South Korea (excluding two statements
-that do not mention Japan at all), and 87% for China — and this
-difference initially appears to map onto three distinct memory-regime
-types: a policy-management regime in Japan, in which responsibility is
-consistently left unattributed while institutional remedies (e.g.
-relief for atomic-bomb survivors, repatriation of war dead's remains) are
-foregrounded; a victim-politics regime in South Korea, in which Japan is
-more often named explicitly and the issue is activated as both a
-domestic-political and diplomatic resource; and a sovereignty-legitimacy
-regime in China, in which most statements both name an explicit
-responsible agent and are coded as belonging to Kingdon's political
-dimension, reflecting a standing institutional script.
+(101 from a 2020-2026 main sample — 41 for Japan, split between 37
+head-of-state and 4 foreign-minister-level statements, and 30 each for
+South Korea and China — plus one pre-2020 landmark statement, the 1995
+Murayama Statement), read in full and coded for issue type, speaker
+level, Kingdon's problem/policy/politics dimensions, apology-related
+vocabulary (apology, explanation, remorse, reflection, remedy,
+forgiveness), and the explicitness of attributed responsibility. At the
+country level, the share of statements that explicitly name a
+responsible agent differs sharply — 0% for Japan, 71% for South Korea
+(excluding two statements that do not mention Japan at all), and 87% for
+China — and this difference initially appears to map onto three distinct
+memory-regime types: a policy-management regime in Japan, in which
+responsibility is consistently left unattributed while institutional
+remedies (e.g. relief for atomic-bomb survivors, repatriation of war
+dead's remains) are foregrounded; a victim-politics regime in South
+Korea, in which Japan is more often named explicitly and the issue is
+activated as both a domestic-political and diplomatic resource; and a
+sovereignty-legitimacy regime in China, in which most statements both
+name an explicit responsible agent and are coded as belonging to
+Kingdon's political dimension, reflecting a standing institutional
+script.
 
 　　Decomposing these country-level figures by speaker level, however,
 shows that the apparent national uniformity in South Korea and China is
@@ -543,10 +620,16 @@ speeches — shows the opposite pattern: only 20% of Xi's own statements
 name a responsible agent explicitly, with the summit remarks instead
 using the same kind of abstract, unaddressed language ("draw lessons
 from history") that characterizes Japan's own policy-management regime.
-A keyness (log-likelihood) analysis of the corpus's vocabulary
-corroborates the country-level typology at the lexical level while also
-reflecting genre composition: Japan's most distinctive words now reflect
-the atomic-bomb commemorations that make up a large share of the
+Japan itself offers the one case in this corpus where both registers
+were observed directly: four newly-collected foreign-minister-level
+statements (2020-2024) also show 0% explicit agency, the same rate as
+the 37 head-of-state statements — a small sample (n=4) that nonetheless
+suggests Japan's policy-management style may not be head-of-state-
+specific at all, unlike South Korea's and China's sharply level-
+dependent registers. A keyness (log-likelihood) analysis of the corpus's
+vocabulary corroborates the country-level typology at the lexical level
+while also reflecting genre composition: Japan's most distinctive words
+reflect the atomic-bomb commemorations that make up a large share of the
 expanded sample (atomic, nuclear, bomb, Hiroshima, Nagasaki), South
 Korea's reflect a national-independence narrative (freedom, independence,
 liberation), and China's are the only ones in which the substantive issue
@@ -564,13 +647,19 @@ government move in and out of it depending on the leader and the
 diplomatic occasion. The paper concludes that the recurrence of
 historical recognition disputes in East Asia is not simply a matter of
 insufficiently sincere apologies, but of an asymmetry between these two
-registers: however far head-of-state dialogue converges toward a
-policy-management style, as it increasingly has under South Korea's Lee
-and China's Xi, the bureaucratic register continues to reproduce
-explicit, actor-naming discourse largely undisturbed — and it is this
-persistent gap between the two registers, rather than either alone, that
-keeps the underlying disputes structurally available for renewed
-diplomatic friction.
+registers in South Korea and China: however far head-of-state dialogue
+converges toward a policy-management style, as it increasingly has under
+South Korea's Lee and China's Xi, the bureaucratic register continues to
+reproduce explicit, actor-naming discourse largely undisturbed — and it
+is this persistent gap between the two registers, rather than either
+alone, that keeps the underlying disputes structurally available for
+renewed diplomatic friction. Japan's own preliminary evidence suggests a
+different mechanism may be at work there instead: rather than a gap
+between registers, a single consistently unattributed register spanning
+both levels — a possibility that, if confirmed by more bureaucratic-level
+Japanese data than the four statements available here, would mean the
+underlying recurrence is sustained by different routes in different
+countries rather than by one uniform mechanism.
 
 ---
 
@@ -588,14 +677,15 @@ diplomatic friction.
 する。記憶レジームは、①公的記憶の主体、②記憶を固定化する制度装置、③責任
 を構築し正当化する語彙、の三要素からなる。
 
-　　本稿はKingdonの政策の窓モデルを補助線として、日中韓の政府首脳・報道
-官・国営メディアによる公式英語発話91件(2020〜2026年の主軸90件、日中韓各
-30件+1995年の村山談話1件)を全文読解し、争点類型、発話者レベル、Kingdonの
-問題・政策・政治の三次元、謝罪関連語彙(謝罪・説明・悔恨・反省・救済・赦
-し)、行為主体の明示性についてコーディングした。国レベルで集計すると、行為
-主体を明示する発話の比率は、日本0%、韓国71%(日本に一切言及しない2件を
-除く)、中国87%と顕著に異なり、この差異は当初、三つの異なる記憶レジーム類
-型に対応するように見えた。すなわち、行為主体を一貫して曖昧化しながら被爆者援護・遺骨収集事業
+　　本稿はKingdonの政策の窓モデルを補助線として、日中韓の政府首脳・大臣・
+報道官・国営メディアによる公式英語発話102件(2020〜2026年の主軸101件、日
+本41件[首脳級37件・外務大臣級4件]・韓国30件・中国30件+1995年の村山談話
+1件)を全文読解し、争点類型、発話者レベル、Kingdonの問題・政策・政治の三
+次元、謝罪関連語彙(謝罪・説明・悔恨・反省・救済・赦し)、行為主体の明示性
+についてコーディングした。国レベルで集計すると、行為主体を明示する発話の
+比率は、日本0%、韓国71%(日本に一切言及しない2件を除く)、中国87%と顕著
+に異なり、この差異は当初、三つの異なる記憶レジーム類型に対応するように見
+えた。すなわち、行為主体を一貫して曖昧化しながら被爆者援護・遺骨収集事業
 等の制度的対応を前面に出す日本の「政策管理型」、日本を名指しする頻度が相対
 的に高く国内政治・外交双方の資源として問題を活性化させる韓国の「被害政治
 型」、そして大半の発話が行為主体を明示しKingdonの政治次元に該当する、定型
@@ -610,12 +700,16 @@ diplomatic friction.
 に高い(約100%)一方、新たに追加した習近平自身の発言(2022〜2024年の対日
 首脳会談3件、2025年の抗日戦争勝利80周年演説2件を含む5件)ではわずか20%に
 とどまり、首脳会談での発言は「歴史の教訓に学ぶ」といった、日本の政策管理型
-に近い抽象的な語り口をとる。語彙レベルのキーネス分析も国レベルの類型論を裏
-づける一方でサンプル構成を反映している――日本の特徴語は、サンプル拡大に伴
-い増えた原爆式典演説を反映し(atomic, nuclear, bomb, hiroshima,
-nagasaki)、韓国のそれは自国独立史ナラティブを反映し(freedom,
-independence, liberation)、実質的な争点語彙・特定の歴史的事件名そのものが
-上位に現れるのは中国のみである(aggression, nanjing, massacre, yasukuni)。
+に近い抽象的な語り口をとる。日本については、外務大臣級4件(茂木・林[2件]
+・上川)を新たに収集したところ、首脳級37件と同じく例外なく0%であった――
+件数はなお少ないが、韓国・中国のような実務・首脳間の乖離が日本には存在し
+ない可能性を示す、本稿で唯一の直接的な証拠である。語彙レベルのキーネス分
+析も国レベルの類型論を裏づける一方でサンプル構成を反映している――日本の特
+徴語は、サンプルの大半を占める原爆式典演説を反映し(atomic, nuclear,
+bomb, hiroshima, nagasaki)、韓国のそれは自国独立史ナラティブを反映し
+(freedom, independence, liberation)、実質的な争点語彙・特定の歴史的事件
+名そのものが上位に現れるのは中国のみである(aggression, nanjing,
+massacre, yasukuni)。
 
 　　以上を踏まえ、本稿は3類型そのものを国家単位の性格描写から発話レジス
 ター単位の記述へと再定式化する。すなわち「被害政治型」「主権・正統性型」
@@ -625,10 +719,13 @@ independence, liberation)、実質的な争点語彙・特定の歴史的事件�
 一つのレジスターである。日本の首脳はこのレジスターを4代を通じ一貫して採用
 し続けている点で特異だが、韓国(尹錫悦・李在明期)・中国(習近平の対日首脳
 会談)の首脳もまた、同じレジスターに次第に接近しつつある。本稿は、東アジア
-における歴史認識問題の反復的再燃が、単なる謝罪の不誠実さの問題ではなく、こ
-の実務・首脳レジスター間の非対称な乖離――首脳間でどれほど政策管理型の「未
-来志向」対話が進んでも、実務・広報レジスターが対日名指しの言説を安定的に再
-生産し続けるという構造――に起因すると結論づける。
+における歴史認識問題の反復的再燃が、単なる謝罪の不誠実さの問題ではなく、韓
+国・中国についてはこの実務・首脳レジスター間の非対称な乖離――首脳間でどれ
+ほど政策管理型の「未来志向」対話が進んでも、実務・広報レジスターが対日名指
+しの言説を安定的に再生産し続けるという構造――に起因すると結論づける。日本
+については、乖離ではなくむしろ両レベルを通じた一貫した曖昧化(限られた実
+務級データが示す暫定的な知見)が、同様に問題を潜在的な再燃可能性として保
+持し続ける、国ごとに異なる経路である可能性を示唆する。
 
 ---
 
@@ -717,3 +814,45 @@ independence, liberation)、実質的な争点語彙・特定の歴史的事件�
   には手を付けていない――必要であれば別途ご相談されたい。
 - `draft_paper_ja.docx`(日英とも)は、この更新をまだ反映していない――次
   のステップとして再生成が必要。
+
+【2026-09-22 さらに追加更新:101件データ(日本の外務大臣級4件・バックロ
+グ全数レビュー由来7件を追加)への反映】
+- コーパスが90件(30/30/30)から101件(日本41[首脳級37・外務大臣級4]・
+  韓国30・中国30)に拡張されたことを受け、要旨(日英・和文再掲とも)、5節
+  (分析方法)、6節(分析結果、頻出語キーネス表・争点分布・謝罪責任語彙6
+  項目表・Kingdon三次元をすべて含む)、7節(考察)、8節(おわりに)を
+  `pilot_east_asia_2020_2025.csv`(101件)・`landmark_anchors.csv`(1
+  件)から再計算・再執筆した。韓国・中国のデータは今回追加されておらず、
+  数値は前回集計から変わっていない。
+- 5節は、日本の`pilot_manual_review.csv`(旧・未コーディング候補746件相
+  当のうち718件)を全数レビューし判定を完了したこと(7件採用・709件除
+  外)、および外務省(mofa.go.jp、ライブサイトは接続不能)のWayback
+  Machineスナップショットから外務大臣級4件を新たに収集したことを反映し
+  た。「残る718件は今後の課題」という記述は、実態(全数判定済み・0件保
+  留)に合わせて削除した。
+- 6節では、日本のサンプル拡大(30→41件)に伴う数値の微修正に加え、キーネ
+  ス表の日本側上位語を実際に再計算した(語数8,419→9,413。上位語の構成自
+  体は広島・長崎演説由来の被爆・核軍縮語彙が引き続き支配的で、大きくは変
+  わらない)。
+- **7節・8節の最大の変更点**:前回集計時点では日本について首脳級(HEAD)
+  のデータしかなく、「政策管理型が発話者レベルに依存しない日本の特性か、
+  首脳レジスター固有の現象か」は未確定として留保していた。今回、外務大臣
+  級4件(茂木2020年、林2022年2件、上川2024年)の実データが得られ、これも
+  例外なくagency_explicit=0%であることを確認した。これは韓国・中国とは対
+  照的に、日本については実務・首脳間の乖離そのものが存在しない可能性を示
+  す、本稿で唯一の直接証拠である。7節(一)を書き換えてこの知見を明示的に
+  組み込み、7節(二)には、韓国・中国に成立する「実務・首脳間の非対称な乖
+  離」という反復性の機序が、日本については当てはまらず、代わりに「両レベ
+  ルを通じた一貫した曖昧化」という別の機序が働いている可能性がある、とい
+  う留保を新たに追加した。8節の結論・今後の課題もこれに合わせて書き換え、
+  今後の課題の第一項を「日本側の実務・広報レベルのデータ収集」(n=4まで
+  完了、より多くの件数による検証が今後の課題)に更新し、第二項の「718件
+  の追加コーディング」は完了済みとして「新たな一次資料の発見」に差し替え
+  た。n=4はなお小さいサンプルであり、7節・8節の該当箇所ではこの点を明示
+  的に「暫定的知見」と留保している――3類型の呼称自体や理論枠組み(4節)
+  への変更は、この更新の対象外である。
+- **`draft_paper_ja.docx`(日英とも)も、この更新を反映して再生成済み**
+  (XSD構造検証パス、210段落)。ビルドスクリプト(scratchpad内
+  `docxbuild/build.js`)を、`draft_paper_ja.md`の新旧テキストブロックを
+  機械的に diff して対応する箇所を置換する方式で更新した――手作業でのコ
+  ピー時の転記ミスを避けるため。

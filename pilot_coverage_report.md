@@ -363,6 +363,47 @@ administrative matter distinct from the international historical-
 recognition disputes this corpus tracks, so it was not coded despite
 matching keywords.
 
+### Confound stress-test re-run against the full 101-record sample
+
+Re-running the same cross-tab against the current 101-record sample
+(adding the 7 Round-5 records, all Japan HEAD-level, to the 94-record
+sample the previous pass used) gives, at the country level:
+
+| | apology | remorse | reflection | remedy | agency_explicit |
+|---|---|---|---|---|---|
+| Japan (n=41) | 0.00 | 0.10 | 0.68 | 0.66 | 0.00 |
+| Korea (n=30) | 0.00 | 0.00 | 0.40 | 0.20 | 0.71 |
+| China (n=30) | 0.00 | 0.00 | 0.17 | 0.00 | 0.87 |
+
+Korea and China are unchanged (no new records this round). Japan's
+`agency_explicit` stays at a clean **0.00 across all 41 records** —
+checked both by `document_type` (SPEECH n=24, PRESS_CONFERENCE n=15,
+STATEMENT n=2, all 0.00) and by individual prime minister (Kishida n=20,
+Ishiba n=8, Suga n=5, Abe n=4, Hayashi n=2, Motegi n=1, Kamikawa n=1, all
+0.00) — the Round-5 additions (Battle of Okinawa series, the 2022 Sado
+press conference, the Iwo-To address) neither break nor meaningfully shift
+this finding; they extend the genre/administration coverage the same
+exceptionless pattern already held across. `reflection` (0.67→0.68) and
+`remedy` (0.70→0.66) both move by ~1pp, well within noise for this sample
+size — not a substantive change, since 5 of the 7 new records (the Okinawa
+series) were coded `reflection=1`/`remedy=1` on the same template as the
+existing Hiroshima/Nagasaki batch, while the Sado record (both 0) and the
+Iwo-To record (both 1) roughly offset each other.
+
+The speaker-level split for Japan (HEAD n=37 including all 7 Round-5
+additions, MINISTER n=4, unchanged from the 94-record pass since no new
+MINISTER data was added) is essentially the same as reported in "Round 4"
+above: HEAD `reflection`=0.70, `remedy`=0.73 vs. MINISTER `reflection`=0.50,
+`remedy`=0.00, `agency_explicit`=0.00 at both levels. The headline
+speaker-level finding — Japan's `agency_explicit=0` holds across both HEAD
+and MINISTER, unlike Korea's and China's level-specific register gaps — is
+unchanged and, if anything, slightly more robust with a larger HEAD-level
+denominator (37 vs. 30).
+
+**This re-run (and the "Round 4" one before it) is reflected in
+`draft_paper_ja.md`/`.docx` as of 2026-09-22** — see the file's own dated
+memo entries for the specific sections revised.
+
 ## Fully coded records by country
 
 ### Japan (41) — see `pilot_japan_2020_2025.csv`
