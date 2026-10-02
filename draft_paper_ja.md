@@ -65,19 +65,55 @@
 
 ## 3、先行研究の限界
 
-歴史認識問題をめぐる既存研究は、大別して二つの視点に整理できる。第一の視点
+歴史認識問題をめぐる既存研究は、大別して三つの視点に整理できる。第一の視点
 は謝罪の十分性・誠意・道徳性を問うもので、道徳的関係の修復⑴、歴史的不正義
-への補償・修復⑵、日本の謝罪・戦後責任の評価⑶⑷⑸などが該当する。第二の視
-点は謝罪を外交的シグナルとして捉えるもので、謝罪のタイミング・動機分析⑹、
-国家間信頼形成への効果⑺⑻などがこれに含まれる。
+への補償・修復⑵、日本の謝罪の法的・歴史的な評価⑶などが該当する。第二の視
+点は謝罪を外交的シグナルとして捉えるもので、謝罪のタイミング・動機分析⑷、
+国家間信頼形成への効果⑸⑹などがこれに含まれる。
 
-これらの研究は、謝罪の有無・十分性・外交的効果に焦点を当てる傾向があり、歴
-史問題がなぜ反復的に再燃するのかを十分に説明できない。本稿は、謝罪そのもの
-ではなく、各国が過去を記憶し、責任を構築する「制度的・言説的構造」に注目す
-る。歴史認識問題は、単なる「過去の評価」や「感情の衝突」ではなく、各国の過
-去の公的な記憶、責任の配分、正当化をめぐる政治的問題である。この構造を「記
-憶レジーム」として捉えるならば、歴史認識問題の反復的再燃は、各国の記憶レジ
-ームの違いによって説明できるというのが本稿の見立てである。
+第二の視点に属する研究のうち、Lind(2008)⑺は、単に謝罪の有無や十分性を問
+うものではなく、謝罪・悔悟(contrition)がむしろ国内の反発(ナショナリスト
+的バックラッシュ)を招き、謝罪国内部の政治的不安定化を通じて和解を損ないう
+ることを、日韓関係と独仏関係との比較によって示した研究であり、「謝罪→和
+解」という単純な因果を前提とせず、謝罪と緊張緩和が結びつかない回路(国内政
+治を媒介とした逆機能)を明示的に扱っている。この意味で、Lindの議論は、本稿
+が注目する「反復的再燃のメカニズム」に対しても独自の答えを提示するもので
+あり、単に「謝罪の十分性を問う研究」の一つに位置づけるべきではない。ただ
+し、Lindの関心はあくまで謝罪という行為そのものの効果(逆機能を含む)にあ
+り、謝罪が行われない場合も含めた、各国が過去をどのように制度的・言説的に
+構造化しているかという、本稿の「記憶レジーム」という問いには立ち入らない。
+
+第三の視点は、過去の記憶そのものを政治的・制度的な構築物として捉える、比
+較歴史社会学的な「記憶の政治」研究である。Bernhard and Kubik(2014)⑻は、
+旧共産圏における記憶をめぐる政治的争いを分析する枠組みとして「記憶レジー
+ム(memory regime)」という概念そのものを提示し、記憶をめぐるアクター間の
+相互作用によって、分裂的・区画的・統一的という異なる型の記憶レジームが生
+成されることを論じた――本稿の中心概念である「記憶レジーム」は、この用語
+法を東アジアの歴史認識問題に応用するものである。Berger(2012)⑼は、日独の
+比較を通じて、戦争の記憶・罪責感をめぐる国内的な規範が、安全保障政策・対
+外関係のあり方そのものを規定することを論じ、He(2009)⑽は、日中・独波とい
+う二組の二国間関係を比較し、国家間の記憶の収斂・乖離(ナショナル・ミスメ
+イキングの有無)こそが和解の成否を分けると論じた。中国側については、
+Wang(2012)⑾が、「国恥」をめぐる歴史記憶が中華人民共和国の正統性構築・対
+外行動の理解枠組みとして機能してきたことを示し、日本側については、
+Seraphim(2006)⑿が戦後日本の戦争記憶をめぐる社会団体(遺族会・平和運動団
+体等)間の制度的な競合過程を、Hashimoto(2015)⒀が「敗北」をめぐる文化的ト
+ラウマと国民的アイデンティティの構築過程を、それぞれ描き出している。
+Shin and Sneider(2016)⒁は、日中韓のオピニオンリーダー(歴史家・ジャーナリ
+スト等)の記憶をめぐる言説を比較し、本稿の問題関心にもっとも近い先行研究
+の一つである。
+
+これら第三の視点に属する研究は、各国がいかに過去を記憶し、制度化し、国内
+の政治的アクター間の競合を通じてその記憶を構築してきたかを、豊富な質的・
+歴史的データに基づいて描き出す点で、本稿の理論的基盤そのものである。しか
+し、これらの研究は主として単一事例の歴史叙述、ないし少数事例の比較歴史分
+析によるものであり、政府発話そのものを大規模かつ体系的にコーディングし、
+発話者レベル・時期・ジャンルを統制したうえで、行為主体への責任帰属の方向
+性や謝罪関連語彙の使用パターンを定量的に比較するという方法は採られていな
+い。本稿は、この第三の視点が切り開いた「記憶レジーム」という概念を継承し
+つつ、それを第一・第二の視点が蓄積してきた謝罪発話そのものの体系的分析の
+方法と組み合わせることで、歴史認識問題がなぜ反復的に再燃するのかという問
+いに、実証的な答えを与えようとするものである。
 
 ## 4、理論枠組み
 
@@ -89,7 +125,7 @@
 厳、救済)である。記憶レジームは、過去をどのように語るかだけでなく、「誰が
 語り、どの制度を通じて固定化し、どのような責任を構築するか」を含む。
 
-補助線として、Kingdonの「政策の窓」モデルを導入する。歴史認識問題が政策過
+補助線として、Kingdon⒂の「政策の窓」モデルを導入する。歴史認識問題が政策過
 程のどこで機能するのかを明確化するためである。問題次元は被害・加害・不正
 義・責任が「公的問題」として構成される局面、政策次元は謝罪・補償・基金・合
 意・教育・制度改革などの解決策が提示される局面、政治次元は国内政治上の動
@@ -175,7 +211,7 @@
 韓国・中国の候補群は、上記の技術的制約のもとで複数の発見経路を組み合わせて
 見出しえた文書の集積であり、日本と同水準の意味での母集団代表性は持たない。
 この非対称性は、量的な代表性の主張によってではなく、比較政治学における構造
-化・焦点化比較(structured, focused comparison)の枠組みによって正当化す
+化・焦点化比較(structured, focused comparison)⒃の枠組みによって正当化す
 る。すなわち、三国それぞれについて同一の争点群・同一のコーディング枠組みを
 一貫して適用したうえで、各国を代表する事例(首脳による年次式典演説、外交当
 局者による定例会見・声明、国営メディアによる年次追悼報道等、公的性格の強い
@@ -305,7 +341,7 @@ review.csv`の全数レビューにより新たに採用した7件)によるも�
 
 計量テキスト分析は、5節で述べた通り、文脈的コーディングによって得られた解
 釈を裏づける補助的根拠として用いる。101件の`response_text`(発話全文)を国
-別に結合し、対数尤度比(log-likelihood, LL)によるキーネス分析を実施した。
+別に結合し、対数尤度比(log-likelihood, LL)⒄によるキーネス分析⒅を実施した。
 すなわち、ある語が特定の国のコーパスにおいて、他の二か国のコーパスと比べて
 どれだけ統計的に有意に高頻度で出現するかを算出したものである(語形は小文字
 化し、機能語を除去、出現数3未満の語は除外)。韓国・中国は前回集計(90件)
@@ -777,19 +813,43 @@ Stanford University Press, 1991.
 Historical Injustices*, W. W. Norton & Company, 2000.
 ⑶ Alexis Dudden, *Troubled Apologies Among Japan, Korea, and the United
 States*, Columbia University Press, 2008.
-⑷ Jennifer Lind, *Sorry States: Apologies in International Politics*,
-Cornell University Press, 2008.
-⑸ Thomas U. Berger, *War, Guilt, and World Politics after World War II*,
-Cambridge University Press, 2012.
-⑹ Christopher Daase, Stefan Engert, Michel-André Horelt, Judith Renner and
+⑷ Christopher Daase, Stefan Engert, Michel-André Horelt, Judith Renner and
 Renate Strassner (eds.), *Apology and Reconciliation in International
 Relations: The Importance of Being Sorry*, Routledge, 2016.
-⑺ Daqing Yang, "Political Apology in Sino-Japanese Relations: The Murayama
+⑸ Daqing Yang, "Political Apology in Sino-Japanese Relations: The Murayama
 Statement and Its Receptions in China," in Kazuhiko Togo (ed.), *Japan and
 Reconciliation in Post-war Asia: The Murayama Statement and Its
 Implications*, Palgrave Macmillan, 2013.
-⑻ Deli Yang and Paul F. Diehl, "Political Apologies in International
+⑹ Deli Yang and Paul F. Diehl, "Political Apologies in International
 Relations," *Oxford Research Encyclopedia of Politics*, 2025.
+⑺ Jennifer Lind, *Sorry States: Apologies in International Politics*,
+Cornell University Press, 2008.
+⑻ Michael Bernhard and Jan Kubik (eds.), *Twenty Years after Communism:
+The Politics of Memory and Commemoration*, Oxford University Press, 2014.
+⑼ Thomas U. Berger, *War, Guilt, and World Politics after World War II*,
+Cambridge University Press, 2012.
+⑽ Yinan He, *The Search for Reconciliation: Sino-Japanese and
+German-Polish Relations since World War II*, Cambridge University Press,
+2009.
+⑾ Zheng Wang, *Never Forget National Humiliation: Historical Memory in
+Chinese Politics and Foreign Relations*, Columbia University Press, 2012.
+⑿ Franziska Seraphim, *War Memory and Social Politics in Japan,
+1945-2005*, Harvard University Asia Center (Harvard East Asian
+Monographs 278), 2006.
+⒀ Akiko Hashimoto, *The Long Defeat: Cultural Trauma, Memory, and
+Identity in Japan*, Oxford University Press, 2015.
+⒁ Gi-Wook Shin and Daniel C. Sneider (eds.), *Divergent Memories:
+Opinion Leaders and the Asia-Pacific War*, Stanford University Press,
+2016.
+⒂ John W. Kingdon, *Agendas, Alternatives, and Public Policies*, 2nd ed.,
+Longman, 1995.
+⒃ Alexander L. George and Andrew Bennett, *Case Studies and Theory
+Development in the Social Sciences*, MIT Press, 2005.
+⒄ Ted Dunning, "Accurate Methods for the Statistics of Surprise and
+Coincidence," *Computational Linguistics* 19(1), 1993, pp. 61-74.
+⒅ Paul Rayson and Roger Garside, "Comparing Corpora Using Frequency
+Profiling," *Proceedings of the Workshop on Comparing Corpora* (ACL
+2000), pp. 1-6.
 
 ---
 
@@ -1110,7 +1170,42 @@ countries rather than by one uniform mechanism.
   コストが更新のたびに二重化する一因になっていたため。
 - `draft_paper_ja.docx`(日英とも)は、この更新をまだ反映していない――次
   のステップとして再生成が必要。
-- 未着手のまま残る項目:改善策4(事象駆動型再燃分析)の本格実施、改善策6
-  (先行研究整理の書き直し――Lind 2008の再読解、Bernhard & Kubik 2014・
-  Yinan He 2009・Zheng Wang 2012等の追加)、コードブック付録・コーダー間
-  信頼性に関する限界の明記、本文中に残る英語変数名の日本語言い換え。
+- 未着手のまま残る項目:改善策4(事象駆動型再燃分析)の本格実施、コードブ
+  ック付録・コーダー間信頼性に関する限界の明記、本文中に残る英語変数名の
+  日本語言い換え。
+
+【2026-10-02 改善策6:先行研究整理の書き直し】
+- 3節(先行研究の限界)を全面的に書き直した。第一の変更点は、Lind(2008)
+  の位置づけの修正である。旧稿は、Lind・Dudden・Bergerを「日本の謝罪・戦
+  後責任の評価」という一つのグループにまとめ、全体を「謝罪の有無・十分性
+  に焦点を当てる既存研究は反復的再燃を説明できない」という一文で退けてい
+  たが、これはLindの議論を不正確に要約するものであった。実際には、Lindは
+  謝罪・悔悟がむしろ国内の反発(ナショナリスト的バックラッシュ)を招き、
+  謝罪国内部の政治的不安定化を通じて和解を損ないうることを、日韓関係と独
+  仏関係との比較から論じており、「謝罪が行われても緊張が解消されない」こ
+  とへの一つの答えをすでに提示している。3節に独立の段落を設け、この点を
+  明示的に認めたうえで、本稿の「記憶レジーム」という問いとの違い(Lindは
+  謝罪という行為そのものの効果を問うが、謝罪が行われない場合を含めた記憶
+  の制度的構造そのものは問わない)を述べた。
+- 第二の変更点は、Bergerの再配置と、本稿の中心概念「記憶レジーム」の理論
+  的系譜を初めて明示したことである。旧稿はBergerをDudden・Lindと同じ「日
+  本の謝罪評価」グループに置いていたが、Bergerの議論(戦争の記憶・罪責感
+  をめぐる国内規範が対外政策を規定するという日独比較)は、本稿の理論枠組
+  みにより近い。3節に新たに「第三の視点」として、比較歴史社会学的な「記
+  憶の政治」研究の系譜を立て、Bernhard and Kubik(2014、「記憶レジーム」
+  という用語そのものの初出)、Berger(2012)、He(2009、日中・独波の比
+  較)、Wang(2012、中国の国恥記憶)、Seraphim(2006、戦後日本の記憶政
+  治の社会団体間競合)、Hashimoto(2015、日本の文化的トラウマ)、Shin
+  and Sneider(2016、日中韓のオピニオンリーダー比較、本稿にもっとも近い
+  先行研究)を位置づけた。本稿の「記憶レジーム」は、この系譜の用語・問題
+  関心を継承しつつ、発話の大規模コーディングという異なる方法を組み合わせ
+  るものであることを明記した。
+- 第三に、本文中で参照されながら註に反映されていなかった方法論上の引用を
+  追加した。4節のKingdonモデル導入箇所にKingdon(1995)⒂を、5節の構造
+  化・焦点化比較の箇所にGeorge and Bennett(2005)⒃を、6節のキーネス分
+  析(対数尤度比)の箇所にDunning(1993)⒄・Rayson and Garside(2000)
+  ⒅を、それぞれ追加した。
+- 註は全8件から全18件に拡張した(⑴〜⑻は再配列、⑼〜⒅が新規)。本文中の
+  丸数字の出現順序が番号の昇順と一致することを機械的に確認済み。
+- 4節(理論枠組み)・7節(考察)・8節(おわりに)の本文自体への変更はな
+  い――この更新は3節の書き直しと註の拡張に限定される。
