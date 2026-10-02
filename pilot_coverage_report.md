@@ -546,6 +546,114 @@ use this channel for this topic, while Korea and China rely on it
 heavily, is itself a datum about cross-national differences in
 communication style, not a confound to explain away.
 
+### Six new landmark-anchor documents, and the Aug 15 / decennial-Danwa timeline, 1993–2025 (2026-10-02)
+
+The external review specifically asked for pre-2020 watershed documents
+(Hosokawa 1993, Koizumi's Yasukuni-era statements, Abe's 2015 70th-
+anniversary Danwa, Ishiba's 2025 80th-anniversary statement, the 1998
+Obuchi–Kim Joint Declaration) rather than relying on the single 1995
+Murayama anchor. The blocker noted throughout this project — `mofa.go.jp`
+blocked site-wide, and the Wayback Machine unreachable (TLS connection
+reset even on its root domain, re-confirmed today, 10 days after the
+previously-documented outage) — remains in force and was re-tested before
+falling back to an alternative: **"The World and Japan" Database**
+(`worldjpn.net`/`worldjpn.grips.ac.jp`, PI: TANAKA Akihiko; National
+Graduate Institute for Policy Studies / Institute for Advanced Studies on
+Asia, University of Tokyo), an academic archival project that reproduces
+official Japanese-government diplomatic texts with full source citation
+(e.g. "[出典] 首相官邸", "[出典] 外交青書42号"). This is directly reachable and
+was used for five of the six new records, each retrieved in **both** the
+Japanese original and the official English rendering, cross-checked
+against each other for fidelity (confirmed consistent) — this
+cross-check also directly feeds Task 14 (original-language spot-check),
+since it gives an authentic Japanese-original/English-translation pair
+for five pre-2020 landmark documents. `classification_confidence` is set
+to `MEDIUM` for these five (an academic-archive substitution for the
+primary government source, the same downgrade convention already used
+elsewhere in this corpus for wire-service substitutions).
+
+The sixth new record — Ishiba's October 2025 80th-anniversary document —
+needed no substitution at all: it was retrieved directly from live
+`japan.kantei.go.jp`/`www.kantei.go.jp` using the `AcademicResearchBot/1.0`
+User-Agent header already documented in this project's "Network access
+notes" as necessary to get real content from Kantei (its default-UA
+response is a fake-looking 404). `classification_confidence=HIGH`.
+
+All six new records were added to `landmark_anchors.csv` (now 7 rows:
+Murayama 1995 plus these six), not the main 101-record axis, since like
+Murayama they are purposively-selected watershed documents rather than
+part of the main-axis sampling frame. The full, chronologically-ordered
+set:
+
+| Date | Country | Speaker | apology | remorse | reflection | remedy_victim_directed | attribution_direction | pardon_or_forgiveness |
+|---|---|---|---|---|---|---|---|---|
+| 1993-08-23 | Japan | Hosokawa | 1 | 1 | 1 | 0 | SELF | 0 |
+| 1995-08-15 | Japan | Murayama | 1 | 1 | 1 | **1** | SELF | 0 |
+| 1998-10-08 | Japan | Obuchi | 1 | 1 | 1 | 0 | SELF | 0 |
+| 1998-10-08 | Korea | Kim Dae-jung | 0 | 0 | 1 | 0 | NA | **1** |
+| 2001-08-13 | Japan | Koizumi | 0 | 1 | 1 | 0 | SELF | 0 |
+| 2015-08-14 | Japan | Abe | 0 | 0 | 1 | 0 | SELF | 0 |
+| 2025-10-10 | Japan | Ishiba | 0 | 0 | 1 | 0 | **NA** | 0 |
+
+**This is a strikingly clean, monotonic decay pattern that the paper's
+Section 7 discussion should build around.** Reading down the Japan rows:
+`apology` drops out first (1993/1995/1998 → 0 from 2001 on); `remorse`
+survives one step longer (present through 2001, drops out from 2015 on,
+even though 2015 explicitly *references* past remorse — see below);
+`attribution_direction=SELF` survives longest of all, present in every
+Japan landmark document from 1993 through 2015, and is lost only in 2025,
+the most recent document, where it degrades all the way to `NA`.
+
+Two findings are worth flagging specifically:
+
+1. **Abe's 2015 Danwa is a reaffirmation, not a fresh apology/remorse —
+   coded accordingly.** Its text states "Japan has repeatedly expressed
+   the feelings of deep remorse and heartfelt apology... Such position
+   articulated by the previous cabinets will remain unshakable," then
+   pivots to argue future generations "must not...be predestined to
+   apologize." This is the well-documented "Did Abe apologize?"
+   ambiguity in the secondary literature. It is coded `apology=0,
+   remorse=0` here for direct comparability with how this corpus already
+   codes every 2020–2025 Japan main-axis record showing the identical
+   reaffirm-but-do-not-restate pattern (all coded `apology=0`): a
+   reference to a past apology is not itself coded as a new one. Under
+   this reading, **2015 is the pivot year** after which Japan's official
+   repertoire shifts from (occasionally) offering fresh apology/remorse
+   language to only ever reaffirming it — exactly the inflection point
+   the reviewer asked the paper to locate and discuss explicitly.
+
+2. **Ishiba's 2025 "Reflection" is not a Danwa at all, and does not
+   engage the Japan-vs-Asia-neighbors question.** Contemporaneous
+   reporting (Tokyo Shimbun 2025-10-11, Nikkei 2025-09-24, JCP/Akahata
+   2025-10-11) confirms Ishiba originally intended a cabinet-decided 80th-
+   anniversary Danwa (continuing the 50th/60th/70th-anniversary series)
+   but abandoned that plan after opposition within the LDP, issuing
+   instead a lesser, personal "内閣総理大臣所感" (Reflection by the Prime
+   Minister) with no cabinet endorsement. Substantively, the document is
+   almost entirely a domestic-institutional post-mortem — why Imperial
+   Japan's constitutional structure failed to keep the military under
+   civilian control — and at no point mentions Korea, China, colonial
+   rule, comfort women, forced labor, or any wrong committed against
+   another country's people; its only regional reference is a passing
+   mention of a war-dead memorial visit in the Philippines. This is why
+   it is coded `agency_explicit=NA` / `attribution_direction=NA` rather
+   than `0`: it does not fail to name a responsible actor toward Asian
+   victims, it does not raise the question at all. This is a genre *and*
+   framing break beyond even the attenuation visible in 2015, and
+   directly explains why the milestone-Danwa tradition cannot be used as
+   a counterweight to the 2020–2025 main axis's `agency_explicit=0`
+   finding for the current (2025-forward) period: **the genre that used
+   to carry this content did not fire in 2025.**
+
+Remaining landmark documents named by the reviewer but not yet collected:
+the 2005 textbook controversy documents and the 2018 Korea Supreme Court
+forced-labor ruling. The latter is a judicial ruling rather than a
+government statement and falls outside this corpus's "official
+government statement" eligibility rule in the strict sense; it is instead
+planned as a trigger event for the event-based Kingdon reignition analysis
+(see "Remaining open items"), where government statements reacting to it
+are the relevant unit, not the ruling's own text.
+
 ## Fully coded records by country
 
 ### Japan (41) — see `pilot_japan_2020_2025.csv`
