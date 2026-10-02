@@ -323,11 +323,18 @@ explicit=1`該当発話は例外なく日本を名指しする他者帰属であ
 語資料における言説とは区別して解釈される必要がある。第四に、中国の南京大虐
 殺記念日(12月13日)については、定例記者会見の質疑では言及されない年が確
 認されており(2022年・2023年)、この争点は日常的な記者会見ではなく指導者
-individual の式典演説等、別の資料類型によって捕捉されるべきものである可能
-性が高い――本稿の中国側サンプルが定例記者会見アーカイブに依拠している以
-上、南京大虐殺関連の言説を過小に捉えている可能性がある。これらの限界は、三
-国の記憶レジームの差異という本稿の主要な主張の妥当性を損なうものではない
-が、より大規模かつ対称的なコーパスに基づく検証は今後の課題としたい。
+個人による式典演説等、別の資料類型によって捕捉されるべきものである可能性が
+高い――本稿の中国側サンプルが定例記者会見アーカイブに依拠している以上、南
+京大虐殺関連の言説を過小に捉えている可能性がある。第五に、本稿のコーディン
+グはすべて単一のコーダー(著者)によるものであり、コーダー間信頼性(inter-
+coder reliability)の算出は行っていない。境界事例の判断根拠はすべて
+`coder_notes`に記録し、付録Aのコードブックで判定基準を公開することで、判
+断の再現可能性と反証可能性を担保しているが、これは独立した複数コーダーに
+よる一致率の算出に代わるものではない。将来の検証では、本稿のコードブック
+に基づく第二コーダーによる独立コーディングとCohenのκ係数等の算出を行うこ
+とが望ましい。これらの限界は、三国の記憶レジームの差異という本稿の主要な
+主張の妥当性を損なうものではないが、より大規模かつ対称的なコーパスに基づ
+く検証、および複数コーダーによる信頼性検証は今後の課題としたい。
 
 ## 6、分析結果
 
@@ -853,6 +860,43 @@ Profiling," *Proceedings of the Workshop on Comparing Corpora* (ACL
 
 ---
 
+## 付録A:コードブック概要
+
+本稿のコーディング基準の全文は、本稿のデータ一式とともに公開しているリポ
+ジトリの`codebook.md`に収録している。以下は、本文で言及した主要な変数の定
+義を要約したものである。
+
+| 変数名 | 定義 |
+|---|---|
+| `country` | japan / korea / china。 |
+| `speaker_level` | `HEAD`(首脳:大統領・首相・国家主席)/ `MINISTER`(外務大臣級)/ `OFFICIAL`(報道官等の実務レベル)/ `UNKNOWN`(第三者的報道等)。 |
+| `document_type` | `STATEMENT` / `PRESS_CONFERENCE` / `SPEECH` / `JOINT_STATEMENT` / `WRITTEN_RESPONSE` / `OTHER`。 |
+| `issue_primary` / `issue_secondary` | 争点区分(戦争一般・侵略・植民地支配・慰安婦・性奴隷・南京・靖国・歴史教科書・強制労働・補償・謝罪一般・歴史認識一般・その他)。最も具体的に該当する区分をissue_primaryとし、他の該当区分をissue_secondaryに列挙する。 |
+| `kingdon_problem` / `kingdon_policy` / `kingdon_politics` | Kingdonの政策の窓モデルの三次元(各0/1/NA、同時に複数該当可)。 |
+| `apology` / `explanation` / `remorse` / `reflection` / `remedy` / `pardon_or_forgiveness` | 謝罪関連語彙6項目(各0/1)。キーワード一致のみに基づかず、全文読解に基づき判定する。 |
+| `responsibility_actor` | 行為主体の種別(`STATE` / `GOVERNMENT` / `LEADER` / `MILITARY` / `PEOPLE_NATION` / `UNSPECIFIED` / `OTHER` / `NA`)。いずれの国の行為主体かは示さない。 |
+| `agency_explicit` | 行為主体が明示されているか(0/1/NA)。 |
+| `attribution_direction`(本稿で新設) | `agency_explicit`が該当する場合に、自国を名指しする自己帰属(`SELF`)か、相手国を名指しする他者帰属(`OTHER`)かを区別する。`agency_explicit=0`の場合は`NONE`、`NA`の場合は`NA`。 |
+| `remedy_victim_directed`(本稿で新設) | `remedy=1`のうち、相手国の歴史的被害者に向けた救済に限定したもの(0/1)。自国民向けの内政的救済、相手国自身の措置への反応、相手国への反対給付の要求はいずれも0とする。 |
+| `classification_confidence` | `HIGH` / `MEDIUM` / `LOW`。一次資料への直接アクセスが失敗し、学術アーカイブ・通信社報道等で代替した記録は`MEDIUM`に格下げする。 |
+| `coder_notes` | コーディング根拠・出典・境界事例の判断理由を記す自由記述欄。 |
+
+非ハルシネーション原則として、実際に全文を読解した文書のみを記録し、判定
+不能な項目は推測せず`UNKNOWN`/`NA`とする(5節(六)参照)。
+
+## 付録B:データの所在
+
+本稿が分析に用いた108件(主軸101件+歴史的画期7件)の記録一覧(発話日・発
+話者・国・文書種別・一次資料URL・コーディング結果全項目)、コードブック全
+文、収集・コーディング手続きの詳細な作業記録は、本稿とは別に、再現可能性
+を確保するための独立したデータセットとして保存・公開している。国際ジャー
+ナルへの投稿を想定した場合のデータ提出方針(Journal of Peace Research・
+International Organization等の指針に照らした検討)を含め、収録内容の詳細
+は`pilot_coverage_report.md`および`east_asia_corpus_data.xlsx`(README
+シート)を参照されたい。
+
+---
+
 Historical Recognition Issues and Memory Regimes: The Organization of
 History, the Construction of Responsibility, and the Politics of
 Diplomatic Friction in Japan, South Korea, and China (provisional)
@@ -1209,3 +1253,32 @@ countries rather than by one uniform mechanism.
   丸数字の出現順序が番号の昇順と一致することを機械的に確認済み。
 - 4節(理論枠組み)・7節(考察)・8節(おわりに)の本文自体への変更はな
   い――この更新は3節の書き直しと註の拡張に限定される。
+
+【2026-10-02 コーダー間信頼性の明記・コードブック付録の追加】
+- 5節(七)方法論上の限界に、単一コーダー(著者)によるコーディングであり
+  コーダー間信頼性(inter-coder reliability)の算出を行っていないことを、
+  第五の限界として明示的に追加した。境界事例の判断根拠はcoder_notesへの
+  記録と付録Aのコードブック公開によって再現可能性を担保しているが、これ
+  は独立した複数コーダーによる一致率の算出に代わるものではない旨を明記
+  し、第二コーダーによる独立コーディングとCohenのκ係数等の算出を今後の
+  検証課題として述べた。
+- 本文(註の直後、英文要旨の前)に「付録A:コードブック概要」「付録B:
+  データの所在」を新設した。付録Aはcodebook.mdの主要変数(country・
+  speaker_level・document_type・issue_primary/secondary・Kingdon三次
+  元・謝罪語彙6項目・responsibility_actor・agency_explicit・本稿で新設し
+  たattribution_direction/remedy_victim_directed・classification_
+  confidence・coder_notes)の定義を要約した表である。付録Bは、108件の記
+  録一覧・コードブック全文・作業記録を本稿とは別に独立したデータセットと
+  して保存・公開していることを明記し、国際ジャーナルのデータ提出方針
+  (JPR・IO等)に照らした検討を含め、詳細はpilot_coverage_report.mdおよ
+  びeast_asia_corpus_data.xlsxを参照するよう案内した。108件すべての記録
+  を本文に一括掲載することはしていない――可読性と、データファイル自体の
+  再現可能性確保という目的のバランスを考慮した判断である。
+- 本文中の変数名(`agency_explicit`等)のバックティック表記は、初出時に
+  必ず日本語の語義を括弧で付す既存の慣行を踏襲しており、個別に日本語言い
+  換えへの全面置換は行っていない――コーディングの再現可能性・コードブッ
+  クとの対応関係を本文からも直接確認できるようにするための意図的な表記
+  であり、単純な「英語の混入」ではないと判断したため。この判断自体の当否
+  は、査読過程で改めて検討されたい。
+- 5節(三)の「指導者individualの式典演説」という誤記(英単語の混入)を
+  「指導者個人による式典演説」に修正した。
