@@ -188,7 +188,7 @@ reflection + high other-attribution) holds within each matched genre, so
 it is not an artifact of genre-mix differences. See
 `pilot_coverage_report.md`'s "Attribution-direction split and remedy
 narrowing" and "Matched document-genre tiers" sections, and `codebook.md`
-for the two new fields' definitions. Two further redesign steps are also done: a matched-document-genre-tier
+for the two new fields' definitions. A matched-document-genre-tier
 re-analysis (`pilot_coverage_report.md`'s "Matched document-genre tiers"
 section) confirms the country-level pattern is not a genre artifact, and
 6 new landmark documents (Hosokawa 1993, Koizumi 2001, the 1998
@@ -199,11 +199,26 @@ self-attribution itself degrades to `NA` in 2025 when Ishiba's
 80th-anniversary statement was downgraded from a cabinet-decided Danwa to
 a personal "reflection" that does not engage the Japan-vs-Asia-neighbors
 question at all (see `pilot_coverage_report.md`'s "Six new landmark-
-anchor documents" section). `draft_paper_ja.md`/`.docx` have not yet been
-rewritten to reflect any of this — that rewrite, plus the remaining
-redesign steps (event-based Kingdon streams analysis, original-language
-spot-checks beyond the 5 landmark documents already cross-checked, and a
-literature-review rewrite), is in progress.
+anchor documents" section).
+
+**All eight items from the external review's redesign plan are now
+complete and reflected in `draft_paper_ja.md`/`.docx`**: (1) matched
+document-genre tiers, (2) a limited original-language spot-check
+(Ishiba's 2025 main-axis records against their Kantei Japanese
+originals — no translation-driven coding drift found in that sample),
+(3) the attribution-direction/remedy-narrowing redesign above, (4) an
+event-based Kingdon streams-convergence analysis (the March 2023
+third-party reimbursement sequence and the 2022–2026 Sado Gold Mines
+dispute, both read from existing main-axis records rather than new
+collection), (5) the 1993–2025 landmark timeline above, (6) a rewritten
+literature review (correcting a mischaracterization of Lind 2008 and
+adding the comparative "politics of memory" literature — Bernhard &
+Kubik, Berger, He, Wang, Seraphim, Hashimoto, Shin & Sneider — that is
+this paper's actual theoretical precursor), (7) a stated inter-coder-
+reliability limitation, and (8) Appendix A (codebook summary) / Appendix
+B (pointing to where the full 108-record dataset is published
+separately). See `draft_paper_ja.md`'s trailing editorial-memo block for
+the full, dated change log of each step.
 
 ## Network access notes (for future sessions)
 
