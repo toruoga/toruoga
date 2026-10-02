@@ -404,6 +404,74 @@ denominator (37 vs. 30).
 `draft_paper_ja.md`/`.docx` as of 2026-09-22** — see the file's own dated
 memo entries for the specific sections revised.
 
+### Attribution-direction split and remedy narrowing (2026-10-02)
+
+An external review of the first-draft manuscript (28-record snapshot)
+identified two conflations in the original coding scheme that, on
+inspection against the current 101-record sample, turned out to still
+hold and to be consequential enough to require a redesign rather than a
+caveat:
+
+1. **`agency_explicit` conflated self-attribution and other-attribution.**
+   The field only recorded *whether* a responsible actor was named, not
+   *which country* was named as responsible. A new field,
+   `attribution_direction` (`SELF` / `OTHER` / `NONE` / `NA`), was added
+   to every row of `pilot_east_asia_2020_2025.csv`,
+   `pilot_japan_2020_2025.csv`, and `landmark_anchors.csv`: `SELF` means
+   the speaker's own government is named as the responsible actor,
+   `OTHER` means the other country is named, `NONE` means no actor is
+   named, `NA` means the record does not engage the historical-wrong
+   question at all. Re-reading every `agency_explicit=1` record's
+   `response_text`/`relevant_excerpt` confirms the direction is
+   one-sided in this corpus: **every** Korea/China `agency_explicit=1`
+   record names Japan (`OTHER`); **no** 2020–2025 Japan record
+   self-attributes (`SELF`=0/41). The sole `SELF` record in the whole
+   102-record corpus is the 1995 Murayama Danwa landmark anchor. This
+   means the original `agency_explicit` rates (Japan 0%, Korea 71.4%,
+   China 86.7%) were already, in effect, other-attribution rates for
+   Korea/China and a true null for Japan — the redesign makes this
+   explicit rather than changing the headline numbers.
+
+2. **`remedy` conflated victim-directed and self-directed relief.**
+   Individual full-text review of all 27 Japan `remedy=1` records (24
+   Hiroshima/Nagasaki, Okinawa-memorial, and Iwo-To addresses; see below)
+   and all 6 Korea `remedy=1` records found that every one of them refers
+   to the speaker's own government caring for its own citizens — atomic-
+   bomb survivor support, war-dead repatriation, US-base-burden relief for
+   Okinawa (Japan); Comfort Women Memorial Day messages and defense of
+   Korea's own third-party compensation plan (Korea) — not to remedy
+   provided to the *other* country's historical victims. Three Japan
+   records (2023-03-06, 2023-03-16, 2021-01-08) were additionally found to
+   be **flatly miscoded**: their own pre-existing `coder_notes` already
+   stated the remedy was Korea's own measure (which Japan merely welcomed)
+   or that Japan was demanding remedy *from* Korea — the reverse
+   direction — yet `remedy` had been left at `1`. These three were
+   corrected to `remedy=0` (with an explanatory note appended to
+   `coder_notes`), bringing Japan's `remedy=1` count from 27 to 24.
+   A new field, `remedy_victim_directed` (0/1), was then added to every
+   row: 1 only if the speaker's own government commits to or provides
+   compensation/relief directed at the *other* country's historical
+   victims. Result: **`remedy_victim_directed=0` for all 101 main-axis
+   records in every country (Japan 0/41, Korea 0/30, China 0/30)**. The
+   sole `remedy_victim_directed=1` record in the entire 102-record corpus
+   is, again, the 1995 Murayama Danwa (the Peace, Friendship and Exchange
+   Initiative).
+
+**Implication for the paper's typology.** The original "policy-management
+type" (high `reflection`/`remedy`, low `agency_explicit`, attributed to
+Japan) was substantially an artifact of the broad `remedy` definition: once
+narrowed to victim-directed remedy, the rate collapses to 0% for every
+country in the 2020–2025 window, and the only non-zero case in the whole
+corpus sits outside that window entirely (1995). Sections 5–8 of
+`draft_paper_ja.md` need to be rewritten around this finding before any of
+the tier-restructuring (see "Remaining open items") can proceed, since the
+corrected measures change what the three-type (or now, arguably two-type)
+comparison is actually claiming.
+
+Script: the one-off correction/field-addition script used for this pass is
+not committed (scratch-only, single-use); its logic is fully reproduced
+above. The corrected CSVs are the committed source of truth going forward.
+
 ## Fully coded records by country
 
 ### Japan (41) — see `pilot_japan_2020_2025.csv`

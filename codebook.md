@@ -64,17 +64,46 @@ the passage supports the codes assigned.
 - `explanation` — description or explanation of past acts or the government's position.
 - `remorse` — expressions of remorse, regret, sorrow, responsibility, or contrition.
 - `reflection` — expressions of reflection, recognition, learning from the past, or self-examination.
-- `remedy` — funds, compensation, reparations, institutional measures, assistance, corrective action, settlement.
+- `remedy` — funds, compensation, reparations, institutional measures, assistance, corrective action, settlement, **regardless of who the beneficiary is**. This is the broad/raw measure; see `remedy_victim_directed` below for the narrower, analytically load-bearing version.
 - `pardon_or_forgiveness` — request for forgiveness/pardon, or reconciliation explicitly framed as forgiveness.
 
 Do not assume semantic equivalence merely because a related word appears
 (e.g. "regret" about a procedural delay is not `remorse` about a historical
 wrong) — read the surrounding passage.
 
+- `remedy_victim_directed`: `1` only if `remedy=1` AND the measure is the
+  speaker's own government committing to or providing compensation/relief
+  directed at the **other** country's historical victims (e.g. Japan
+  compensating Korean forced-labor victims). `0` in every other case,
+  including: the speaker's government caring for its own citizens/victims
+  (Japan: hibakusha support, war-dead repatriation, Okinawa base-burden
+  relief; Korea: Comfort Women Memorial Day measures, Korea's own
+  third-party compensation plan for its own citizens); one country
+  welcoming or commenting on the *other* country's own domestic measure;
+  or one country demanding remedy *from* the other. This field exists
+  because `remedy` alone conflates self-directed and victim-directed
+  relief, which were found (2026-10-02 review pass) to look identical at
+  the keyword level but to mean opposite things substantively — see
+  `pilot_coverage_report.md`, "Attribution-direction split and remedy
+  narrowing," for the full derivation and the three records whose
+  `remedy` value was corrected as a result.
+
 ## 7. Responsibility / agency
 
-- `responsibility_actor` in `{STATE, GOVERNMENT, LEADER, MILITARY, PEOPLE_NATION, UNSPECIFIED, OTHER}`.
+- `responsibility_actor` in `{STATE, GOVERNMENT, LEADER, MILITARY, PEOPLE_NATION, UNSPECIFIED, OTHER}`. Note: this records only the *type* of actor named, not *which country*'s actor — see `attribution_direction` below for that.
 - `agency_explicit`: `1` if the responsible actor is explicitly named; `0` if expressed through passive/impersonal/abstract/agentless language (e.g. "mistakes were made," "it is regrettable," "the events of the past," "suffering occurred"); `NA` if not applicable. Judge from context, not mechanically.
+- `attribution_direction` in `{SELF, OTHER, NONE, NA}`, defined only when
+  `agency_explicit` is not `NA`: `SELF` if the speaker's own government is
+  named as the responsible actor; `OTHER` if the other country is named;
+  `NONE` if `agency_explicit=0` (no actor named); `NA` mirrors
+  `agency_explicit=NA`. Added because `agency_explicit` alone cannot
+  distinguish "Japan names Japan as responsible" from "Korea names Japan
+  as responsible" — both score `agency_explicit=1` despite being
+  substantively opposite claims (self-attribution vs. other-attribution).
+  Empirically (2026-10-02 review pass, full 102-record corpus), every
+  Korea/China `agency_explicit=1` record is `OTHER` (names Japan); the
+  only `SELF` record in the corpus is the 1995 Murayama Danwa landmark
+  anchor.
 
 ## 8. document_type
 
