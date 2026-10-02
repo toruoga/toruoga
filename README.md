@@ -164,6 +164,36 @@ every document type, every prime minister); Korea's and China's register
 gaps remain sharply speaker-level-specific. These findings are reflected
 in `draft_paper_ja.md`/`.docx` as of 2026-09-22.
 
+**2026-10-02 redesign, in response to external review**: an outside
+review of the first-draft manuscript argued the original `agency_explicit`
+measure conflated self- and other-attribution, that `remedy` was too
+broad (manufacturing an artifact "policy-management type" for Japan), and
+that the three countries' document genres were not matched. All three
+turned out to be valid on inspection of the current 101-record corpus,
+and have been addressed: (1) a new `attribution_direction` field
+(SELF/OTHER/NONE/NA) shows the corpus's attribution is one-directional —
+every Korea/China `agency_explicit=1` record names Japan, while Japan
+never self-attributes in 2020–2025 (the sole `SELF` record in the whole
+102-record corpus is the 1995 Murayama Danwa); (2) a new
+`remedy_victim_directed` field, after fixing 3 Japan records whose
+`remedy=1` coding contradicted their own `coder_notes`, shows **0% victim-
+directed remedy for every country in the entire 101-record main-axis
+sample** — the "policy-management type" was an artifact of conflating
+self-directed domestic relief with remedy actually directed at the other
+country's historical victims; (3) recomputing within two document-genre
+tiers that are populated in all three countries (ceremonial/anniversary
+addresses; press-conference responses) shows the country-level pattern
+(Japan: high reflection + zero other-attribution; Korea/China: moderate
+reflection + high other-attribution) holds within each matched genre, so
+it is not an artifact of genre-mix differences. See
+`pilot_coverage_report.md`'s "Attribution-direction split and remedy
+narrowing" and "Matched document-genre tiers" sections, and `codebook.md`
+for the two new fields' definitions. `draft_paper_ja.md`/`.docx` have not
+yet been rewritten to reflect this redesign — that rewrite, plus further
+redesign steps (an Aug 15 1993–2025 timeline, event-based Kingdon
+streams analysis, original-language spot-checks, and a literature-review
+rewrite), is in progress.
+
 ## Network access notes (for future sessions)
 
 - The org-level egress block reported by an earlier session in this

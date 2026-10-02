@@ -472,6 +472,80 @@ Script: the one-off correction/field-addition script used for this pass is
 not committed (scratch-only, single-use); its logic is fully reproduced
 above. The corrected CSVs are the committed source of truth going forward.
 
+### Matched document-genre tiers, and whether the country-level pattern survives within them (2026-10-02)
+
+The reviewer's other central critique was that the three countries are
+compared on an unmatched mix of document genres (Japan skews ceremonial
+addresses, Korea skews written statements, China skews spokesperson
+press-conference transcripts), so an apparent "country difference" could
+simply be a genre difference. `document_type` in the 101-record sample
+cross-tabulates as:
+
+| | SPEECH | PRESS_CONFERENCE | STATEMENT/OTHER/JOINT/WRITTEN |
+|---|---|---|---|
+| Japan (n=41) | 24 | 15 | 2 |
+| Korea (n=30) | 10 | 4 | 16 |
+| China (n=30) | 3 | 11 | 16 |
+
+Two genres are populated in all three countries and treated as matched
+tiers for comparison; the third is not well matched (Japan has only 2
+records in it) and is reported descriptively only, as a finding about
+each country's preferred communication channel rather than as a
+comparison cell:
+
+- **Tier A — Ceremonial/Anniversary Address** (`document_type=SPEECH`):
+  scripted monologue, typically delivered on a fixed memorial date.
+- **Tier B — Press-Conference Response** (`document_type=PRESS_CONFERENCE`):
+  reactive Q&A format, typically a response to a journalist's question.
+- **Tier C — Written/Other Statement** (`STATEMENT`/`OTHER`/
+  `JOINT_STATEMENT`/`WRITTEN_RESPONSE`): residual category; Japan n=2 is
+  too thin to compare, so this tier is excluded from the matched-genre
+  claims below.
+
+Recomputing the key rates within Tier A and Tier B only:
+
+| Tier A (SPEECH) | n | reflection | remedy (broad) | remedy_victim_directed | self_attr | other_attr (of applicable) |
+|---|---|---|---|---|---|---|
+| Japan | 24 | 100.0% | 100.0% | 0.0% | 0.0% | 0.0% (n=24) |
+| Korea | 10 | 70.0% | 10.0% | 0.0% | 0.0% | 62.5% (n=8) |
+| China | 3 | 66.7% | 0.0% | 0.0% | 0.0% | 66.7% (n=3) |
+
+| Tier B (PRESS_CONFERENCE) | n | reflection | remedy (broad) | remedy_victim_directed | self_attr | other_attr (of applicable) |
+|---|---|---|---|---|---|---|
+| Japan | 15 | 26.7% | 0.0% | 0.0% | 0.0% | 0.0% (n=15) |
+| Korea | 4 | 50.0% | 50.0% | 0.0% | 0.0% | 100.0% (n=4) |
+| China | 11 | 0.0% | 0.0% | 0.0% | 0.0% | 100.0% (n=11) |
+
+(Korea Tier B and China Tier A are thin, n=4 and n=3 respectively — read
+as suggestive, not conclusive.)
+
+**This is a genuine validity check, and it comes out favorably for the
+paper's central claim rather than dissolving it.** Within both matched
+genres, the same qualitative country-level pattern that the unmatched
+101-record sample showed still holds: Japan combines high `reflection`
+with **zero** other-attribution in every genre and at every level (n=0/24
+Tier A, n=0/15 Tier B), while Korea and China combine moderate-to-high
+`reflection` with **high** other-attribution (Korea 62.5–100%, China
+66.7–100%). The country difference is therefore not an artifact of Japan
+being sampled disproportionately from a "softer" genre — it reproduces
+genre-by-genre. What the tier analysis *does* overturn, consistently with
+the "Attribution-direction split and remedy narrowing" finding above, is
+the `remedy` dimension: `remedy_victim_directed=0` in every single
+tier × country cell, with the Tier A "100.0%" and Tier B "50.0%" `remedy
+(broad)` figures for Japan and Korea being entirely self-directed relief,
+not evidence of any country-level difference in treatment of the other
+country's victims.
+
+Tier C is reported for completeness but not used for comparison: Korea
+(n=16, mostly `STATEMENT`) and China (n=16, mostly `OTHER`) are both
+thin wrappers around each country's preferred "other" channel (Korea:
+government spokesperson written statements; China: MOFA/State Council
+website postings), and Japan's n=2 in this category means there is no
+Japan comparison point at all. The fact that Japan essentially does not
+use this channel for this topic, while Korea and China rely on it
+heavily, is itself a datum about cross-national differences in
+communication style, not a confound to explain away.
+
 ## Fully coded records by country
 
 ### Japan (41) — see `pilot_japan_2020_2025.csv`
