@@ -188,11 +188,22 @@ reflection + high other-attribution) holds within each matched genre, so
 it is not an artifact of genre-mix differences. See
 `pilot_coverage_report.md`'s "Attribution-direction split and remedy
 narrowing" and "Matched document-genre tiers" sections, and `codebook.md`
-for the two new fields' definitions. `draft_paper_ja.md`/`.docx` have not
-yet been rewritten to reflect this redesign — that rewrite, plus further
-redesign steps (an Aug 15 1993–2025 timeline, event-based Kingdon
-streams analysis, original-language spot-checks, and a literature-review
-rewrite), is in progress.
+for the two new fields' definitions. Two further redesign steps are also done: a matched-document-genre-tier
+re-analysis (`pilot_coverage_report.md`'s "Matched document-genre tiers"
+section) confirms the country-level pattern is not a genre artifact, and
+6 new landmark documents (Hosokawa 1993, Koizumi 2001, the 1998
+Obuchi–Kim Joint Declaration, Abe 2015, Ishiba 2025) were added to
+`landmark_anchors.csv`, building a 1993–2025 timeline that shows a clean
+monotonic decay — apology drops out after 1998, remorse after 2001, and
+self-attribution itself degrades to `NA` in 2025 when Ishiba's
+80th-anniversary statement was downgraded from a cabinet-decided Danwa to
+a personal "reflection" that does not engage the Japan-vs-Asia-neighbors
+question at all (see `pilot_coverage_report.md`'s "Six new landmark-
+anchor documents" section). `draft_paper_ja.md`/`.docx` have not yet been
+rewritten to reflect any of this — that rewrite, plus the remaining
+redesign steps (event-based Kingdon streams analysis, original-language
+spot-checks beyond the 5 landmark documents already cross-checked, and a
+literature-review rewrite), is in progress.
 
 ## Network access notes (for future sessions)
 
